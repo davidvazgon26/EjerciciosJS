@@ -1,4 +1,11 @@
-main();    
+'use strict';
+
+var _input = '';
+var _index = 0;
+process.stdin.on('data', (data) => { _input += data; });
+process.stdin.on('end', () => {
+    _input = _input.split(new RegExp('[ \n]+'));
+    main();    
 });
 function read() { return _input[_index++]; }
 
