@@ -1,0 +1,37 @@
+<script>
+   
+
+    function binaryNumbers(n){
+        let binario = n.toString(2);
+        let arr = [];
+        let sum = 0;
+
+        for (const el of binario) {
+            // console.log(el)
+            if (el == 1) {
+                sum +=1
+            } else {
+                arr.push(sum);
+                sum=0
+            }
+        }
+        arr.push(sum);
+            // console.log(binario)
+            // console.log(arr)
+            console.log(Math.max(...arr))
+    }
+
+
+    binaryNumbers(5)
+    binaryNumbers(106)
+    binaryNumbers(439)
+    binaryNumbers(1000000)
+
+    let teclados= [40,50,60]*2
+    let drives = [5,8,12]
+
+    console.log(teclados)
+
+
+
+</script>
