@@ -1,0 +1,27 @@
+.Contenedor{
+    border: 1px solid black;
+    width: fit-content;
+    height: auto;
+    padding: 5px;
+    background: #202c49;
+    border-radius: 12px;
+    margin: 15px;
+    color: white;
+    text-align: center
+}
+
+
+button{
+    background-color: #202c49;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    padding: 5px 15px;
+    margin: 10px
+}
+
+button:hover{
+    background-color: #af2f2a;
+    color: white;
+
+}
