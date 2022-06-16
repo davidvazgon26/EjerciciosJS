@@ -1,0 +1,119 @@
+
+node.js maneja objetos
+
+BD maneja tablas
+
+ORM hace de intermediario para la comunicacion entre estos 2
+
+
+esta basado en promesas
+
+para nuevos proyectos
+corres git init
+corres npm init
+instalas sequelize // npm i --save sequelize
+instalas dependencias de  // npm i --save pg pg-hstore
+
+conectas a la bd
+
+requieres a sequelize // const { Sequelize} = require('sequelize')
+
+realizas la conexion 
+// const sequelize = new Sequelize('tipoDB://user:password@localhost:5432/DBname',{
+	logging: false  //ojo, esta parte es solo si queremos que en consola nos deje de avisar todas las operaciones automaticas que va realizando sequalize
+});
+
+ver bd en pg: \l
+
+**Si quiero hacer testing connection
+
+// await solo se pueden utilizar dentro de funciones asincronaz, es por eso que utilizaremos la segunda opcion.
+
+try{
+await sequelize.authenticate();
+console.log('connection  successfully');
+}catch (error){
+console.error('Unable to connect to the database:', error)
+}
+
+u esta entra manera de escribiro:
+
+sequelize.authenticate()
+.then(() =>{
+console.log('connection  successfully')
+})
+.catch(err => console.log(err));
+
+// cuando definimos nuestras entidades desde sequelize, debemos definir el tipo de dato.
+
+//Tambien existe enum en sequelize (lista de opciones).
+
+//En BD se define la entidad-relacioin, ahora en sequelize seran modelos.
+
+Ejemplo de modelo:
+
+const User = sequelize.define('User',{
+firstName:{
+	type: DataTypes.STRING
+},
+lastName:{
+type: DataTypes.STRING
+}
+});
+
+// Conectar a una DB desde PG: \c nameDB
+// ver las tablas de mi bd: \dt
+
+//Ojo, las tablas no las podras acceder despues de creadas, debes inicializarlas con:
+
+Model.sync() // Crea la tabla si no existe, si existe no hace nada.
+Model.sync({force:true}) // elimina la tabla y la vuelve a crear
+Model.sync({alter:true}) // intentara aplicar los cambios que se generaron
+
+ejemplo de syncronizacion:
+
+//esto es para un solo modelos
+
+User.sync({force:true}).then(()=>{
+	console.log('Se crei la tabla para User' )
+})
+
+//para varios modelos seria (puede darse el caso que son muchos modelos):
+
+sequalize.sync({force:true})
+.then(() =>{
+	console.log('Se crearon todas las tablas')
+})
+
+los modelos podemos:
+
+* pedir que no sea null: allowNull: false
+* declrarle un valor default: defaultValue: true
+* pedir que sea un valor unico: unique:true
+* pedir crear mi propia primaryKey: primaryKey:true
+
+Esto debe ir dentro de los atributos en cada modelo
+
+insertando un dato:
+
+try{
+await User.create({firstName: 'Jane'})
+}catch(error){
+console.log(`Ocurrio un error al intentar insertar el dato:, ${error)}`)
+}
+
+esto sweria un Select:
+
+const allUsers = await User.finAll();
+console.log(allUsers.map(e => e.toJSON())); 
+
+
+
+
+
+
+
+
+
+
+

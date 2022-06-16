@@ -1,0 +1,20 @@
+git commit -m 'Informacion del Commit'
+git status
+git log
+git  pull origin master
+git push origin master
+git restore + nombre de archivo.extension o carpeta
+
+
+
+
+
+
+//consoloa
+
+
+npm cache clean -f
+rm -rf node_modules
+npm i
+
+
