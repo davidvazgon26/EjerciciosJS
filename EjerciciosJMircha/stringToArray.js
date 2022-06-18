@@ -5,6 +5,9 @@
 
 const stringToArray = function(str,val){
 
+    if(str ===""){console.warn("No hay nada que separar"); return;}
+    if(val ===""){console.warn("No hay separador"); return;}
+
     let result = str.split(val)
 
     console.log(result);

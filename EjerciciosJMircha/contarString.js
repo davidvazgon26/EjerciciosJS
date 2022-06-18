@@ -4,6 +4,8 @@
 
 const contarString = function (string){
 
+        if(string ===""){console.warn("No hay nada que contar"); return;}
+
         let result = string.length;
 
         console.log(result)

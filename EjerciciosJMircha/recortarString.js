@@ -5,6 +5,9 @@
 
 const recortar = function(string,num){
 
+    if(string ===""){console.warn("No hay nada que recortar"); return;}
+    if(num ===""){console.warn("No hay numero"); return;}
+    
     let result = string.substring(0,num);
 
     console.log(result);
