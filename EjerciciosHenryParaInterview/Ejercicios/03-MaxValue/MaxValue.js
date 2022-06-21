@@ -26,4 +26,9 @@ function MaxValue(shares) {
  //complejidad temporal O(n^2)  porque recorre 2 veces el mismo arreglo
   //complejidad espacial O(1)
 
+  //Duda con el 23 de inicio, pero asi lo explicaron
+  
+
+
+
 module.exports = MaxValue;

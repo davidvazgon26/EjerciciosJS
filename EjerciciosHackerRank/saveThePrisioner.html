@@ -1,0 +1,35 @@
+
+Hola
+
+<script>
+    console.log("que pedo")
+
+    function saveThePrisioner(n,m,s){
+
+        // let prisioneros = n
+        // let dulces = m>n?m%n:m
+        // let posicionSilla = s-1
+
+        // if(posicionSilla+dulces<prisioneros){ return posicionSilla+dulces}
+        // else{ dulces = dulces-(prisioneros-posicionSilla)+1}
+
+        // while(dulces>0){
+        //     dulces--
+        //     posicionSilla>=prisioneros?posicionSilla=1:posicionSilla++
+        // }
+        // //console.log(posicionSilla)
+        return (((m%n)+(s-1))%n) || n
+    }
+
+    // console.log(saveThePrisioner(5,2,1))
+    // console.log(saveThePrisioner(5,2,2))
+    // console.log(saveThePrisioner(352926151,380324688,94730870))
+    console.log(saveThePrisioner(7,19,2))
+    console.log(saveThePrisioner(3,7,3))
+    // console.log(saveThePrisioner(3,394274638,3))
+    // console.log(saveThePrisioner(7,615562705,2))
+    // console.log(saveThePrisioner(2,739424390,2))
+    // console.log(saveThePrisioner(654809340,204894365,472730208))
+    //saveThePrisioner(352926151,380324688,94730870)
+
+</script>
