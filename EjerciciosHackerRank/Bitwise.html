@@ -1,0 +1,28 @@
+Hola
+
+<script>
+
+    function bitwiseAnd(N, K) {
+    
+        let arr =[0]
+       for(let i=1;i<N+1;i++){
+           for(let j=i+1;j<N+1;j++){
+               let result = i&j
+               if(result<K && result>arr[0]){ 
+                arr[0] = result }
+           }
+       }
+       
+      // console.log(Math.max(...arr))
+      // return Math.max(...arr)
+      return arr[0]
+    }
+
+    console.log(bitwiseAnd(5,2))
+    console.log(bitwiseAnd(955,236))
+    // console.log(bitwiseAnd(8,5))
+    // console.log(bitwiseAnd(2,2))
+    // console.log(bitwiseAnd(9,2))
+    // console.log(bitwiseAnd(8,3))
+    
+</script>
