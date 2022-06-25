@@ -1,0 +1,29 @@
+
+
+<script>
+
+function jumpingOnClouds(c, k) {
+    
+    let i = 0
+    let n = c.length
+    let energy = 100
+    
+    do{
+        i = (i+k)%n
+        console.log(i) 
+        if(c[i]===1){energy -=3}
+        else{energy -=1}
+        
+        
+    }while(i>0)
+    
+    //console.log(energy)
+    return energy
+}
+
+
+console.log(jumpingOnClouds([0,0,1,0,0,1,1,0], 2))
+console.log(jumpingOnClouds([1,1,1,0,1,1,0,0,0,0], 3))
+
+
+</script>
