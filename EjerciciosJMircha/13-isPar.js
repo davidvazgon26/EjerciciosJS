@@ -5,6 +5,7 @@ const isPar = (n)=>{
 
     if(n === undefined) { return("Debes ingresar un numero"); }
     if(n<0){return("Ingresa un numero positivo"); }
+    if(typeof n === "string"){return ('el dato ingresado no es un numero, es un string')}
 
     if(n%2 === 0){return(`El numero ${n} es par`)}
     else{return(`El numero ${n} es impar`)}
