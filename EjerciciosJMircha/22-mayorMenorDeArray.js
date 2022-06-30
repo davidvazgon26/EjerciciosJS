@@ -3,7 +3,7 @@
 
 
 const mayorYMenor = (array) => {
-    if(!Array.isArray(array)){ console.warn(`No es un array valido, esto es un ${typeof array}`); return }
+    if(!(array instanceof Array)){ console.warn(`No es un array valido, esto es un ${typeof array}`); return }
     if(array.length<=0){console.warn('El arreglo esta vacio'); return}
 
     let min = Math.min(...array)

@@ -2,28 +2,44 @@
 //pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
 
 
+// const ordenamiento = (arr) => {
+
+//     if(!Array.isArray(arr)){console.error(`el objeto ingresado no es un array, es un ${typeof arr}` ); return}
+
+//     if(arr.length<= 0){console.warn("El arreglo esta vacio"); return }
+
+//     let asc = arr.sort((a,b)=>a-b)
+//     let desc = arr.slice().sort((a,b)=>b-a)
+
+//     let obj ={
+//         asc,
+//         desc
+//     }
+
+//     console.log(obj)
+
+// }
+
+//Metodo J Mircha
+
 const ordenamiento = (arr) => {
 
     if(!Array.isArray(arr)){console.error(`el objeto ingresado no es un array, es un ${typeof arr}` ); return}
 
     if(arr.length<= 0){console.warn("El arreglo esta vacio"); return }
 
-    let asc = arr.sort((a,b)=>a-b)
-    let desc = arr.slice().sort((a,b)=>b-a)
-
     let obj ={
-        asc,
-        desc
+        arr,
+        asc: arr.map(el=>el).sort(),
+        desc: arr.map(el=>el).sort().reverse()
     }
-
 
     console.log(obj)
 
-
 }
 
+ordenamiento('22,55,44,66,855,551,1,55')
 ordenamiento([7, 5,7,8,6])
 ordenamiento([22,55,44,66,855,551,1,55])
-ordenamiento(['22,55,44,66,855,551,1,55'])
 ordenamiento([])
 ordenamiento({})

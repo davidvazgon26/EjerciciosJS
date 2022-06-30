@@ -8,22 +8,31 @@ const paresImpares = (array) => {
     if(!Array.isArray(array)){console.warn(`Esto no es un array valido, es un ${typeof array}`); return;}
 
     if(array.length<=0){console.warn("Debes ingresar un arreglo con datos, este esta vacio"); return;}
-    let obj = {}
-    let par = []
-    let impar = []
+    //mi solucion
+    // let obj = {}
+    // let par = []
+    // let impar = []
 
-    for(let i=0;i<array.length;i++){
-        if(Number.isNaN(array[i])){ `El valor ${array[i]} no es un numero valido`; return}
-            if(array[i]%2 === 0){ par.push(array[i]) }
-            else{impar.push(array[i])}
-    }
+    // for(let i=0;i<array.length;i++){
+    //     if(Number.isNaN(array[i])){ `El valor ${array[i]} no es un numero valido`; return}
+    //         if(array[i]%2 === 0){ par.push(array[i]) }
+    //         else{impar.push(array[i])}
+    // }
 
-     obj = {
-        par,
-        impar
-    }
+    //  obj = {
+    //     par,
+    //     impar
+    // }
 
-    console.log(obj)
+    // console.log(obj)
+
+   // 
+/**/
+
+     return console.info({
+        pares: array.filter(num=>num%2===0),
+        impares: array.filter(num=>num%2===1)
+     })
 
 
 }

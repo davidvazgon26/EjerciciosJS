@@ -10,6 +10,9 @@ const isName = (str) =>{
 
     if(/[!@#$%^&*()+]/.test(str)){console.error("La cadena ingresada no corresponde a un nombre"); return}
 
+    // solucion de JMircha
+    // let expReg = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g.test(str)
+
     return console.log(`${str} es un nombre valido`)
 
 }
