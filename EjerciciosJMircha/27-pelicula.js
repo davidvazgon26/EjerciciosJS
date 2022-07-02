@@ -122,13 +122,33 @@ class Pelicula{
 
     }
 
+    validarNumero(propiedad,numero){
+        if(!numero) return console.warn(`${propiedad} "${numero}" esta vacio`);
+        if(typeof numero !== "number") return console.error(`${propiedad} "${numero}" ingresado no es un numero valido`)
+        console.log("Validacion del numero exitosa")
+        return true
+    }
+
     validarCalificacion(calificacion){
-        if(this.validarNumero("Anio de estreno", estreno)){
-            if(!(/^([0-9]{4}$)/.test(estreno))){
-                return console.error(`Anio de estreno "${calificacion}"`)
-            }
+        if(this.validarNumero("Calificacion", calificacion)){
+           return (calificacion< 0 || calificacion>10)
+           ?console.error(`La calificacion no es valida, debe ser en un rango de 0.1 a 10.0`)
+           :this.calificacion = calificacion.toFixed(1)
         }
             
+    }
+
+    fichaTecnica(){
+        console.log((`
+        Ficha tecnica:
+        Titulo: "${this.titulo}"
+        Director: "${this.director}"
+        Anio: "${this.estreno}"
+        Pais: "${this.pais.join(" || ")}"
+        Generos: "${this.genero.join(", ")}"
+        Calificacion: "${this.caificacion}"
+        Id Pelicula: "${this.id}"
+        `))
     }
 
   
@@ -144,5 +164,38 @@ const pelicula = new Pelicula({
     estreno: 2022,
     pais: ["Mexico", "Francia"],
     genero: ["Action", "Comedy"],
-    // calificacion:"8.7", 
+    calificacion:8.79999, 
 })
+
+const misPelis = [
+    {
+        id: 'tt1234567',
+        titulo: "La babosa asesina",
+        director: "Lucas Watchovski",
+        estreno: 2022,
+        pais: ["Mexico", "Francia"],
+        genero: ["Action", "Comedy"],
+        calificacion:8.79999, 
+    },{
+        id: 'tt1234567',
+        titulo: "La babosa asesina",
+        director: "Lucas Watchovski",
+        estreno: 2022,
+        pais: ["Mexico", "Francia"],
+        genero: ["Action", "Comedy"],
+        calificacion:8.79999, 
+    },{
+        id: 'tt1234567',
+        titulo: "La babosa asesina",
+        director: "Lucas Watchovski",
+        estreno: 2022,
+        pais: ["Mexico", "Francia"],
+        genero: ["Action", "Comedy"],
+        calificacion:8.79999, 
+    }
+
+];
+
+//pelicula.fichaTecnica()
+
+misPelis.forEach(item => new Pelicula(item).fichaTecnica());
