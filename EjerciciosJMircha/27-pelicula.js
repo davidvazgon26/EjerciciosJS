@@ -37,7 +37,18 @@ class Pelicula{
             this.validarEstreno(estreno);
             this.validarPais(pais);
             this.validarGenero(genero);
+            this.validarCalificacion(calificacion);
     }
+
+      // staic es para cuando necesitas un atributo (atributo estatico) que este disponible aun cuando no exista una instancia de la clase. Get es el obtenedor
+      static get listaGeneros(){
+        return ['Action', 'Adult', 'Adventure', 'Animation', 'Biography', 'Comedy', 'Crime', 'Documentary' ,'Drama', 'Family', 'Fantasy', 'Film Noir', 'Game-Show', 'History', 'Horror', 'Musical', 'Music', 'Mystery', 'News', 'Reality-TV', 'Romance', 'Sci-Fi', 'Short', 'Sport', 'Talk-Show', 'Thriller', 'War', 'Western']
+      }
+
+      //Metodo estatico para consumir el atributo estatico para
+      static generosAceptados(){
+        return console.info(`Los generos aceptados son: ${Pelicula.listaGeneros.join(",")}`)
+      }
 
     validarString(propiedad, valor){ // Metodo para reutilizar en validarId, validarTitulo, validarDirector
         if(!valor) return console.warn(`${propiedad} ${valor} esta vacio`)
@@ -91,17 +102,40 @@ class Pelicula{
         return true
     }
     validarPais(pais){
-        if(this.validarArreglo("Pais", pais)){}
+        if(this.validarArreglo("Pais", pais)){
+        console.log(`Validacion de Pais exitosa`)
+
+        }
+        
         
     }
     validarGenero(genero){
-        if(this.validarArreglo("genero", genero)){}
+        if(this.validarArreglo("Generos", genero)){
+            for(let item of genero){
+                if(!Pelicula.listaGeneros.includes(item)) { 
+                    console.error(`Genero(s) incorrectos ${genero.join(', ')}`);
+                    Pelicula.generosAceptados();
+                }
+            }
+        }
+        console.log(`Validacion de Generos exitosa`)
 
+    }
+
+    validarCalificacion(calificacion){
+        if(this.validarNumero("Anio de estreno", estreno)){
+            if(!(/^([0-9]{4}$)/.test(estreno))){
+                return console.error(`Anio de estreno "${calificacion}"`)
+            }
+        }
+            
     }
 
   
 
 }
+
+//Pelicula.generosAceptados()
 
 const pelicula = new Pelicula({
     id: 'tt1234567',
@@ -109,6 +143,6 @@ const pelicula = new Pelicula({
     director: "Lucas Watchovski",
     estreno: 2022,
     pais: ["Mexico", "Francia"],
-    // genero:["Accion", "Comedy"],
+    genero: ["Action", "Comedy"],
     // calificacion:"8.7", 
 })
