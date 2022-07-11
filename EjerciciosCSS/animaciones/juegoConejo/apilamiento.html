@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --fondo : #CCEFFF;
+        }
+        body{
+            margin: 0;
+            height: 100vh;
+            /* centrar */
+            width: 100%;
+            display: grid;
+            place-items: center; 
+        }
+        .phone{
+            position: relative;
+            border: 8px solid black;
+            border-radius:40px;
+            height:75vh;
+            width: 46vw;
+            background: var(--fondo);
+            box-shadow: 0 19px 38px rgb(0,0,0,0.3), 0 15px 12px rgb(0,0,0,0.22);
+        }
+        .layer-1{
+            position: absolute;
+            z-index: 1;
+            height: 400px;
+            width: 60px;
+            background: black;
+            bottom: 0;
+            left: 50px;
+        }
+        .layer-2{
+            position: absolute;
+            z-index: 1;
+            height: 400px;
+            width: 60px;
+            background: white;
+            bottom: 0;
+            right: 50px;
+        }
+        .layer-3{
+            position: absolute;
+            z-index: 2;
+            height: 350px;
+            width: 150px;
+            left:0;
+            right:0;
+            margin: 0 auto;
+            background: wheat;
+            bottom:0;
+            border-radius: 0 0 0 40px;
+            /* border: 1px solid black; */
+        }
+        .layer-4{
+            position: absolute;
+            z-index: 3;
+            width: 60px;
+            height: 300px;
+            background: white;
+            bottom: 0;
+            left: 20px;
+            border-radius: 0 0 0 30px;
+        }
+        .layer-5{
+            position: absolute;
+            z-index: 4;
+            background:wheat;
+            width: 140px;
+            height: 260px;
+            bottom: 0;
+            border-radius: 0 0 0 30px;
+            /* border: 1px solid black; */
+        }
+        .layer-6{
+            position: absolute;
+            z-index: 5;
+            background: white;
+            width:60px;
+            height: 220px;
+            right: 40px;
+            bottom: 0;
+        }
+        .layer-7{
+            position: absolute;
+            z-index: 6;
+            background: wheat;
+            width: 120px;
+            height: 184px;
+            right: 0;
+            bottom: 0;
+            border-radius: 0 0 30px 0;
+        }
+        .layer-8{
+            position: absolute;
+            z-index: 7;
+            background: green;
+            width: 120px;
+            height: 80px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 0;
+        }
+        .layer-9{
+            position: absolute;
+            z-index: 8;
+            background: white;
+            width: 70px;
+            height: 72px;
+            left: 0;
+            bottom: 0;
+            border-radius: 0 0 0 30px;;
+        }
+        .layer-10{
+            position: absolute;
+            z-index: 8;
+            background: white;
+            width: 70px;
+            height: 72px;
+            right: 0;
+            bottom: 0;
+            border-radius: 0 0 30px 0
+        }
+        .left-ear-outer{
+            background: white;
+            border-radius: 90%;
+            width: 16px;
+            height: 50px;
+            position: absolute;
+            left: 4px;
+        }
+        .left-ear-inner{
+            background: pink;
+            border-radius: 90%;
+            width: 10px;
+            height: 40px;
+            position: absolute;
+            left: 7px;
+            top: 10px;
+        }
+        .right-ear-outer{
+            background: white;
+            border-radius: 90%;
+            width: 16px;
+            height: 50px;
+            position: absolute;
+            right: 4px;
+        }
+        .right-ear-inner{
+            background: pink;
+            border-radius: 90%;
+            width: 10px;
+            height: 40px;
+            position: absolute;
+            right: 7px;
+            top: 10px;
+        }
+
+        .head{
+            background: white;
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            left:0;
+            right: 0;
+            margin: 0 auto;
+            top: 30px;
+            border-radius: 50% ;
+        }
+
+        .head-eye{
+            background:black;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            position: absolute;
+            top: 12px;
+        }
+
+        .head-eye-left{
+            left: 20px
+        }
+        .head-eye-right{
+            right: 20px
+        }
+    </style>
+</head>
+<body>
+    <div class="phone">
+        <div class="layer-1">
+            <!-- Conejo 1 -->
+            <div class="left-ear-outer"></div>
+            <div class="left-ear-inner"></div>
+            <div class="right-ear-outer"></div>
+            <div class="right-ear-inner"></div>
+            <div class="head">
+                <div class="head-eye head-eye-left"></div>
+                <div class="head-eye head-eye-right"></div>
+            </div>
+        </div>
+        <div class="layer-2"></div>
+        <div class="layer-3"></div>
+        <div class="layer-4"></div>
+        <div class="layer-5"></div>
+        <div class="layer-6"></div>
+        <div class="layer-7"></div>
+        <div class="layer-8"></div>
+        <div class="layer-9"></div>
+        <div class="layer-10"></div>
+    </div>
+    
+</body>
+</html>
