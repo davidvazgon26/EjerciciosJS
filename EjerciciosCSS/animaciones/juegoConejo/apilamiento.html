@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Juego de los conejos</title>
     <style>
         :root {
             --fondo: #CCEFFF;
@@ -36,7 +39,7 @@
             width: 230px;
             background: var(--fondo);
             box-shadow: 0 19px 38px rgb(0, 0, 0, 0.3), 0 15px 12px rgb(0, 0, 0, 0.22);
-            
+
         }
 
         .layer-1 {
@@ -54,14 +57,16 @@
             animation-iteration-count: infinite;
         }
 
-        @keyframes layer{
-            0%{
+        @keyframes layer {
+            0% {
                 bottom: 0;
             }
-            25%{
+
+            25% {
                 bottom: -40px;
             }
-            100%{
+
+            100% {
                 bottom: 0;
             }
         }
@@ -82,24 +87,33 @@
             outline: none;
         }
 
-        input:checked{
+        input:checked {
             /* content: counter(score); */
             counter-increment: score;
         }
 
         .score {
             position: absolute;
-            left: 50%;
-            top: 0;
+            left: 48%;
+            top: 26px;
             transform: translate(-50%, 0);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
 
-          .score::after{
+        .title {
+            position: absolute;
+            left: 30%;
+            top: -8px;
+            transform: translate(-20%, 0);
+            font-size: 1rem;
+            font-family: 'Pacifico';
+        }
+
+        .score::after {
             content: counter(score)
         }
 
-      
+
 
         .layer-2 {
             position: absolute;
@@ -198,16 +212,17 @@
             bottom: 0;
         }
 
-        .alto{
+        .alto {
             width: 46%;
             height: 100%;
             background: var(--light-green);
             left: 0;
-            right:0;
+            right: 0;
             margin: 0 auto;
             border-radius: 40px 40px 0 0;
         }
-        .izq{
+
+        .izq {
             position: absolute;
             top: 24px;
             width: 40%;
@@ -216,7 +231,8 @@
             left: 0;
             border-radius: 40px 40px 0 0;
         }
-        .der{
+
+        .der {
             position: absolute;
             top: 17px;
             width: 30%;
@@ -235,32 +251,33 @@
             left: 0;
             bottom: 0;
             border-radius: 0 0 0 30px;
-            
+
         }
 
-        .nube-blanca-alto{
-            background:white;
+        .nube-blanca-alto {
+            background: white;
             width: 100%;
             height: 100%;
             border-radius: 40px 40px 30px 30px
         }
 
-        .nube-blanca-lado{
-            background:white;
+        .nube-blanca-lado {
+            background: white;
             width: 130%;
             height: 64%;
             border-radius: 50px 50px 40px 60px;
             position: absolute;
             bottom: 0;
         }
-        .nube-blanca{
-            background:white;
+
+        .nube-blanca {
+            background: white;
             width: 130%;
             height: 64%;
             border-radius: 50px 50px 80px 60px;
             position: absolute;
             bottom: 0;
-            right:0;
+            right: 0;
         }
 
         .layer-10 {
@@ -277,7 +294,7 @@
         .left-ear-outer {
             background: white;
             border-radius: 90%;
-            width: 16px;
+            width: 26px;
             height: 50px;
             position: absolute;
             left: 4px;
@@ -339,17 +356,19 @@
         }
 
         @keyframes blink {
-            0%{
+            0% {
                 height: 5px;
-            }    
-            5%{
+            }
+
+            5% {
                 transform: translate(0px, 3px);
                 height: 2px;
-            }    
-            10%{
+            }
+
+            10% {
                 transform: translate(0px, 0px);
                 height: 5px;
-            }    
+            }
         }
 
         .head-eye-left {
@@ -377,29 +396,24 @@
         }
 
         .zigzag {
-            background: linear-gradient(135deg, var(--dark-green) 25%, transparent 25%) -50px 0, 
-                        linear-gradient(-135deg, var(--dark-green) 25%, transparent 25%) -50px 0, 
-                        linear-gradient(45deg, var(--light-brown) 25%, transparent 25%), 
-                        linear-gradient(-45deg, transparent 25%, var(--dark-brown) 25%);
+            background: linear-gradient(135deg, var(--dark-green) 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, var(--dark-green) 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, var(--light-brown) 25%, transparent 25%),
+                linear-gradient(-45deg, transparent 25%, var(--dark-brown) 25%);
             background-size: 33px 30px;
             height: 30px;
             /* width: 100%; */
         }
-      
-
-      
-
-       
     </style>
 </head>
 
 <body>
-    
+
     <div class="phone">
-        
-        
+
+
         <div class="layer-1">
-            
+
             <!-- Conejo 1 -->
             <input type="checkbox" aria-label="pendiente" />
             <div class="left-ear-outer"></div>
@@ -468,7 +482,7 @@
             <div class="nube-blanca-alto">
                 <div class="nube-blanca-lado"></div>
             </div>
-            
+
         </div>
         <div class="layer-10">
             <div class="nube-blanca-alto">
@@ -477,6 +491,7 @@
 
         </div>
         <div class="title">
+            <h3>Click sobre el conejo</h3>
             <h3 class="score">Score: </h3>
         </div>
     </div>
