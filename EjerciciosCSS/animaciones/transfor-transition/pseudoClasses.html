@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            color: black;
+        }
+        a:link{
+            color: blue;
+        }
+        a:visited{
+            color: tomato;
+        }
+        a:focus{
+            color: yellowgreen;
+        }
+        a:hover{
+            color:aqua
+        }
+        p:not(.maravillas){
+            color:lightcoral
+        }
+        .container div:nth-child(1){
+            color: lightgreen;
+        }
+
+        .div::before{
+            content: ":) usando el before "
+        }
+
+        .div2::after{
+            content: " :( usando el after"
+        }
+
+
+    </style>
+</head>
+<body>
+    <a href="#">Alicia</a>
+    <a href="/">Otro</a>
+
+    <p>en el</p>
+    <p class="maravillas">pais</p>
+
+    <div class="container">
+        <div>primer elemento</div>
+        <div>segundo elemento</div>
+        <div>tercer elemento</div>
+    </div>
+
+    <div class="div">Alicia</div>
+    <div class="div2">Alicia</div>
+    
+</body>
+</html>
