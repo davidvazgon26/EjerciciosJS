@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform y scale</title>
+    <style>
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+            margin-bottom: 40px;
+
+        }
+        .circle:hover{
+            transform: scale(1.2);
+        }
+        .Min:hover{
+            transform: scale(0.8);
+        }
+        .X:hover{
+            transform: scaleX(0.8);
+        }
+        .Y:hover{
+            transform: scaleY(0.8);
+        }
+        .ambos:hover{
+            transform: scale(0.8, 1.2);
+        }
+
+    </style>
+</head>
+
+<body>
+    Aumenta
+    <div class="circle"></div>
+    Disminuye
+    <div class="circle Min"></div>
+    Disminuye eje X
+    <div class="circle X"></div>
+    Disminuye eje Y
+    <div class="circle Y"></div>
+    Transformacion 2 ejes
+    <div class="circle ambos"></div>
+
+</body>
+
+</html>
