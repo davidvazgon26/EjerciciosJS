@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backface visibility</title>
     <style>
-        .card{
+        .card {
             width: 200px;
             height: 200px;
-            transform-style: preserve-3d;
+            cursor: pointer;
             position: relative;
+            transform-style: preserve-3d;
+            transition: all 2s;
         }
-        .card:hover{
+
+        .card:hover {
             transform: rotateY(180deg);
-            transition: transform 1s;
         }
-        .face{
+
+        .face {
             border-radius: 20px;
             width: 100%;
             height: 100%;
             position: absolute;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
+            display: grid;
+            place-content: center;
         }
 
-        .face.front{
+        .front {
             background: pink;
         }
-        .face.back{
+
+        .back {
             background: papayawhip;
             transform: rotateX(180deg);
         }
+
+        @media (prefers-reduced-motion: no-preference) {
+            /* Código de animaciones */
+
+        }
     </style>
 </head>
+
 <body>
 
     <div class="card">
         <div class="face front"></div>
-    <div class="face back"></div>
+        <div class="face back"></div>
     </div>
-    
+
 </body>
+
 </html>
