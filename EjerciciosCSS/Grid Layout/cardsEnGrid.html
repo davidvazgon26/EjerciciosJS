@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards en Grid ejercicio</title>
+    <style>
+        .container {
+            background: papayawhip;
+            display: grid;
+            width: 160px;
+            height: 160px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "card-1 card-2"
+                "card-1 card-3";
+            margin-bottom: 40px;
+        }
+
+        .item-one {
+            background: hotpink;
+            grid-area: card-1;
+        }
+
+        .item-two {
+            background: lightseagreen;
+            grid-area: card-2;
+        }
+
+        .item-three {
+            background: lightcoral;
+            grid-area: card-3;
+        }
+
+        .container2 {
+            background: papayawhip;
+            display: grid;
+            width: 160px;
+            height: 160px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+                "card-1 card-2"
+                "card-3 card-3";
+            margin-bottom: 40px;
+        }
+
+        .item-four {
+            background: orange;
+            grid-area: card-1;
+        }
+
+        .item-five {
+            background: pink;
+            grid-area: card-2;
+        }
+
+        .item-six {
+            background: lightskyblue;
+            grid-area: card-3;
+        }
+
+        /* ejercicio 3  */
+
+        .container4 {
+            background: papayawhip;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 160px;
+            height: 160px;
+        }
+
+        .item:nth-child(1) {
+            background: hotpink;
+            /* primero alinea vertical y luego horizontal */
+            place-self: center stretch;
+            text-align: center;
+        }
+
+        .item:not(:nth-child(1)) {
+            background: turquoise;
+            text-align: center;
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item-one">1</div>
+        <div class="item-two">2</div>
+        <div class="item-three">3</div>
+    </div>
+    <div class="container2">
+        <div class="item-four">4</div>
+        <div class="item-five">5</div>
+        <div class="item-six">6</div>
+    </div>
+
+    <!-- justify-self, alinea horizontal o por renglon - - - -> -->
+    <!-- align-self, alinea de manera vertical o en la misma columna  -->
+    <!-- place-self, nos permite acomodar las 2 anteriores en una sola linea -->
+
+    <!-- ejercicio 3 -->
+    <div class="container4">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+
+</html>
