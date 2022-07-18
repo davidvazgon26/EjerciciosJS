@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatitos Random</title>
+    <style>
+        img{
+            width: 190px;
+            height: 190px;
+            border-radius: 20px;
+        }
+        button{
+            margin: 10px 0 0 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gatitos</h1>
+    <span id="error"></span>
+    <section id="randomCat">
+        <h2>Gatitos Random</h2>
+        <article>
+            <img id="1" alt="Foto gatito aleatoria">
+            <button id="'btn1" onclick="saveFavouritesCats()">Guardar en favoritos</button>
+        </article> 
+
+        <article>
+            <img id="2" alt="Foto gatito aleatoria">
+            <button id="btn2" onclick="saveFavouritesCats()">Guardar en favoritos</button>
+        </article>
+
+    
+
+        <button onclick="loadRandomCats()">Reset</button>
+    </section>
+
+    <section id="favoritesCat">
+        <h2>Gatitos Favoritos</h2>
+        <article>
+            <img id="3" alt="Foto gatito aleatoria">
+            <button>Sacar de favoritos</button>
+        </article>
+    </section>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
