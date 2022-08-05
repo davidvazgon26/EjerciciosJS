@@ -33,6 +33,30 @@
         }
 
         obj.imprimir();
+
+        const obj2={
+            name : "Contexto Objeto 2",
+            imprimir: imprimir
+        }
+
+        obj2.imprimir();
+
+        const obj3={
+            name : "Contexto Objeto3",
+            imprimir: ()=>{
+                console.log(this.name)
+            }
+        }
+
+        obj3.imprimir();
+
+        //funcion constructora
+        function Persona(nombre){
+            this.nombre = nombre;
+            return console.log(this.nombre)
+        }
+
+        let david = new Persona("David");
     </script>
 </body>
 </html>
