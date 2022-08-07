@@ -1,7 +1,16 @@
-
-function Route( ) {
-    this.id;
-    this.init;
-    this.end;
+//Transformando a clase
+// function Route( ) {
+//     this.id;
+//     this.init;
+//     this.end;
     
+// }
+
+class Route{
+    constructor(){
+        this.id;
+        this.init;
+        this.end;
+        
+    }
 }
