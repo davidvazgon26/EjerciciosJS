@@ -1,0 +1,13 @@
+//declarando un json
+
+ const json = {
+    cadena: "David",
+    numero: 41,
+    boleano: true,
+    arreglo: ["correr", "programar", "cocinar"],
+    objeto: {
+        twitter: "@davidvazgon",
+        email: "davidvazgon@hotmail.com"
+    },
+    nulo:null
+ }
