@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+  result = fetch("./respuesta.json")
+    .then(response => response.json())
+    .then(json => {
+      console.log(json)
+
+      for (let i = 0; i < 150; i++){
+        console.log("------------------");
+        console.log(json.hotels.name[i])
+        console.log(json.hotels.address[i])
+        console.log("Rating: "+json.hotels.hotel_rating[i])
+        console.log(json.hotels.hotel_summary[i])
+        console.log("Review:"+json.hotels.review_score[i])
+        console.log("Origin "+json.hotels.origin[i])
+        console.log("Price $"+json.hotels['avg_price_per_night (€)'][i])
+        
+      }
+  });
+
+    
+  </script>
+</body>
+
+</html>
+
+
+
+
+
