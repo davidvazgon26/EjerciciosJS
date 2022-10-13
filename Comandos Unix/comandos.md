@@ -657,3 +657,184 @@ ejemplos comprime:
 ejemplo descomprime
 
 `$ tar -xzf pic.tar.gz`
+
+# Expresiones Regulares
+
+ver tema de expresiones regulares
+
+ejemplo sencillo de una linea de texto pero puede hacerse con ficheros y demas:
+
+`$ echo "Esto es un ejemplo con cadena" | egrep "[abc]"`
+
+resultado: 
+
+    Esto es un ejemplo con cadena // marca la c y a
+
+ejemplo anterior negado:
+
+`$ echo "Esto es un ejemplo con cadena" | egrep "[^abc]"`
+
+resultado:
+
+    Esto es un ejemplo con cadena // marca todo excepto la c y a
+
+ejemplo con tags:
+
+`$ echo "<img href='aaa'>" | egrep "<[^>]+>"`
+
+resultado:
+
+    <img href='aaa'>
+**Nota** los ejercicios se realizan con echo pero en su lugar puede haber un fichero.
+
+**Nota:** [ejercicios de regex](https://alf.nu/RegexGolf?world=regex&level=r00)
+
+
+# Seguridad
+
+## password 
+
+cambiar el password
+
+## us
+
+Cambiar de usuario
+
+## sudo 
+
+autoriza hacer algo como usuario root
+
+## whoami
+
+identifica el usuario actual o logeado
+
+## users 
+
+muestra los usuarios del equipo
+
+## adduser
+
+permite agregar un usuario nuevo
+
+ejemplo:
+
+`$ sudo adduser usuarioprueba`
+
+resultado:
+
+    [sudo] password for user: 
+    Adding user `usuarioprueba' ...
+    Adding new group `usuarioprueba' (1002) ...
+    Adding new user `usuarioprueba' (1001) with group `usuarioprueba' ...
+    Creating home directory `/home/usuarioprueba' ...
+    Copying files from `/etc/skel' ...
+    New password: 
+    Retype new password: 
+    passwd: password updated successfully
+    Changing the user information for usuarioprueba
+    Enter the new value, or press ENTER for the default
+            Full Name []: Usuario de Prueba
+            Room Number []:
+            Work Phone []: 
+            Home Phone []: 
+            Other []: 
+    Is the information correct? [Y/n] y
+
+
+## w
+
+muestra los usuarios loggeados y que estan haciendo
+
+## chmod
+
+cambiar los permisos de uno o mas ficheros
+
+`$ sudo chmod 777 fichero`
+
+## permisos
+
+lectura: 4 escritura: 2 ejecucion: 1
+
+todo el mundo accede: 777
+
+## groups
+
+muestra los grupos a los que pertenecemos
+
+## addgroup 
+
+para crear un grupo
+
+**Ejemplo:** `$ adduser user group`  //añade un usuario a un grupo
+
+## chown
+
+cambia el propietario "Change Owner"
+
+`$ sudo chown user:grupo fichero`
+
+cambio los archivos y el directorio de owner:
+
+`$ sudo chown -R user:group directorio/`
+
+## cambiar a root
+
+`$ sudo su root`
+
+**Nota** root no cuenta con contrasena por default
+
+
+# Otros Comandos
+
+## rename
+
+renombrar ficheros
+
+`$ rename "s/text/md" *.text` //renombra en el directorio actual los ficheros con extension md por text
+
+## ssh
+
+acceso remoto seguro
+
+`$ ssh user@localhost ` // te ingresa a la terminal local pero desde ssh
+
+## scp y sftp
+
+copias remotas
+
+ejemplo:
+
+`$ scp README.md user@192.168.0.5:` // estamos copiando el fichero README al directorio raiz de user
+
+sftp nos permite interactuar con la consola remota y traer o llevar ficheros con comandos como get o put (puedes ver todos los comandos con help)
+
+## nohup
+
+comando que se quede andando aunque se cierre la consola
+
+## mount umount
+
+para montar y desmontar discos
+
+## rsync
+
+sincroniza directorios
+
+## wget
+
+accede a una pagina web y la baja en local
+
+ejemplo:
+
+`wget http://google.com`
+
+## link2 y lynx
+
+Son navegadores web para explorar sitos web 
+
+
+
+
+
+
+
