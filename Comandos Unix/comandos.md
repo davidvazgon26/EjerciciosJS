@@ -226,6 +226,14 @@ respuesta:
 
     no hay respuesta, si usas el comando cd pic para ir al directorio pic y usas el comando ls ahi encontraras el fichero
 
+ejemplo para mover de una ruta a mi ruta actual:
+
+`$ mv pic/*.md . `
+
+respuesta:
+
+    no hay respuesta, esto mueve de la ruta que le pasaste los archivos indicados a tu ruta actual que en los parametros esta representada por "." el punto.
+
 ejemplo para renombrar fichero:
 
 `$ mv ficheromv.txt ejemplorenombrar.txt `
@@ -317,12 +325,335 @@ resultado:
 
 ## df
 
-VEr el espac
+Ver el espacio disponible / usado de nuestras unidades de disco
+
+**Nota** para hacerlo un poco mas legible puedes utilizar el parametro -h
 
 ejemplo:
 
-`$ mkdir newdir`
+`$ df -h`
 
 resultado:
 
-    sin resultados visibles, debe usar ls para comprobar
+    Algo similar a esto:
+
+        Filesystem      Size  Used Avail Use% Mounted on
+        /dev/sdb        251G  1.4G  237G   1% /
+        tmpfs           3.1G     0  3.1G   0% /mnt/wsl
+        tools           216G  184G   33G  86% /init
+        none            3.1G     0  3.1G   0% /dev
+        none            3.1G  4.0K  3.1G   1% /run
+        none            3.1G     0  3.1G   0% /run/lock
+        none            3.1G     0  3.1G   0% /run/shm
+        none            3.1G     0  3.1G   0% /run/user
+        tmpfs           3.1G     0  3.1G   0% /sys/fs/cgroup
+        drivers         216G  184G   33G  86% /usr/lib/wsl/drivers
+        lib             216G  184G   33G  86% /usr/lib/wsl/lib
+        C:\             216G  184G   33G  86% /mnt/c
+
+
+
+# Comandos de texto
+
+## wc
+
+Cuenta las palabras de un fichero (Word Count)
+
+ejemplo:
+
+`$ wc ejemplo.txt`
+
+respuesta:
+
+      5  30 169 ejemplo.txt
+
+Que son: 5 lineas, 30 palabras, 169 caracteres.
+
+
+## grep
+
+Busca el patron en un fichero (Global Regular Expression Print)
+
+ejemplo:
+
+`$ grep abad ejemplo.txt`
+
+respuesta:
+
+Dábale arroz a la zorra el 
+<span style="color:red">abad</span>
+
+
+## cut
+
+corta las lineas de texto por la cantidad deseada
+
+ejemplo:
+
+`$ cut -c1-5 ejemplo.txt`
+
+respuesta:
+
+        La ca
+        Dába 
+        Líne 
+        Colec
+        Dame 
+
+ejemplo 2:
+
+`$ cut -d' ' -f2 ejemplo.txt`
+
+respuesta:
+
+        cabra    
+        arroz    
+        separadas
+        moscas,
+        pan
+      
+
+## head
+
+muestra los "n" renglones de inicio del fichero
+
+ejemplo:
+
+`$ head -c 32 ejemplo.txt`
+
+respuesta:
+
+        La cabra se subió al monte.
+
+
+## tail
+
+muestra los "n" renglones del final del fichero
+
+ejemplo:
+
+`$ tail -c 32 ejemplo.txt`
+
+respuesta:
+
+    oco.
+    Dame pan y llámame tonto.
+
+**Nota** si no se incluye el parametro de los caracteres por default te da al rededor de 9 o 10 lineas.
+
+
+## less
+
+muestra el fichero de manera paginada para navegarlo
+
+ejemplo:
+
+`$ less ejemplo.txt`
+
+respuesta:
+
+    La cabra se subió al monte.
+    Dábale arroz a la zorra el abad.
+    Líneas separadas por saltos de línea.
+    Colecciono moscas, pero no estoy loco.
+    Dame pan y llámame tonto.
+    ejemplo.txt (END)
+
+
+## nano
+
+nos permite editar el fichero
+
+ejemplo:
+
+`$ nano ejemplo.txt`
+
+respuesta:
+
+    La cabra se subió al monte.
+    Dábale arroz a la zorra el abad.
+    Líneas separadas por saltos de línea.
+    Colecciono moscas, pero no estoy loco.
+    Dame pan y llámame tonto.
+    ejemplo.txt (END)
+
+
+# Procesos en Unix
+
+`$ ps`
+
+ver los procesos corriendo
+
+`$ kill -9 <no de proceso>`
+
+Matar algun proceso corriendo
+
+`$ free`
+
+ver la memoria libre en el sistema
+
+`$ top`
+
+para ver los procesos ordenadamente
+
+`$ time + comando`
+
+sirve para ver cuanto tarda en ejecutarse el comando.
+
+`$ sleep 1`
+
+duerme el proceso por los segundos dados
+
+`$ comando1 && comando2`
+
+para concatenar comandos
+
+`$ comando &`
+
+ejecuta el comando en background, es decir lo deja en segundo plano.
+
+
+## Enlazar comandos
+
+## ">"
+
+ejemplo:
+
+`$ cat README.md soluciones.md > combinado.md`
+
+resultado:
+
+    combina el texto de ambos ficheros en combinado.md
+
+## ">>"
+
+anade al final del fichero la respuesta
+
+ejemplo:
+
+`$ ccomando >> fichero`
+
+`$ echo "hola, mundo" >> ejemplo.txt`
+
+resultado:
+
+    La cabra se subió al monte.
+    Dábale arroz a la zorra el abad.
+    Líneas separadas por saltos de línea.
+    Colecciono moscas, pero no estoy loco.
+    Dame pan y llámame tonto.
+    hola, mundo
+    ejemplo.txt (END)
+
+**Nota** si solo utilizas un mayor que, lo que hara sera sustituir lo que este dentro del fichero.
+ 
+## "<"
+
+ejemplo:
+
+`$ grep arroz < ejemplo.txt`
+
+resultado:
+
+    Dábale arroz a la zorra el abad.
+
+
+
+## "|"
+
+ejemplo:
+
+`$ cat ejemplo.txt | grep "arroz" | grep "abad"`
+
+resultado: filtro las lineas que contengan arroz y abad
+
+    Dábale arroz a la zorra el abad.
+
+## sort
+
+ejemplo:
+
+`$ sort ejemplo.txt`
+
+resultado: ordena las lineas por su primera letra
+
+    Colecciono moscas, pero no estoy loco.
+    Dame pan y llámame tonto.
+    Dábale arroz a la zorra el abad.
+    La cabra se subió al monte.
+    Líneas separadas por saltos de línea.
+
+
+## uniq
+
+Elimina las lineas repetidas
+
+ejemplo:
+
+`$ cat ejemplo.txt | sort | uniq -c`
+
+resultado: 
+
+      1 Colecciono moscas, pero no estoy loco.
+      1 Dame pan y llámame tonto.
+      1 Dábale arroz a la zorra el abad.
+      1 La cabra se subió al monte.
+      1 Líneas separadas por saltos de línea.
+
+**Nota** en este caso se utilizo el comando en conjunto con  sort para ordenar, cat para leer y -c para contar.
+
+## split
+
+corta el fichero segun los parametros y crea nuevos con dicha informacion
+
+ejemplo:
+
+`$ split -b <bytes> <file> <prefijo>`
+
+`$ split -b 100 ejemplo.txt DAVG`
+
+resultado: 
+
+      1 Colecciono moscas, pero no estoy loco.
+      1 Dame pan y llámame tonto.
+      1 Dábale arroz a la zorra el abad.
+      1 La cabra se subió al monte.
+      1 Líneas separadas por saltos de línea.
+
+**Nota** en este caso se utilizo el comando en conjunto con  sort para ordenar, cat para leer y -c para contar.
+
+## du
+
+obtienes el espacio ocupado por algun archivo
+
+`$ du -sh ejemplo.txt`
+
+## find
+
+busca ficheros por nombre
+
+ejemplo:
+
+`$ find ./pic -name *.png`
+
+resultado:
+
+    ./pic/bash.png
+    ./pic/wikipedia-ls.png
+
+
+
+# tar
+
+comprime y descomprime ficheros o directorios
+
+`$ tar -czf  <destino.tar.gz> <fichero1> <fichero2>...`
+
+ejemplos comprime:
+
+`$ tar -czf pic.tar.gz pic`
+
+
+ejemplo descomprime
+
+`$ tar -xzf pic.tar.gz`
