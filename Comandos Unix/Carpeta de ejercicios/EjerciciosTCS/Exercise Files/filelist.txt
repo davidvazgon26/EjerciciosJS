@@ -1,0 +1,12 @@
+total 132K
+drwxrwxrwx 1 davidvazgon davidvazgon 4.0K Oct 18 11:56 demo
+drwxrwxrwx 1 davidvazgon davidvazgon 4.0K Oct 18 09:53 departments
+-rwxrwxrwx 1 davidvazgon davidvazgon  160 Oct 18 09:53 dupes.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon    0 Oct 18 14:16 filelist.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon 128K Oct 18 09:53 log.tar.gz
+-rwxrwxrwx 1 davidvazgon davidvazgon   16 Oct 18 13:40 new.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon   49 Oct 18 13:48 new2.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon 1.5K Oct 18 09:53 poems.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon  129 Oct 18 09:53 simple_data.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon   64 Oct 18 11:08 test.sh
+lrwxrwxrwx 1 davidvazgon davidvazgon    9 Oct 18 12:31 writing.txt -> poems.txt
