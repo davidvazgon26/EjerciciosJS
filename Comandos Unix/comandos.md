@@ -747,7 +747,9 @@ muestra los usuarios loggeados y que estan haciendo
 
 ## chmod
 
-cambiar los permisos de uno o mas ficheros
+cambiar los permisos de uno o mas ficheros  
+
+
 
 `$ sudo chmod 777 fichero`
 
@@ -834,7 +836,7 @@ Son navegadores web para explorar sitos web
 
 
 
-fin
+fin...
 
 
 
