@@ -847,7 +847,53 @@ grep
 
 ln
 
+uname
 
+free
+
+lshw
+
+ps
+
+top
+
+kill
+
+tar
+
+zip
+
+unzip
+
+which ls
+
+echo
+
+$PATH
+
+env
+
+ls -a
+
+>
+
+>>
+
+<
+
+lsblk
+
+info coreutils
+
+chmod
+
+chown
+
+chgrp
+
+bash
+
+wget
 
 
 
