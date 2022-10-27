@@ -1,0 +1,50 @@
+#! /usr/bin/env bash
+echo "Hello world"
+
+#This is a comment
+
+echo "Bye"
+
+#Variables
+
+myvar=hello
+
+myvar2="Mi variable 2"
+
+varnumber=26
+
+echo $myvar
+
+
+echo $myvar2
+
+echo $varnumber
+
+
+# Other variables
+
+mynewvar = "Hola"
+echo "El valor de mi variable es: $mynewvar"
+mynewvar =  "Hasta pronto"
+echo "El valor de mi variable es: $mynewvar"
+
+
+#Declarando constantes
+declare -r myname = "David"
+echo mi nombre es: $myname
+myname= "Alejandro"
+echo mi nombre es: $myname
+
+#usando lower case
+declare -l low = "Este es un TEXTO!!"
+echo "El valor de la cadena es: $low"
+low = "CAMBIO el VALOR"
+echo "El valor de la cadena es: $low"
+
+
+6declare -u upper = ""
+
+
+
+
+
