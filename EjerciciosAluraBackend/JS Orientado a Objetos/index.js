@@ -63,6 +63,6 @@ console.log(cuentaCorriente2);
 console.log("Deposito a cuenta corriente 2, ahora tiene: ")
 cuentaCorriente2.depositoEnCuenta(100)
 console.log(cuentaCorriente2);
-console.log("Retiro a cuenta corriente 2, ahora tiene: ")
+console.log("Retiro a cuenta corriente 2, ahora solo tiene: ")
 cuentaCorriente2.retirarDeCuenta(2000)
 console.log(cuentaCorriente2);
