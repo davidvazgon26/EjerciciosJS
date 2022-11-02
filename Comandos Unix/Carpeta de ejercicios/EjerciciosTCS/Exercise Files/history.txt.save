@@ -1,0 +1,980 @@
+    1  pwd
+    2  cd ..
+    3  ls
+    4  cd /home
+    5  cd~
+    6  cd /
+    7  ls
+    8  pwd
+    9  help
+   10  touch valores.js
+   11  valores.js code .
+   12  cat valores.js
+   13  ls
+   14  touch figuras.{html,js}
+   15  pwd
+   16  ls
+   17  pwd
+   18  ls
+   19  l -l
+   20  ls
+   21  cd..
+   22  cd ..
+   23  ls
+   24  cd ..
+   25  ls
+   26  cd 'Documents and Settings'
+   27  ls
+   28  cd david/
+   29  ls
+   30  cd 'Mis documentos'
+   31  ls
+   32  cd Proyectos/
+   33  ls
+   34  cd p
+   35  cd Platzi/
+   36  ls
+   37  cd 'Curso
+   38  de Terminal'
+   39  ls
+   40  cd 'Curso de Terminal'/
+   41  ls
+   42  ls -l
+   43  l -l
+   44  l -lh
+   45  pwd
+   46  ls
+   47  file Comandos\ de\ Terminal.txt 
+   48  nautilus 'Curso de Terminal'
+   49  cal
+   50  cal+1
+   51  ls
+   52  printevent
+   53  printenv
+   54  ech $path
+   55  ech $PATH
+   56  ls
+   57  pgsql
+   58  psql
+   59  sudo nano /etc/hosts
+   60  pwd
+   61  ls
+   62  cd Comandos\ Unix/
+   63  ls
+   64  echo hola, mundo
+   65  $ echo hola, mundo
+   66  pwd
+   67  cd Carpeta\ de\ ejercicios/
+   68  git clone https://github.com/alexfernandez/floqq-unix.git
+   69  ls
+   70  cd floqq-unix/
+   71  ls
+   72  file ejemplo.txt 
+   73  file README.md 
+   74  file LICENSE 
+   75  ls
+   76  file pic
+   77  file página
+   78  file "página"
+   79  file página
+   80  file ejemplo
+   81  file ejemplo.txt
+   82  echo "Hola mundo"
+   83  ls
+   84  file pic
+   85  file página.html
+   86  ls
+   87  pwd
+   88  cd /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix
+   89  cd pic
+   90  cd mnt
+   91  cd /mnt
+   92  cd /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix/pic$ cd mnt
+   93  ls
+   94  cd c
+   95  ls
+   96  cd User
+   97  cd Users
+   98  ls
+   99  cd david/
+  100  ls
+  101  cd Desktop/
+  102  cd Ejercicios
+  103  ls
+  104  cd ..
+  105  cd EjerciciosVarios/
+  106  ls
+  107  cd Comandos\ Unix/
+  108  ls
+  109  cd Carpeta\ de\ ejercicios/
+  110  ls
+  111  cd floqq-unix/
+  112  ls
+  113  ls pic
+  114  tree pic
+  115  tree /pic
+  116  tree pic
+  117  brew instn tree
+  118  brec install tree
+  119  qbrew install tree
+  120  brew install tree
+  121  tree
+  122  sudo apt install tree
+  123  tree
+  124  sudo apt install tree
+  125  sudo apt-get update
+  126  sudo apt install tree
+  127  tree
+  128  cat ejemplo.txt página.html
+  129  touch novedad
+  130  ls
+  131  cp ejemplo.txt copia.txt
+  132  ls
+  133  cat copia
+  134  cat copia.txt 
+  135  mv ejemplo.txt página.html ficheromv.txt
+  136  touch ficheromv.txt
+  137  ls
+  138  mv ejemplo.txt página.html ficheromv.txt
+  139  mv ejemplo.txt página.html /pic
+  140  mv ejemplo.txt página.html pic
+  141  ls
+  142  cd /pic
+  143  cd pic
+  144  ls
+  145  mv ejemplo.txt página.html cd ..
+  146  mv ejemplo.txt página.html mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix
+  147  mv ejemplo.txt página.html /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix
+  148  mv ejemplo.txt página.html floqq-unix
+  149  pwd
+  150  mv ejemplo.txt página.html /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix
+  151  mv ejemplo.txt mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix/ejemplo.txt
+  152  mv ejemplo.txt /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix/ejemplo.txt
+  153  cp ejemplo.txt /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix/ejemplo.txt
+  154  cp ejemplo.txt mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix/ejemplo.txt
+  155  ls
+  156  cd ..
+  157  ls
+  158  mv ficheromv.txt pic
+  159  cd pic
+  160  ls
+  161  pwd
+  162  cd ..
+  163  ls
+  164  cd pic
+  165  ls
+  166  mv ficheromv.txt /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix
+  167  ls
+  168  mv ficheromv.txt mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/floqq-unix
+  169  ls
+  170  mv ficheromv.txt 
+  171  ls
+  172  cd ..
+  173  ls
+  174  cd pic
+  175  ls
+  176  mv ficheromv.txt floqq-
+  177  mv floqq-unix ficheromv.txt
+  178  ls
+  179  mv ficheromv.txt /floqq-unix
+  180  ls
+  181  mv ficheromv.txt cd ..
+  182  ls
+  183  cd ..
+  184  ls
+  185  cat ficheromv.txt 
+  186  none ficheromv.txt 
+  187  nano ficheromv.txt 
+  188  cat ficheromv.txt 
+  189  mv ficheromv.txt /pic
+  190  mv ficheromv.txt pic
+  191  ls
+  192  cd pic
+  193  ls
+  194  cat ficheromv.txt 
+  195  mv ficheromv.txt cd ..
+  196  ls
+  197  cd ..
+  198  ls
+  199  cat ficheromv.txt 
+  200  rm ficheromv.txt 
+  201  ls
+  202  rm ficheromv.txt 
+  203  mkdir newdir
+  204  ls
+  205  rmdir newdir
+  206  df
+  207  df -h
+  208  cd ..
+  209  ls
+  210  cd Ejercicios
+  211  cd ..
+  212  ls
+  213  cd ..
+  214  ls
+  215  cd EjerciciosVarios/
+  216  ls
+  217  cd Comandos\ Unix/
+  218  ls
+  219  cd Carpeta\ de\ ejercicios/
+  220  ls
+  221  cd floqq-unix/
+  222  ls
+  223  df -h
+  224  touch prueba1.txt prueba2.png prueba3.fake
+  225  ls
+  226  rm prueba?.*
+  227  ls
+  228  ls /pic
+  229  ls pic
+  230  ls
+  231  wc ejemplo.txt 
+  232  DDclear
+  233  clear
+  234  grep abad ejemplo.txt
+  235  cut -c1-5 ejemplo.txt
+  236  cut -d' ' -f2 ejemplo.txt
+  237  head -c12 ejemplo.txt
+  238  head -c 12 ejemplo.txt
+  239  head -c 32 ejemplo.txt
+  240  tail -c 32 ejemplo.txt 
+  241  tail ejemplo.txt 
+  242  less ejemplo.txt 
+  243  nano ejemplo.txt 
+  244  ls
+  245  less copia.txt 
+  246  nano ejemplo.txt 
+  247  ps x
+  248  ps
+  249  ps x
+  250  free
+  251  free -h
+  252  top
+  253  grep arroz < ejemplo.txt
+  254  cat ejemplo.txt | grep "arroz" | grep "abad"
+  255  less
+  256  less ejemplo.txt 
+  257  cat ejemplo.txt | grep "por" | grep "abad"
+  258  less ejemplo.txt 
+  259  cat ejemplo.txt | grep "arroz" | grep "abad"
+  260  sort ejemplo.txt 
+  261  cat ejemplo.txt | sort | uniq -c
+  262  echo "hola, mundo" >> ejemplo.txt
+  263  less ejemplo.txt 
+  264  split -b 100 ejemplo.txt DAVG
+  265  ls
+  266  less DAVGaa
+  267  du -sh ejemplo.txt
+  268  du *
+  269  du -sh *
+  270  find ./pic -name *.png
+  271  kill -l
+  272  wc -l
+  273  help
+  274  pwd -l
+  275  help -l
+  276  man pwd
+  277  man tar
+  278  man wc
+  279  ls -?
+  280  ls --help
+  281  echo "Esto es un ejemplo con cadena" | grep "[abc]"
+  282  echo "Esto es un ejemplo con cadena" | grep "[^abc]"
+  283  echo "<gsfgsfg>" | grep "<[^>]+>
+  284  echo "<gsfgsfg>" | grep "<[^>]+>"
+  285  echo "<g>" | grep "<[^>]+>"
+  286  echo "<g>" | egrep "<[^>]+>"
+  287  echo "Esto es un ejemplo con cadena" | egrep "[^abc]"
+  288  echo "<gsfgsfg>" | egrep "<[^>]+>"
+  289  whoami
+  290  users
+  291  adduser usuarioprueba
+  292  sudo adduser usuarioprueba
+  293  users
+  294  user
+  295  users
+  296  -w
+  297  w
+  298  whomai
+  299  whoami
+  300  us root
+  301  su root
+  302  wsl --user root
+  303  --user root
+  304  ubuntu2004 config - usuario root
+  305  whoami
+  306  su root
+  307  sudo us root
+  308  sudo su root
+  309  ls
+  310  cd Comandos\ Unix/
+  311  ls
+  312  cd Carpeta\ de\ ejercicios/
+  313  ls
+  314  cd floqq-unix/
+  315  ls
+  316  touch file1 file2 file3
+  317  ls
+  318  Cat < file1 >> file2 | file3
+  319  cat < file1 >> file2 | file3
+  320  ls
+  321  cat < file1 >> file2 | file3
+  322  cat<file1>>file2|file3
+  323  vim
+  324  ls
+  325  CLEAR
+  326  clear
+  327  cd ~
+  328  ls
+  329  cd Documents
+  330  cd
+  331  ls
+  332  dir
+  333  cd /mnt
+  334  ls
+  335  ls
+  336  cd Comandos\ Unix/
+  337  ls
+  338  cd Carpeta\ de\ ejercicios/
+  339  ls
+  340  touch EjerciciosTCS
+  341  ls
+  342  delete EjerciciosTCS 
+  343  rm EjerciciosTCS 
+  344  ls
+  345  mkdir EjerciciosTCS
+  346  ls
+  347  cd EjerciciosTCS/
+  348  ls
+  349  ls ~
+  350  ls
+  351  ~
+  352  pwd
+  353  cd ~
+  354  ls
+  355  cd /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS
+  356  cd "/mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS"
+  357  cd -
+  358  cd
+  359  cd -
+  360  ls
+  361  ls -l
+  362  ls
+  363  cd
+  364  ld --color+always
+  365  ld --color=always
+  366  ls --color=always
+  367  ls
+  368  cd -
+  369  ls
+  370  ls --color=always
+  371  cd Exercise\ Files/
+  372  ls
+  373  ls -l
+  374  mkdir demo
+  375  ls
+  376  cp * ./demo
+  377  cp * /demo
+  378  file demo
+  379  cp -r * ./demo
+  380  cd demo
+  381  ls
+  382  rm demo
+  383  ls demo
+  384  cd demo
+  385  ls
+  386  cd ..
+  387  rm -r * ./demo
+  388  rm -r * /demo
+  389  cd demo
+  390  ls
+  391  cd ..
+  392  ld
+  393  ls
+  394  cd demo
+  395  ls
+  396  cd ..
+  397  cd departments/
+  398  ls
+  399  cd ..
+  400  ls
+  401  cp *.* /demo
+  402  ls /demo
+  403  ls
+  404  ls ./demo
+  405  cd demo
+  406  ls
+  407  cd ..
+  408  cp *.* ./demo
+  409  ls ./demo
+  410  rm ????.* ./demo
+  411  ls
+  412  ls ./demo
+  413  ls
+  414  cp dupes.txt demo/dupes2.txt
+  415  ls demo
+  416  mv dupes2.txt demo/
+  417  ls demo
+  418  mv dupes2.txt demo
+  419  mv dupes2.txt /demo/
+  420  ls demo
+  421  rm dupes2.txt demo/ 
+  422  ls demo
+  423  rm dupes2.txt demo
+  424  ls demo
+  425  rm dupes2.txt /demo
+  426  ls demo
+  427  rm dupes2.txt /demo/
+  428  rm demo/dupes2.txt
+  429  ls demo
+  430  rm demo/*.txt
+  431  ls demo
+  432  ls
+  433  mv dupes.txt dupes3.txt
+  434  ls
+  435  mv dupes3.txt dupes.txt
+  436  ls
+  437  cp dupes.txt demo/
+  438  ls demo
+  439  cp dupes.txt dupes3.txt dupes
+  440  cp dupes.txt dupes3.txt .
+  441  cp dupes.txt ./dupes3.txt
+  442  ls
+  443  cp dupes.txt ./dupes4.txt ./dupes
+  444  cp dupes.txt ./dupes4.txt ./dupes.tar
+  445  cp dupes.txt ./dupes4.txt 
+  446  ls
+  447  rm dupes?.txt
+  448  ls
+  449  ls /root
+  450  sudo ls /root
+  451  sudo -k
+  452  sudo -s
+  453  ls
+  454  ./test.sh
+  455  ls demo
+  456  cp ../test.sh
+  457  cd demo
+  458  ls
+  459  cp ../test.sh
+  460  mv test.sh ../
+  461  ls
+  462  cd ..
+  463  ls
+  464  ./test.sh 
+  465  chmod -x test.sh 
+  466  ./test.sh 
+  467  chmod a-x test.sh 
+  468  ./test.sh 
+  469  chmod 644 test.sh 
+  470  ./test.sh 
+  471  ls -l test.sh 
+  472  stat test.sh 
+  473  chmod --help
+  474  chmod 644 test.sh
+  475  stat test.sh 
+  476  chmod 0644 test.sh
+  477  stat test.sh 
+  478  chmod -x test.sh
+  479  stat test.sh 
+  480  test.sh
+  481  ./test.sh 
+  482  cat test.sh 
+  483  apropose description edit
+  484  apropos description edit
+  485  nano test.sh 
+  486  vim test.sh 
+  487  ls -l
+  488  sudo chown root test.sh
+  489  ls -l
+  490  ln -s poems.txt writing.txt
+  491  ls -l
+  492  grep "the" poems.txt 
+  493  grep -n "the" poems.txt 
+  494  grep -ni "the" poems.txt 
+  495  cl
+  496  clear
+  497  ls
+  498  cat simple_data.txt 
+  499  awk '{print $2}' simple_data.txt 
+  500  cat dupes.txt 
+  501  sort -u dupes.txt
+  502  cat dupes.txt 
+  503  tac dupes.txt 
+  504  vi
+  505  ls
+  506  ls -l
+  507  ls -lh
+  508  nano
+  509  fg
+  510  ls
+  511  cat new2.txt 
+  512  ls
+  513  cd ..
+  514  tar -cvf myfiles.tar Exercise\ Files/
+  515  ls
+  516  ls -l
+  517  tar -caf myfiles.tar.gz Exercise\ Files/
+  518  tar -caf myfiles.tar.bz2 Exercise\ Files/
+  519  ls -lh
+  520  zip exfiles.zip Exercise\ Files/
+  521  sudo apt install zip
+  522  zip exfiles.zip Exercise\ Files/
+  523  ls -lh
+  524  zip-r exfiles.zip Exercise\ Files/
+  525  zip -r exfiles.zip Exercise\ Files/
+  526  ls -lh
+  527  ls
+  528  cd Exercise\ Files/
+  529  ls -lh>filelist.txt
+  530  ls
+  531  cat filelist.txt 
+  532  env.
+  533  env2
+  534  env
+  535  echo $ PATH
+  536  echo $PATH
+  537  wich ls
+  538  which ls
+  539  which java
+  540  which javac
+  541  which run
+  542  ls -a
+  543  ls -lha
+  544  ~/ .bash_profile
+  545  ls -lha
+  546  nano ~/.bash_profile
+  547  ls -l /etc/*release
+  548  uname -a
+  549  uname -r
+  550  free -h
+  551  cst /proc/cpuinfo
+  552  cat /proc/cpuinfo
+  553  df -h
+  554  sudo du -hd1 /
+  555  sudo lshw
+  556  apt show tree
+  557  tree
+  558  ps 
+  559  ps-ef
+  560  psg
+  561  ps -ef | grep
+  562  ps -ef
+  563  clear
+  564  uname -a
+  565  uname -r
+  566  free -h
+  567  df -h
+  568  lshw | less
+  569  ip a
+  570  cat /proc/cpuinfo
+  571  clear
+  572  exit
+  573  ls
+  574  cd
+  575  pwd
+  576  cd /mnt
+  577  ls
+  578  cd c
+  579  ls
+  580  cd User
+  581  cd Users
+  582  ls
+  583  ls -lh
+  584  cd david
+  585  ls -lh
+  586  ls
+  587  cd Desktop/
+  588  ls
+  589  sudi vi /etc/wsl.conf
+  590  sudo vi /etc/wsl.conf
+  591  cd
+  592  ls
+  593  cd -
+  594  ls
+  595  wsl
+  596  wsl --version
+  597  cd 
+  598  pwd
+  599  cd home
+  600  cd home/
+  601  cd /home
+  602  ls
+  603  cd davidvazgon
+  604  ls
+  605  cd ..
+  606  ls
+  607  cd ..
+  608  pwd
+  609  explorer.exe
+  610  ls
+  611  explorer.exe
+  612  cd
+  613  cat /etc/resolv.conf
+  614  service --status-all
+  615  ls
+  616  cd Comandos\ Unix/
+  617  ls
+  618  cd Carpeta\ de\ ejercicios/
+  619  ls
+  620  cd EjerciciosTCS/
+  621  ls
+  622  l
+  623  ls --help
+  624  ls -ahns
+  625  apt show coreutils
+  626  info coreutils
+  627  tree
+  628  lsblk
+  629  apt show coreutils
+  630  info coreutils
+  631  ls
+  632  du README.md 
+  633  du README.md -h
+  634  w
+  635  ls
+  636  cd Comandos\ Unix/
+  637  ls
+  638  cd Xa
+  639  cd Carpeta\ de\ ejercicios/
+  640  ls
+  641  cd Comandos\ Unix/Carpeta\ de\ ejercicios/EjerciciosTCS/
+  642  ls
+  643  cd Exercise\ Files/
+  644  ls
+  645  pwd
+  646  cd
+  647  ln -s /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files davunix
+  648  ln -s /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files/ davunix
+  649  ln -s /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files Excercise Files
+  650  ln -s /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files/ /davunix
+  651  ls
+  652  cd /
+  653  ls
+  654  ln -s /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files davunix
+  655  pwd
+  656  ln -s /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files /davunix
+  657  cd
+  658  cd Comandos\ Unix/Carpeta
+  659  cd Comandos\ Unix/Carpeta/
+  660  ls
+  661  pwd
+  662  ln -s /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files /davunix
+  663  mkdir davunix
+  664  ls
+  665  ln -s /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files /davunix
+  666  ln -s /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files ./davunix
+  667  ls
+  668  davunix
+  669  cd davunix
+  670  ls
+  671  l -l
+  672  cd Comandos
+  673  Comandos
+  674  l -lh
+  675  cd Comandos\ Unix/Carpeta\ de\ ejercicios/EjerciciosTCS/
+  676  cd
+  677  cd Comandos\ Unix/Carpeta\ de\ ejercicios/EjerciciosTCS/
+  678  pwd
+  679  ls
+  680  cd /
+  681  ls
+  682  cd /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files ./davunix
+  683  cd /mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files
+  684  cd home
+  685  ls
+  686  cd ..
+  687  ls
+  688  cd mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos Unix/Carpeta de ejercicios/EjerciciosTCS/Exercise Files
+  689  cd mnt/c/Users/david/Desktop/EjerciciosVarios/Comandos\ Unix/Carpeta\ de\ ejercicios/EjerciciosTCS/Exercise\ Files
+  690  ls
+  691  grep -E [hia] poems.txt 
+  692  grep -E \w{6,} poems.txt 
+  693  grep -E "\w{6,}" poems.txt 
+  694  grep -E "\w{6,}" poems.txt echo
+  695  echo h {a,e,i}llo
+  696  echo h{a,e,i}llo
+  697  echo $PATH
+  698  .env
+  699  env
+  700  which ls
+  701  man
+  702  man ls
+  703  fish
+  704  sudo apt install fish
+  705  fish
+  706  echo {1..12}
+  707  echo {cat,dog,fox}_{1...5}
+  708  echo {cat,dog,fox}{1...5}
+  709  echo {1...5}
+  710  echo {cat,dog,fox}{1..5}
+  711  echo {cat,dog,fox}_{1..5}
+  712  echo {cat,dog,fox}_{01..12}
+  713  a="HOla"
+  714  echo ${a}
+  715  echo $a
+  716  echo ${a,3}
+  717  echo ${a:3}
+  718  echo ${a:2}
+  719  a="Hello"
+  720  echo ${a:2}
+  721  echo ${a:2:5}
+  722  echo ${a:2:4}
+  723  echo ${a:2:3}
+  724  echo ${a:1:3}
+  725  a="Hello World"
+  726  echo $a
+  727  echo ${a/World/Unix}
+  728  echo $a
+  729  echo ${a//o/0}
+  730  echo "The kernel is $(uname -r)."
+  731  echo "Result: $(python3 -c 'print("Hello from Python!")') | tr [a-z] [A-Z]"
+  732  tr
+  733  echo "Result: $(python3 -c 'print("Hello from Python!")') | tr [a-z] [A-Z]"
+  734  echo "Result: $(python -c 'print("Hello from Python!")') | tr [a-z] [A-Z]"
+  735  echo "Result: $(python -c 'print("Hello from Python!")')" | tr [a-z] [A-Z]
+  736  echo "Result: $(python3 -c 'print("Hello from Python!")')" | tr [a-z] [A-Z]
+  737  echo "Result: $(python -c 'print("Hello from Python!")')" | tr [a-z] [A-Z]
+  738  echo $((2+2))
+  739  pwd
+  740  ls -ls
+  741  cd Comandos\ Unix/
+  742  ls
+  743  cd Carpeta\ de\ ejercicios/
+  744  ls
+  745  cd EjerciciosTCS/
+  746  ls
+  747  cd Exercise\ Files/
+  748  ls
+  749  ls -l
+  750  ls -lh
+  751  ls -l > lista.txt
+  752  ls -lh
+  753  cat lista.txt 
+  754  nano myscript.sh
+  755  clear
+  756  ls -la
+  757  env
+  758  clear
+  759  fish
+  760  ls
+  761  bash dupes.txt 
+  762  cat dupes.txt 
+  763  which bash
+  764  ls /usr/bin/env
+  765  ls -la /usr/bin/env
+  766  ls -la /usr/bin
+  767  ls -la /usr/bin | less
+  768  ls -lh /usr/bin | less
+  769  ls -l
+  770  nano myscript.sh
+  771  chmod +x myscript.sh 
+  772  ./myscript.sh 
+  773  ls -l
+  774  file myscript.sh 
+  775  echo echo echo hola
+  776  echo; echo; echo hola
+  777  echo; echo; echo hola, echo; echo good
+  778  echo; echo; echo; hola, echo; echo; good; echo
+  779  echo; echo; echo; hola, echo; echo; good echo
+  780  echo; echo; echo; hola, echo; echo;"good" echo
+  781  echo; echo; echo; hola echo; echo;"good" echo
+  782  echo; echo; echo; "hola" echo; echo;"good" echo
+  783  echo; echo; echo; "hola"; echo; echo;"good" echo
+  784  "echo hola"
+  785  echo "hola"
+  786  echo; echo "hola"
+  787  echo; echo "hola" echo "adios"
+  788  echo; echo "hola" echo; "adios"
+  789  echo; echo "hola" \echo "adios"
+  790  echo; echo "hola" $echo "adios"
+  791  echo; echo "hola" + echo + "adios"
+  792  echo; echo "hola + echo + adios"
+  793  echo; echo "More space!"; echo
+  794  echo; echo "More space!"; echo; echo
+  795  echo; echo "More space!"; echo; echo; echo; echo; echo
+  796  echo;echo;echo; echo "More space!"; echo; echo; echo; echo; echo
+  797  echo -n;echo;echo; echo "More space!"; echo; echo; echo; echo; echo
+  798  ls
+  799  nano myscript.sh 
+  800  ./myscript.sh 
+  801  ls -l
+  802  myscript.sh
+  803  ./myscript.sh 
+  804  nano myscript.sh 
+  805  ./myscript.sh 
+  806  nano myscript.sh 
+  807  ./myscript.sh 
+  808  nano myscript.sh 
+  809  ./myscript.sh 
+  810  nano myscript.sh 
+  811  ./myscript.sh 
+  812  nano myscript.sh 
+  813  [4 -lt 5]; echo $?
+  814  [4 -lt 5]
+  815  [ 4 -lt 5 ]
+  816  $?
+  817  [ 4 -lt 3 ]
+  818  $?
+  819  [ 4 -lt 3 ]; echo $?
+  820  [ 4 -lt 5 ]; echo $?
+  821  [[ -d ~ && -a /bin/bash ]]; echo$?
+  822  [[ -d ~ && -a  /bin/bash ]]; echo$?
+  823  [[ -d ~ && -a  /bin/bash ]]; echo $?
+  824  [[ ! -d ~ && -a  /bin/bash ]]; echo $?
+  825  [[ -d ~ ]] && echo ~ es un directorio
+  826  [[ "cat" =~ c.* ]]; echo $?
+  827  ls
+  828  mv f1 f1.txt
+  829  ls
+  830  mv f2 f2.txt
+  831  mv f3 f3.txt
+  832  ls
+  833  git status
+  834  fish
+  835  ls -ls
+  836  ls -la
+  837  ls -l
+  838  cd Comandos\ Unix/
+  839  ls -l
+  840  ls
+  841  cd Carpeta\ de\ ejercicios/
+  842  ls
+  843  cd EjerciciosTCS/
+  844  ls
+  845  cd Exercise\ Files/
+  846  ls
+  847  ls -l
+  848  nano myscript.sh.save
+  849  nano myscript.sh
+  850  bash myscript.sh
+  851  nano myscript.sh
+  852  bash myscript.sh
+  853  nano myscript.sh
+  854  bash myscript.sh
+  855  nano myscript.sh
+  856  bash myscript.sh
+  857  nano myscript.sh
+  858  bash myscript.sh
+  859  ls
+  860  ls f*.txt
+  861  ls -l f*.txt
+  862  ls -l *.sh
+  863  ls all
+  864  list All
+  865  list info
+  866  ls
+  867  ls -l
+  868  logger --help
+  869  logger
+  870  fish
+  871  git status
+  872  ls
+  873  cd Comandos\ Unix/
+  874  ls
+  875  cd Carpeta\ de\ ejercicios/
+  876  ls
+  877  cd EjerciciosTCS/
+  878  ls
+  879  cd Exercise\ Files/
+  880  ls
+  881  rm -f .git/index.lock
+  882  ls
+  883  cd Comandos\ Unix/
+  884  ls
+  885  cd Carpeta\ de\ ejercicios/
+  886  ls
+  887  cd EjerciciosTCS/
+  888  ls
+  889  cd Exercise\ Files/
+  890  ls
+  891  find -type f -name "*.txt"
+  892  .conf  /etc
+  893  find /etc -type f -name "*.conf"
+  894  find . -type f -perm 0777
+  895  find . -type f | -perm 777
+  896  find . -type f ! -perm 777
+  897  find . -type f -perm 0777 -exec chmod 644 {} \;
+  898  find . -type f -perm 0777
+  899  find . -type f -perm 0777 -exec chmod 644 {} \;
+  900  find . -type f -perm 0777
+  901  find . -type d -perm 777 -print -exec chmod 644 {} \;
+  902  sudo find . -type d -perm 777 -print -exec chmod 644 {} \;
+  903  find -help
+  904  find . -type f -name ".*"
+  905  find . -type f -name "*.*"
+  906  find . -type f -aname "*.*"
+  907  find . -type f -name -a "*.*"
+  908  ps
+  909  ps -h
+  910  ps -l
+  911  ps aux
+  912  ps aux | -u root
+  913  ps aux | grep bash
+  914  find -r "*.*" .
+  915  find  "*.*" .
+  916  find *f*.* ./
+  917  find *f??.* ./
+  918  ls
+  919  ls -l
+  920  head -n 10 dupes.txt 
+  921  less -n 10 dupes.txt 
+  922  head 10 dupes.txt 
+  923  head -n -10 dupes.txt 
+  924  head -10 dupes.txt | tail -1
+  925  head -n10 dupes.txt 
+  926  sed -n 10p dupes.txt 
+  927  free -h
+  928  df -h
+  929  find . -type f-mtime -30 
+  930  find . -type f-mtime +30 
+  931  find . -type f-mtime+30 
+  932  find .
+  933  find . -type f
+  934  find . -lstype f 
+  935  find . -ls-type f 
+  936  find . -ls -type f 
+  937  find . -l -type f 
+  938  find . -lh -type f 
+  939  find . -ls
+  940  find . -type f-ls
+  941  find . -type f -ls
+  942  find .
+  943  find . -type f
+  944  find ./ -type f
+  945  find ./ -type f -mtime +30
+  946  find ./ -type f -mtime -30
+  947  ls
+  948  cd Comandos\ Unix/
+  949  ls
+  950  cd Carpeta\ de\ ejercicios/
+  951  ls
+  952  cd EjerciciosTCS/
+  953  ls
+  954  ls -l
+  955  cd Exercise\ Files/
+  956  ls
+  957  ls -l
+  958  grep -e 'dif' -e 'hi' poems.txt 
+  959  grep -e 'bes' -e 'hi' poems.txt 
+  960  grep -v 'bes' -e 'hi' poems.txt 
+  961  grep -e 'bes' -e "in" poems.txt 
+  962  grep -exec "Near"
+  963  grep -w "Near"
+  964  grep -w Near
+  965  grep -w Near poems.txt 
+  966  fish
+  967  ls
+  968  ls -l
+  969  ls -w
+  970  ls -help
+  971  ls --help
+  972  history
+  973  find ./ -type f -mtime +30
+  974  free -h
+  975  ls -lh
+  976  history > history.txt
+
+
+^K
+  976  history > history.txt
