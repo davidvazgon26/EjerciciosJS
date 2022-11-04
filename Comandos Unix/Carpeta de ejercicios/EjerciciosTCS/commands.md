@@ -467,3 +467,94 @@
 `sudo apt update`
 
 `sudo apt upgrade`
+
+
+##Otros comandos
+
+### grep
+
+grep -c "keyword" filename
+
+grep -h "keyword" filename
+
+grep -l "keyword" filename
+
+grep -n "keyword" filename
+
+grep -v "keyword" filename
+
+grep -o "keyword" filename
+
+grep -e "keyword" filename
+
+grep -e "keyword1" -e "keyword2" filename
+
+grep ^keyword filename
+
+grep keyword$ 
+
+grep -i "keyword" filename  --> unix, UnIx, UNIX, UnIX
+
+### find
+
+find /etc -type f -name "*.conf"
+
+find . -type f -perm 644
+
+find . -type f ! -perm 644
+
+find . -type f -perm 644 -exec chmod 777 {}\;
+
+find . -type f -name "*.jpeg" -exec rm -f {}\;
+
+find . -type f -empty
+
+find . -type f -mtime -50  --> se refiere a los dias
+
+find . -type f -atime +50  --> days 
+
+find . -type f -cmin -60  --> minute
+
+find . -type f -amin -60  --> minute
+
+find . -type f -size 50M  --> tamanio
+
+### awk
+
+estructura de archivo:
+
+empname,emailid,emailaddress,empaddress,empcontacto,empsalary >>>>> csv file
+
+awk -F, '{print $4}' filename
+
+
+
+awk '{print $NF}' filename
+
+awk '{print $4, $2}' filename
+
+ls -ltr | awk '{print $NF}' filename
+
+awk '{print NR $0}' filename
+
+awk '{if($6>60000) print $0}' filename
+
+awk '{if($1==david){$6=80000} print $0}' empdata.txt
+
+awk '/Mexico/{print $0}' filename
+
+awk 'NR=="5" {print $0}' filename
+
+awk 'NR=="5", NR=="6" {print $0}' filename
+
+awk 'NF==0 {print NR}' filename >>>>> to print empty line
+
+awk 'END {print NR}' filename >>>> no of line in a file
+
+cut -c1 filename
+
+cut -c1,5 filename
+
+cut -c1-5 filename >> to print range
+
+d >> delimeter, f>> field separator
