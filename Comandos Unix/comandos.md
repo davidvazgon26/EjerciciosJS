@@ -895,6 +895,9 @@ bash
 
 wget
 
+info coreutils
+
+
 
 
 
