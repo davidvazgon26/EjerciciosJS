@@ -558,3 +558,5 @@ cut -c1,5 filename
 cut -c1-5 filename >> to print range
 
 d >> delimeter, f>> field separator
+
+pendientes
