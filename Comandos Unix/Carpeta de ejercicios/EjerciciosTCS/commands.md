@@ -560,3 +560,5 @@ cut -c1-5 filename >> to print range
 d >> delimeter, f>> field separator
 
 pendientes
+
+hay que realizar ejercicios de spring boot
