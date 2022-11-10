@@ -562,3 +562,5 @@ d >> delimeter, f>> field separator
 pendientes
 
 hay que realizar ejercicios de spring boot
+
+no olvides hacer la ruta de React y Sprong boot
