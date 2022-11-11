@@ -26,3 +26,22 @@ atajos Ctrl+a y Ctrl+e				 --> mover al inicio y al final de la linea de comando
 atajos &&					 --> Ejecutar el siguiente comando concatenado si el anterior es exitoso
 apropos description edit			 --> busqueda de comandos a partir de palabras clave
 find . -maxdepth 1 -type f -name "new*.txt"	 --> buscar un archivo con una profundidad de solo un nivel
+cp new*.* ./demo				 --> hacer una copia de todos los archivos que comiencen con new al directorio demo
+file new*.*					 --> nuestra el tipo de archivo que es cada uno
+tar -tvf ejemploCompresion.tar.gz		 --> Leer archivos dentro de archivo tar
+tar -xvf ejemploCompresion.tar ./demo2/new3.txt	 --> Extraer solo un archivo de archivo tar.gz
+tar -xvf sampleArchive.tar --wildcards "*.jpg"	 --> Extraer de archivo tar con patron
+tar -rvf ejemploCompresion.tar.gz dupes.txt	 --> Agregar archivo a archivo tar existente
+chmod 755 new4.txt				 --> cambiar permisos al archivo
+cut -c 2-4 dupes.txt				 --> muestra las letras de cada linea indicadas "corta" 
+cat dupes.txt | rev | cut -c 1-2 | rev		 --> muestra los 2 ultimos caracteres de cada linea
+cut -c 5- dupes.txt				 --> mostrar del caracter dado hasta el final de cada linea 
+cat dupes.txt | awk '{print $3}'		 --> Mostrar la columna 3 del archivo
+ps | awk "NR>1{print $1}"			 --> mismo resultado anterior pero sin los encabezados o primer linea 
+cat /etc/passwd | awk -F ":" "{print $1}"	 --> obtener datos antes del delimitador
+cat /etc/passwd | awk -F ":" "{print $1"\t\t"$2"}" --> mismo comando pero con varios valores separados por tabulador
+cat /etc/passwd | awk "BEGIN{FS=":";} {print $1"\t"$3"\t"$4}" --> mismo resultado que el anterior pero con otro comando
+cat /etc/passwd | awk "BEGIN{FS=":";OFS=" - "} {print $1"\t"$3"\t"$4}" --> mismo resultado que el anterior pero con separador
+"awk -F "/" /^// {print } /etc/shells | uniq "	 --> imprime lo que esta despues del ultimo delimitador y quita duplicados
+sed -n 3,5p 2dupes.txt				 --> Mostrar lineas especificadas de un archivo
+sed s/text/textos/ 2dupes.txt > 3dupes.txt	 --> cambia el texto senalado y crea una copia del archivo original
