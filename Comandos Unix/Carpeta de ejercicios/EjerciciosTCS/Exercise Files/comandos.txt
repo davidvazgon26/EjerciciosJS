@@ -26,6 +26,7 @@ atajos Ctrl+a y Ctrl+e				 --> mover al inicio y al final de la linea de comando
 atajos &&					 --> Ejecutar el siguiente comando concatenado si el anterior es exitoso
 apropos description edit			 --> busqueda de comandos a partir de palabras clave
 find . -maxdepth 1 -type f -name "new*.txt"	 --> buscar un archivo con una profundidad de solo un nivel
+find  ./ -maxdepth 1 -type f -ctime +8		 --> Buscar archivos con mas de 8 dias de creados
 cp new*.* ./demo				 --> hacer una copia de todos los archivos que comiencen con new al directorio demo
 file new*.*					 --> nuestra el tipo de archivo que es cada uno
 tar -tvf ejemploCompresion.tar.gz		 --> Leer archivos dentro de archivo tar
