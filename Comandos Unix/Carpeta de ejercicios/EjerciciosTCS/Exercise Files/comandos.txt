@@ -46,3 +46,8 @@ cat /etc/passwd | awk "BEGIN{FS=":";OFS=" - "} {print $1"\t"$3"\t"$4}" --> mismo
 "awk -F "/" /^// {print } /etc/shells | uniq "	 --> imprime lo que esta despues del ultimo delimitador y quita duplicados
 sed -n 3,5p 2dupes.txt				 --> Mostrar lineas especificadas de un archivo
 sed s/text/textos/ 2dupes.txt > 3dupes.txt	 --> cambia el texto senalado y crea una copia del archivo original
+ps -ef | grep bash | awk '{print $2}'		 --> Imprime todos los PID que se refieran al proceso bash
+kill $(ps -ef | grep bash | awk "{print $2}"	 --> Mata todos los PID o procesos que se refieran al proceso bash
+find ./ -type f -size +7c			 --> Encontrar archivos mayores a 5c, puede ser M o G tambien
+find ./ -type f -size -1c -exec rm {}\;		 --> Eliminar archivos menores a 0bytes
+find ./ -type f -size +7c -size -3M		 --> Encontrar archivos mayores a 5c y menores a 3Megas, puede ser M o G tambien
