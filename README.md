@@ -7,6 +7,7 @@ Se sub dividen en carpetas por tema.
 
 Existen proyectos de varios lenguajes. 
 
+Se seguirá actualizando los ejercicios en este repositorio
 
 
 
