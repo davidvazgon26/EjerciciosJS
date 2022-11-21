@@ -4,6 +4,16 @@
       "nombre": "Harland Lohora",
       "email": "harland@alura.com",
       "id": 1
+    },
+    {
+      "nombre": "David Vaz",
+      "email": "david@alura.com",
+      "id": 2
+    },
+    {
+      "nombre": "Ale Vaz",
+      "email": "ale@alura.com",
+      "id": 2
     }
   ]
 }
