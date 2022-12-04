@@ -3,11 +3,11 @@ head dupes.txt					 --> muestra las primeras lineas de un archivo
 tail dupes.txt					 --> muestra las ultimas lineas de un archivo
 uname						 --> muestra informacion del sistema
 hostname					 --> muestra informacion del equipo (nombre)
-new.txt new2.txt > new1.txt 			 --> Guarda en new1 la informacion de new y new2
-locate new*.*					 --> funciona similar al comando find para buscar archivos
-find . -type f -name new.txt			 --> para buscar archivos o directorios cambiando la f por d
+nuevo.txt nuevo2.txt > nuevo1.txt 			 --> Guarda en nuevo1 la informacion de nuevo y nuevo2
+locate nuevo*.*					 --> funciona similar al comando find para buscar archivos
+find . -type f -name nuevo.txt			 --> para buscar archivos o directorios cambiando la f por d
 grep -i "the\| of\| text" dupes.txt poems.txt	 --> Busqueda de texto en archivos
 df						 --> obtienes informe sobre el uso del almacenamiento en el equipo
 du -h poems.txt					 --> puedes obtener el tamanio del archivo o directorio al que apuntes
-diff new.txt new1.txt				 --> muestra las diferencias entre archivos
+diff nuevo.txt nuevo1.txt				 --> muestra las diferencias entre archivos
 stat writing.txt			 --> ver mayor detalle de un archivo

@@ -200,9 +200,9 @@
   200  rm ficheromv.txt 
   201  ls
   202  rm ficheromv.txt 
-  203  mkdir newdir
+  203  mkdir nuevodir
   204  ls
-  205  rmdir newdir
+  205  rmdir nuevodir
   206  df
   207  df -h
   208  cd ..
@@ -508,7 +508,7 @@
   508  nano
   509  fg
   510  ls
-  511  cat new2.txt 
+  511  cat nuevo2.txt 
   512  ls
   513  cd ..
   514  tar -cvf myfiles.tar Exercise\ Files/

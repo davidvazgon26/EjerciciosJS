@@ -11,10 +11,12 @@ Knowledge of the Linux command line is critical for anyone who uses this open-so
 Scott Simpson 
                             
 Senior Staff Instructor
-
-                            
+                          
 
 Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/scott-simpson).
 
 [lil-course-url]: https://www.linkedin.com/learning/learning-linux-command-line-14447912
 [lil-thumbnail-url]: https://cdn.lynda.com/course/3005201/3005201-1639765440825-16x9.jpg
+
+
+

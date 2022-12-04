@@ -1,0 +1,51 @@
+4
+5texto
+comandos.txt
+comandos.txt.save
+dddd.txt
+demo
+departments
+dupes.txt
+ejercicio4noviembre
+example.txt
+history.txt.save
+linkdemo
+linkname
+names.txt
+new.txt
+new1.txt
+new2.txt
+new9.txt
+nohup.out
+otronew.txt
+poems.txt
+simple_data.txt
+test.sh
+texto.csv
+writing.txt
+total 44K
+-rwxrwxrwx 1 davidvazgon davidvazgon   12 Nov 30 17:59 4
+-rwxrwxrwx 1 davidvazgon davidvazgon  113 Nov 30 16:12 5texto
+-rwxrwxrwx 1 davidvazgon davidvazgon 4.5K Nov 30 16:12 comandos.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon  935 Nov 30 16:12 comandos.txt.save
+-rwxrwxrwx 1 davidvazgon davidvazgon    0 Nov 30 16:12 dddd.txt
+drwxrwxrwx 1 davidvazgon davidvazgon 4.0K Nov 30 16:12 demo
+drwxrwxrwx 1 davidvazgon davidvazgon 4.0K Oct 18 09:53 departments
+-rwxrwxrwx 1 davidvazgon davidvazgon  160 Nov 30 16:12 dupes.txt
+drwxrwxrwx 1 davidvazgon davidvazgon 4.0K Nov 30 16:12 ejercicio4noviembre
+-rwxrwxrwx 1 davidvazgon davidvazgon    6 Nov 30 16:12 example.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon  23K Nov 30 16:12 history.txt.save
+drwxrwxrwx 1 davidvazgon davidvazgon 4.0K Nov 30 16:12 linkdemo
+-rwxrwxrwx 1 davidvazgon davidvazgon   16 Nov 30 16:12 linkname
+-rwxrwxrwx 1 davidvazgon davidvazgon   31 Nov 30 16:12 names.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon   22 Nov 30 16:12 new.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon   64 Nov 30 17:27 new1.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon   49 Nov 30 16:12 new2.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon   22 Nov 30 16:12 new9.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon  266 Nov 30 22:13 nohup.out
+-rwxrwxrwx 1 davidvazgon davidvazgon   16 Nov 30 16:12 otronew.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon 1.5K Nov 30 16:12 poems.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon  129 Nov 30 16:12 simple_data.txt
+-rwxrwxrwx 1 davidvazgon davidvazgon   64 Nov 30 16:12 test.sh
+-rwxrwxrwx 1 davidvazgon davidvazgon  113 Nov 30 16:12 texto.csv
+-rwxrwxrwx 1 davidvazgon davidvazgon 1.5K Nov 30 16:12 writing.txt
