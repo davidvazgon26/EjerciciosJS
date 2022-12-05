@@ -3,11 +3,54 @@ head dupes.txt					 --> muestra las primeras lineas de un archivo
 tail dupes.txt					 --> muestra las ultimas lineas de un archivo
 uname						 --> muestra informacion del sistema
 hostname					 --> muestra informacion del equipo (nombre)
-nuevo.txt nuevo2.txt > nuevo1.txt 			 --> Guarda en nuevo1 la informacion de nuevo y nuevo2
+nuevo.txt nuevo2.txt > nuevo1.txt			 --> Guarda en nuevo1 la informacion de nuevo y nuevo2
 locate nuevo*.*					 --> funciona similar al comando find para buscar archivos
 find . -type f -name nuevo.txt			 --> para buscar archivos o directorios cambiando la f por d
 grep -i "the\| of\| text" dupes.txt poems.txt	 --> Busqueda de texto en archivos
 df						 --> obtienes informe sobre el uso del almacenamiento en el equipo
 du -h poems.txt					 --> puedes obtener el tamanio del archivo o directorio al que apuntes
 diff nuevo.txt nuevo1.txt				 --> muestra las diferencias entre archivos
-stat writing.txt			 --> ver mayor detalle de un archivo
+stat writing.txt				 --> ver mayor detalle de un archivo
+whoami						 --> Comando para ver el usuario actual 
+uname -a					 --> ver el sistema operativo utilizado
+free						 --> ver la memoria del sistema
+lshw						 --> ver informacion del equipo o hardware detallado
+tar -cvf archivocomprimido.tar dupes.txt	 --> pasar un archivo o directorio a .tar
+tar -xf name.tar -c directorio			 --> para extraer archivos 
+lsblk						 --> Ver mis particiones de almacenamiento
+info coreutils					 --> informacion sobre los comandos disponibles en la shell
+wc poems.txt					 --> muestra el total de lineas, palabras y bytes del archivo
+atajos Ctrl+c y Ctrl+z				 --> detienen el comando que se este ejecutando
+atajos Ctrl+s y Ctrl+q				 --> congelar y descongelar el comando que se este ejecutando
+atajos Ctrl+a y Ctrl+e				 --> mover al inicio y al final de la linea de comando actual en la shell
+atajos &&					 --> Ejecutar el siguiente comando concatenado si el anterior es exitoso
+apropos description edit			 --> busqueda de comandos a partir de palabras clave
+find . -maxdepth 1 -type f -name "nuevo*.txt"	 --> buscar un archivo con una profundidad de solo un nivel
+find  ./ -maxdepth 1 -type f -ctime +8		 --> Buscar archivos con mas de 8 dias de creados
+cp nuevo*.* ./demo				 --> hacer una copia de todos los archivos que comiencen con nuevo al directorio demo
+file nuevo*.*					 --> nuestra el tipo de archivo que es cada uno
+tar -tvf ejemploCompresion.tar.gz		 --> Leer archivos dentro de archivo tar
+tar -xvf ejemploCompresion.tar ./demo2/nuevo3.txt	 --> Extraer solo un archivo de archivo tar.gz
+tar -xvf sampleArchive.tar --wildcards "*.jpg"	 --> Extraer de archivo tar con patron
+tar -rvf ejemploCompresion.tar.gz dupes.txt	 --> Agregar archivo a archivo tar existente
+chmod 755 nuevo4.txt				 --> cambiar permisos al archivo
+cut -c 2-4 dupes.txt				 --> muestra las letras de cada linea indicadas "corta" 
+cat dupes.txt | rev | cut -c 1-2 | rev		 --> muestra los 2 ultimos caracteres de cada linea
+cut -c 5- dupes.txt				 --> mostrar del caracter dado hasta el final de cada linea 
+cat dupes.txt | awk '{print $3}'		 --> Mostrar la columna 3 del archivo
+ps | awk "NR>1{print $1}"			 --> mismo resultado anterior pero sin los encabezados o primer linea 
+cat /etc/passwd | awk -F ":" "{print $1}"	 --> obtener datos antes del delimitador
+cat /etc/passwd | awk -F ":" "{print $1"\t\t"$2"}" --> mismo comando pero con varios valores separados por tabulador
+cat /etc/passwd | awk "BEGIN{FS=":";} {print $1"\t"$3"\t"$4}" --> mismo resultado que el anterior pero con otro comando
+cat /etc/passwd | awk "BEGIN{FS=":";OFS=" - "} {print $1"\t"$3"\t"$4}" --> mismo resultado que el anterior pero con separador
+"awk -F "/" /^// {print } /etc/shells | uniq "	 --> imprime lo que esta despues del ultimo delimitador y quita duplicados
+sed -n 3,5p 2dupes.txt				 --> Mostrar lineas especificadas de un archivo
+sed s/text/textos/ 2dupes.txt > 3dupes.txt	 --> cambia el texto senalado y crea una copia del archivo original
+ps -ef | grep bash | awk '{print $2}'		 --> Imprime todos los PID que se refieran al proceso bash
+kill $(ps -ef | grep bash | awk "{print $2}"	 --> Mata todos los PID o procesos que se refieran al proceso bash
+find ./ -type f -size +7c			 --> Encontrar archivos mayores a 5c, puede ser M o G tambien
+find ./ -type f -size -1c -exec rm {}\;		 --> Eliminar archivos menores a 0bytes
+find ./ -type f -size +7c -size -3M		 --> Encontrar archivos mayores a 5c y menores a 3Megas, puede ser M o G tambien
+find . -maxdepth 1 -type f -size 0c -delete	 --> Eliminar los archivos (no directorios) que esten vacios o 0 bytes
+cat /etc/passwd | grep bash | awk -F: '{ print $1}'; --> Ver los usuarios del sistema
+
