@@ -53,4 +53,5 @@ find ./ -type f -size -1c -exec rm {}\;		 --> Eliminar archivos menores a 0bytes
 find ./ -type f -size +7c -size -3M		 --> Encontrar archivos mayores a 5c y menores a 3Megas, puede ser M o G tambien
 find . -maxdepth 1 -type f -size 0c -delete	 --> Eliminar los archivos (no directorios) que esten vacios o 0 bytes
 cat /etc/passwd | grep bash | awk -F: '{ print $1}'; --> Ver los usuarios del sistema
+Esperando mas
 
