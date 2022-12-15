@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 
+## Muestra de archivo final
+
+![Imagen resultado final](./public/ResultPractiaReact.PNG){:width="200px" height="100px"}
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,6 +1,15 @@
 # Getting Started with Create React App
 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+In this exercise I see the use of lazyLoader.
+
+For better results, use the browser tools, in network options to use the network limitations tool and to better see how lazyLoader works
+
+Sample of the final result:
+
+![This is the result](./public/UsoDeLazyLoaderEnReact.PNG)
 
 ## Available Scripts
 

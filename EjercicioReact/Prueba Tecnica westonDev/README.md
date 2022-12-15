@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Resultado deseado o final:
+
+![imagen](./public/challenge.PNG)
+
 ## Bases:
 
 * Crear 3 ractangulos con nombres de ejemplo
