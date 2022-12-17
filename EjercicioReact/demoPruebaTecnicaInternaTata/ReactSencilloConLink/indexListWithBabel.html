@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="http://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="http://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+    <title>HTML con React</title>
+</head>
+<body>
+    <!-- Este ejercicio en un ejercicio sencillo de react pero sin crear todo el empaquetado necesario, 
+        solo utilizando los link para simular el empaquetado -->
+    
+<!-- En este ejercicio vemos como te ayuda babel a reducir y eficientar tu codigo sin que te marque errores de tag el browser -->
+
+<!-- Puedes probar tu codigo en line en la siguiente direccion:  https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.21&spec=false&loose=false&code_lz=Q&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Creact%2Cstage-2&prettier=false&targets=&version=7.20.6&externalPlugins=&assumptions=%7B%7D -->
+
+
+        <div id="root"></div>
+
+        <script type="text/babel">
+           
+            ReactDOM.render(
+                <ul>
+                    <li>🥡</li>
+                    <li>🤠</li>
+                    <li>😎</li>
+                </ul>,
+                document.getElementById("root")
+            );
+        </script>
+
+</body>
+</html>
