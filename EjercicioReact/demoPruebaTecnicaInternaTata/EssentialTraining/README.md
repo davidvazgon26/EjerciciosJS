@@ -2,6 +2,27 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Others Links: 
+
+https://jestjs.io/es-ES/docs/using-matchers
+
+https://api.github.com/users/ + ID User
+
+https://snowtooth.moonhighway.com/
+
+formik.org
+
+react-hook-form.com 
+
+usehooks.com 
+
+For deploy: https://www.netlify.com/
+
+Deploy: https://tranquil-travesseiro-d63360.netlify.app/
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:

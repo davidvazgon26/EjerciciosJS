@@ -5,8 +5,8 @@ function AppFormWithUseRef() {
   const txtTitle = useRef();
   const hexColor = useRef();
 
-  console.log(txtTitle);
-  console.log(hexColor);
+  // console.log(txtTitle);
+  // console.log(hexColor);
   
   const submit = (e) =>{
     e.preventDefault();
