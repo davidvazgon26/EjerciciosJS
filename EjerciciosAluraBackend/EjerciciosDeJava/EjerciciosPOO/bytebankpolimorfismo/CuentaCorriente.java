@@ -8,10 +8,14 @@ public class CuentaCorriente extends Cuenta {
     }
 
     @Override
-    public boolean retirar(double valor) {
+    public void retirar(double valor) {
         // comision del 2% por las transferencias o retiros de la cuenta corriente
-        double valorARetirar = valor + 0.2;
+       /*
+         double valorARetirar = valor + 0.2;
         return super.retirar(valorARetirar);
+        */
+        double valorARetirar = valor + 0.2;
+        super.retirar(valorARetirar);
     }
 
     @Override

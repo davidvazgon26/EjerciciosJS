@@ -1,10 +1,14 @@
 package EjerciciosPOO.bytebankpolimorfismo;
 
 public abstract class Funcionario {
+
     private String nombre;
     private String documento; 
     private double salario;
     private int tipo;
+
+    public Funcionario(){}
+
     public String getNombre() {
         return nombre;
     }

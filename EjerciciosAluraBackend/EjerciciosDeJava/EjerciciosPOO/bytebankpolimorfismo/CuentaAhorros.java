@@ -4,6 +4,7 @@ public class CuentaAhorros extends Cuenta {
 
     public CuentaAhorros(int agencia, int numero) {
         super(agencia, numero);
+        System.out.println("Se creo la cuenta No: "+ numero);
     }
 
     @Override
