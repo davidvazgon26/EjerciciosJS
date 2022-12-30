@@ -1,4 +1,6 @@
-package EjerciciosPOO.bytebankpolimorfismo;
+package EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.test;
+
+import EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.modelo.Gerente;
 
 public class TestGerente {
 

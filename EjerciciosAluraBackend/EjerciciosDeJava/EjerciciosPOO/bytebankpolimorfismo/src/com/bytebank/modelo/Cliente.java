@@ -1,4 +1,4 @@
-package EjerciciosPOO.bytebankpolimorfismo;
+package EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.modelo;
 
 public class Cliente implements Autenticable{
         private String nombre;

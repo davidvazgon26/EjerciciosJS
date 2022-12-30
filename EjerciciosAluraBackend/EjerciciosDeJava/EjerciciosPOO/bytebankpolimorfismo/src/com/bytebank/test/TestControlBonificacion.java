@@ -1,4 +1,6 @@
-package EjerciciosPOO.bytebankpolimorfismo;
+package EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.test;
+
+import EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.modelo.*;
 
 public class TestControlBonificacion {
     public static void main(String[] args) {

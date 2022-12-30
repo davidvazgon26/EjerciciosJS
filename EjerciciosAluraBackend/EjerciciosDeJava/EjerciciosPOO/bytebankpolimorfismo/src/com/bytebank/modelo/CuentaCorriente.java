@@ -1,4 +1,4 @@
-package EjerciciosPOO.bytebankpolimorfismo;
+package EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.modelo;
 
 public class CuentaCorriente extends Cuenta {
 

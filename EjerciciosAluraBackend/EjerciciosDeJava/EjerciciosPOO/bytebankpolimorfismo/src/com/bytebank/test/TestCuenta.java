@@ -1,4 +1,7 @@
-package EjerciciosPOO.bytebankpolimorfismo;
+package EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.test;
+
+import EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.modelo.CuentaAhorros;
+import EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.modelo.CuentaCorriente;
 
 public class TestCuenta {
     public static void main(String[] args) {

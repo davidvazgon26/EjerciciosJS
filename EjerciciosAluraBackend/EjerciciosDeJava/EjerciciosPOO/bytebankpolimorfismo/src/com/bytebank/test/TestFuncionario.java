@@ -1,4 +1,7 @@
-package EjerciciosPOO.bytebankpolimorfismo;
+package EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.test;
+
+import EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.modelo.Contador;
+import EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.modelo.Funcionario;
 
 public class TestFuncionario {
 

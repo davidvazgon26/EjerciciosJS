@@ -1,4 +1,5 @@
-package EjerciciosPOO.bytebankpolimorfismo;
+package EjerciciosPOO.bytebankpolimorfismo.src.com.bytebank.modelo;
+
 public abstract class Cuenta {
 
     private static int total = 0;
