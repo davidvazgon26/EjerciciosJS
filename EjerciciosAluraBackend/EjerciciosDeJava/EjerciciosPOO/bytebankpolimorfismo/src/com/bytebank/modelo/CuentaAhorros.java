@@ -11,5 +11,12 @@ public class CuentaAhorros extends Cuenta {
     public void depositar(double valor) {
             this.saldo = this.saldo + valor;        
     }
+
+    @Override
+    public String toString() {
+        return "CuentaAhorros, " + super.toString();
+    }
+
+    
     
 }
