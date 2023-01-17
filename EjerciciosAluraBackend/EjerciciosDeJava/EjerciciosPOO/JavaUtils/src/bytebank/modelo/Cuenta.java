@@ -114,4 +114,17 @@ public abstract class Cuenta {
     	return cuenta;
     }
 
+    public boolean esIgual(Cuenta cuenta){
+        return this.agencia == cuenta.getAgencia() &&
+                this.numero == cuenta.getNumero(); 
+    }
+
+    //Lo mismo que esIgual pero sobreescribiendo el metodo equals
+    @Override
+    public boolean equals(Object obj) {
+        Cuenta cuenta = (Cuenta) obj;
+        return this.agencia == cuenta.getAgencia() &&
+        this.numero == cuenta.getNumero(); 
+    }
+
 }
