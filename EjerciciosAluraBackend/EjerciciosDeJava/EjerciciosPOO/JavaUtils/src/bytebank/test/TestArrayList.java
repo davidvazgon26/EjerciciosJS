@@ -1,15 +1,21 @@
 package EjerciciosPOO.JavaUtils.src.bytebank.test;
 
 import java.util.ArrayList;
+// import java.util.LinkedList;
+import java.util.List;
 
 import EjerciciosPOO.JavaUtils.src.bytebank.modelo.Cuenta;
 import EjerciciosPOO.JavaUtils.src.bytebank.modelo.CuentaCorriente;
 
 public class TestArrayList {
     public static void main(String[] args) {
-        // Con <> forzo a que acepte solo un tipo de objeto
-        ArrayList<Cuenta> lista = new ArrayList<>();
 
+
+        // Con <> forzo a que acepte solo un tipo de objeto
+        // ArrayList<Cuenta> lista = new ArrayList<>();
+
+        //Cambiando ArrayList por la interface de List y la implementacion de LinkedList o  ArrayList
+        List<Cuenta> lista = new ArrayList<>();
         Cuenta cc = new CuentaCorriente(11,22);
         Cuenta cc2 = new CuentaCorriente(13,42);
         Cuenta cc3 = new CuentaCorriente(11,22);
