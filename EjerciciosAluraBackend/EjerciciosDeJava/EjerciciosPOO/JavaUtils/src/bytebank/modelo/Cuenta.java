@@ -4,10 +4,10 @@ package EjerciciosPOO.JavaUtils.src.bytebank.modelo;
  * Cuenta va a crear nuevas instancias de CuentaCorriente
  * 
  * @version 1.0
- * @author diegorojas
+ * @author davidvazgon
  *
  */
-public abstract class Cuenta {
+public abstract class Cuenta implements Comparable<Cuenta> {
 	
 	// public      // Accesible desde cualquier parte
 	// --default   // Accesible dentro del paquete
@@ -62,7 +62,6 @@ public abstract class Cuenta {
             try {
 				this.saca(valor);
 			} catch (SaldoInsuficienteException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
             destino.deposita(valor);
@@ -110,7 +109,7 @@ public abstract class Cuenta {
     
     @Override
     public String toString() {
-    	String cuenta = "Numero: " + this.numero + ", Agencia:" + this.agencia;
+    	String cuenta = "Numero: " + this.numero + ", Agencia:" + this.agencia + ", Nombre: "+ this.titular.getNombre();
     	return cuenta;
     }
 
@@ -125,6 +124,12 @@ public abstract class Cuenta {
         Cuenta cuenta = (Cuenta) obj;
         return this.agencia == cuenta.getAgencia() &&
         this.numero == cuenta.getNumero(); 
+    }
+
+    @Override
+    public int compareTo(Cuenta o){
+        //Orden natural por numero de agencia
+        return Integer.compare(this.agencia, o.getAgencia());
     }
 
 }
