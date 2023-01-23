@@ -1,12 +1,20 @@
 package EjerciciosPOO.JavaCollections.src.mx.com.alura.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet; 
+// import java.util.LinkedHashSet; // // clase 16
 import java.util.List;
+import java.util.Map;
 
 public class Curso implements Comparable<Curso> {
     private String nombre;
     private int tiempo;
     private List<Aula> aulaList = new ArrayList<>();
+    private Collection<Alumno> alumnos = new HashSet<>(); 
+    // private Collection<Alumno> alumnos = new LinkedHashSet<>();// Cambio a LinkedHashSet en la clase 16
+    private Map<String, Alumno> alumnoMap = new HashMap<>();  // clase 18
    
     //Constructor 1
     public Curso(String nombre, int tiempo) {
@@ -43,9 +51,22 @@ public class Curso implements Comparable<Curso> {
         this.aulaList = aulaList;
     }
 
+    public Collection<Alumno> getAlumnos() {  //Se agrego en la clase 15
+        return alumnos;
+    }
+
     public void addAula(Aula clase){
         this.aulaList.add(clase);    
     }
+
+    public void addAlumno(Alumno alumno){
+        this.alumnos.add(alumno);
+        this.alumnoMap.put(alumno.getCodigo(), alumno); // Clase 18
+    }
+
+    
+
+    public boolean verificaAlumno(Alumno alumno){ return this.alumnos.contains(alumno);}  //Se agrego en la clase 15
     
 
     //Otro ejemplo de como y porque sobreescribir el metodo to string, si no lo hago solo veremos en consola la referencia al objeto.
@@ -59,6 +80,10 @@ public class Curso implements Comparable<Curso> {
     public int compareTo(Curso o) {
 
         return this.nombre.compareTo(o.getNombre());
+    }
+
+    public Map<String, Alumno> getAlumnoMap() {  // Clase 18
+        return alumnoMap;
     }
     
 }

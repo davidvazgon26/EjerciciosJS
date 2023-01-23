@@ -1,7 +1,7 @@
 package EjerciciosPOO.JavaCollections.src.mx.com.alura.model;
 
 public class Aula{
-    String nombre;
+    private String nombre;
    
     public Aula(String nombre) {
         this.nombre = nombre;
