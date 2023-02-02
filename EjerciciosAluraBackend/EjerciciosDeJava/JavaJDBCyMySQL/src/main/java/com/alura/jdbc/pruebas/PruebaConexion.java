@@ -1,4 +1,4 @@
-package JavaJDBCyMySQL.src.main.java.com.alura.jdbc;
+package com.alura.jdbc.pruebas;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +8,7 @@ public class PruebaConexion {
 
     public static void main(String[] args) throws SQLException {
         Connection con = DriverManager.getConnection(
-                "jdbc:mariadb://localhost:3306/control_de_stock?useTimeZone=true&serverTimeZone=UTC",
+                "jdbc:mysql://localhost:3306/control_de_stock?useTimeZone=true&serverTimeZone=UTC",
                 "dbuser",
                 "dbuser");
 
