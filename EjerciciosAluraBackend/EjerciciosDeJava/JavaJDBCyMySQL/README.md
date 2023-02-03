@@ -61,3 +61,34 @@ DriverManager.getConnection(
 * Para abrir una conexión con la base de datos debemos utilizar el método getConnection de la clase DriverManager;
     * El método getConnection recibe tres parámetros. Son ellos la URL de conexión JDBC, el usuario y la contraseña.
     * Nunca olvidar finalizzar o cerrar la conexion a la base de datos.
+
+
+### Injection
+
+Cuando ejecutamos una query SQL como Statement tenemos un riesgo de seguridad llamado SQL Injection;
+
+SQL Injection es el hecho de enviar comandos SQL como parámetro de las solicitudes en una aplicación.
+
+Para evitar el fallo por SQL Injection debemos utilizar la interfaz PreparedStatement;
+
+Diferente del Statement, el PreparedStatement trata los parámetros del comando SQL para que caracteres y comandos especiales sean tratados como strings, lo cual nos ayuda a evitar los injections.
+
+Las bases de datos ofrecen un recurso llamado transacción, que junta muchas operaciones SQL como un conjunto de ejecución;
+
+Si el conjunto falla no es aplicada ninguna modificación y ocurre el rollback de la transacción. (uso de autocommit con : setAutocommit, commit y rollback en nuestros statements)
+
+Todos los comandos del conjunto necesitan funcionar para que la transacción sea finalizada con un commit.
+
+Para garantizar el cierre de los recursos abiertos en el código, Java provee un recurso llamado try-with-resources para ayudarnos;
+
+Para utilizar este recurso es necesario que la clase utilizada (como la Connection) implemente la interfaz Autocloseable, aqui un ejemplo de codigo:
+
+```
+//Puede ser con, statement o cualquier metodo que cree una conexion a la BD.
+
+final Connection con = new ConnectionFactory().recuperaConexion();
+
+try(con){  
+    codigo...
+}
+```
