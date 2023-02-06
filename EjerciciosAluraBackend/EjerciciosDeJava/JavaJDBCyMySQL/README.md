@@ -92,3 +92,13 @@ try(con){
     codigo...
 }
 ```
+
+### Ventajas del estándar DAO
+
+Tiene que ver con la capacidad de aislar en un lugar centralizado, toda la lógica de acceso al repositorio de datos de la entidad. Así estaremos evitando duplicación de código y centralización de la lógica.
+
+Se compone de archivo "Modelo", archivo "Controller" y archivo DAO o de persistencia. 
+
+Lo anterior es la forma de organizar el codigo para obtener algo parecido a lo siguiente:
+
+view <--> controller <--> persistencia
