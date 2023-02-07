@@ -1,5 +1,7 @@
 package com.alura.jdbc.view;
 
+
+/** 
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -284,3 +286,5 @@ public class ControlDeStockFrame_copy extends JFrame {
     }
 
 }
+
+*/

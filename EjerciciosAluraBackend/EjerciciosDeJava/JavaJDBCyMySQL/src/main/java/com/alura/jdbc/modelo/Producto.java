@@ -1,6 +1,5 @@
 package com.alura.jdbc.modelo;
 
-
 //Este es el modelo o la representacion de la tabla producto en la base de datos aqui en el backend.
 public class Producto {
    
@@ -20,6 +19,12 @@ public class Producto {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.cantidad = cantidad;
+    }
+
+    public Producto(int id, String nombre, int cantidad) {
+        this.id = id;
+        this.nombre = nombre;
         this.cantidad = cantidad;
     }
 
