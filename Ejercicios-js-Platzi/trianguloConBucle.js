@@ -14,7 +14,6 @@ function printTriangle(size, character){
         if(index !== size){cadena = cadena +  "\n";}
     }
     return cadena;
-
 }
 
 console.log(printTriangle(5,"*"));
