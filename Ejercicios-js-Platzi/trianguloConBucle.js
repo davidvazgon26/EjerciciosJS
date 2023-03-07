@@ -19,3 +19,6 @@ function printTriangle(size, character){
 console.log(printTriangle(5,"*"));
 
 
+
+
+
