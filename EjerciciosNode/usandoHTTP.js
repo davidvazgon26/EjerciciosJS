@@ -2,7 +2,7 @@
 
 const http = require('http');  //requerimos http
 const server = http.createServer((req,res)=>{
-    res.end('respondiendo a la solicitud')
+    res.end('respondiendo a la solicitud v2')
 }) //creamos el servidor
 
 //Configurando el puerto
