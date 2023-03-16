@@ -14,17 +14,61 @@ updateTask(taskId, updates): Buscar la tarea correspondiente con el id especific
  
  function createTaskPlanner() {
   // Tu código aquí 👈
+  const task = []
+  return {
+    prueba: "esta es una prueba",
+    addTask: (obj) => {
+      task.push({
+        id: obj.id,
+        name: obj.name,
+        priority: obj.priority,
+        tags: obj.tags.length ? obj.tags : [],
+        completed: obj.completed === true ? true : false,
+      });
+      console.log("Registro exitoso");
+    },
+    getTasks: () => task,
+    removeTask: (id) => {
+      const indice = task.findIndex((el) => el.id === id); //Encuentro el indice
+      task.splice(task.indexOf(indice), 1); // Lo elimino del arreglo
+    },
+    getPendingTasks: () => {
+      return task.filter((el) => !el.completed);
+    },
+    getCompletedTasks: () => {
+      return task.filter((el) => el.completed);
+    },
+    markTaskAsCompleted: (value) => {
+        if(typeof value === 'string'){
+            task.forEach(arr => {if(arr.name === value) arr.completed=true})
+        }else{
+            task.forEach(arr => {if(arr.id === value) arr.completed=true})
+        }
+    },
+    getSortedTasksByPriority: ()=>{
+        const sortedtask = [...task].sort((a, b) => a.priority - b.priority);
+      return sortedtask;
+    },
+    filterTasksByTag:(tag) => {
+        return task.filter((task) => task.tags.includes(tag));
+      },
+    updateTask:(taskId, updates) => {
+     
+        // obtenemos el id como lo hicimos previamente
+        const index = tasks.findIndex((task) => task.id === taskId);
+        // agregamos las propiedades extras destructurando ambos objetos
+        tasks[index] = { ...tasks[index], ...updates };
+      },
+  };
 
-
+    
 }
-
-
-
-
 
 
 const planner = createTaskPlanner();
 
+console.log(planner.prueba);
+
 planner.addTask({
     id: 1,
     name: "Comprar leche",
@@ -32,50 +76,38 @@ planner.addTask({
     tags: ["shopping", "home"]
 });
 
+planner.addTask({
+    id: 3,
+    name: "Comprar leche",
+    priority: 1,
+    tags: ["shopping", "home"],
+    completed: true
+});
 
 planner.addTask({
     id: 2,
-    name: "Llamar a Juan",
-    priority: 3,
-    tags: ["personal"]
-});
-
-planner.markTaskAsCompleted("Llamar a Juan")
-
-Output:
-planner.getCompletedTasks()
-// [{
-//     id: 2,
-//     name: "Llamar a Juan",
-//     completed: true,
-//     priority: 3,
-//     tags: ["personal"]
-// }]
-
-const planner2 = createTaskPlanner();
-
-
-planner2.addTask({
-    id: 1,
     name: "Comprar leche",
     priority: 1,
-    tags: ["shopping", "home"]
+    tags: ["shopping", "home"],
+    completed: true
 });
 
-planner2.addTask({
-    id: 2,
-    name: "Llamar a Juan",
-    priority: 3,
-    tags: ["personal"]
-});
 
-Output:
-planner2.filterTasksByTag("shopping")
+console.log(planner.getTasks())
 
-// [{
-//     id: 1,
-//     name: "Comprar leche",
-//     completed: false,
-//     priority: 3,
-//     tags: ["shopping", "home"]
-// }]
+
+planner.removeTask(2);
+console.log("------------------------")
+console.log(planner.getTasks())
+console.log("------------------------")
+console.log(planner.getCompletedTasks())
+console.log("------------------------")
+console.log(planner.getPendingTasks())
+console.log("------------------------")
+
+planner.markTaskAsCompleted("Comprar leche")
+
+console.log("------------------------")
+console.log("------------------------")
+console.log(planner.getTasks())
+
