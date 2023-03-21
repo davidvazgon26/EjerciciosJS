@@ -11,3 +11,6 @@ const port = 3000;  // traen el puerto de nuestro archivo .env o utiliza el por 
 server.listen(port,()=>{
     console.log(`Escuchando en el puerto ${port}`)
 })
+
+
+//Tengo otro ejemplo en la careta Ejercicios-js-Platzi/moServidorConHTTP.js
