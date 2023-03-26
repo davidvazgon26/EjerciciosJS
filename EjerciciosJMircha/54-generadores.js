@@ -21,7 +21,7 @@ let iterador = iterable()
 console.log(iterador.next())
 console.log(iterador.next())
 
-//podemos uasr un for of para no tener que estar invocando a nuestra funcion generadora
+//podemos usar un for of para no tener que estar invocando a nuestra funcion generadora
 
 for (const y of iterador) {
     console.log(y)
