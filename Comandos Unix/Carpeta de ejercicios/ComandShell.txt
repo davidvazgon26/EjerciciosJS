@@ -1,0 +1,37 @@
+
+Planteamiento del problema
+Usted está trabajando como administrador de sistemas Linux en un ABC Infotech, su administración quiere información detallada de una máquina en particular, así que ayúdelos con la serie de comandos en el archivo de script de shell para que obtengan la información del sistema de su elección. La información del sistema requerida se enumera a continuación:
+
+Información del nombre de host                                          hostname 
+Uso del espacio en disco del sistema de archivos                        df -h /
+Memoria libre y usada en el sistema                                     free -h
+Tiempo de actividad y carga del sistema                                 uptime
+Usuarios conectados                                                     who
+Los 5 procesos principales en lo que respecta al uso de memoria         ps --sort=-rss -eo rss,pid,cmd | head -6
+
+Nota:
+
+Cree un archivo de script de Shell denominado script.sh en la ruta /Desktop y ejecútelo.
+
+Archivo:
+
+#!/bin/bash
+
+echo "Hostname: $(hostname)"
+echo "Disk usage: $(df -h /)"
+echo "Memory usage: free -m"
+echo "Uptime: $(uptime)"
+echo "Connected users:"
+who
+echo "Top 5 memory-consuming processes:"
+ps aux --sort=-%mem | head -6 | awk '{print $2, $4, $11}'
+
+
+Para crear el archivo de script de shell, siga estos pasos:
+
+Abra un editor de texto, como el Bloc de notas o el Editor de texto de Linux.
+Copie y pegue el script de shell proporcionado en el editor de texto.
+Guarde el archivo con el nombre "script.sh" en la ruta "/Desktop". Asegúrese de seleccionar "Todos los archivos" en la lista desplegable "Guardar como tipo" y agregar la extensión ".sh" al final del nombre del archivo.
+Abra una terminal y navegue hasta la ubicación del archivo de script de shell. Por ejemplo, si su nombre de usuario es "usuario", el comando sería: cd /home/usuario/Desktop
+Ejecute el archivo de script de shell con el comando: ./script.sh
+El script mostrará la información del sistema requerida en la terminal.
