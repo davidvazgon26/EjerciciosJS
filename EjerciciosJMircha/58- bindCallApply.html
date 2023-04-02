@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        console.log(this)
+        console.log(window )
+
+        console.log(this === window)
+
+        // En el navegador window y el this global son iguales
+
+        this.lugar = "Contexto Global";
+
+        function saludar(){
+            console.log(this.lugar)
+        }
+
+        saludar(); // Contexto Global
+
+        const obj = {
+            lugar:"Contexto Objeto"
+        }
+
+        saludar.call(obj) // Contexto Objeto, porque call le cambia el contexto
+        saludar.apply(obj) // Contexto Objeto, porque apply tambien le cambia el contexto
+
+        // Tanto a call como apply se le pueden pasar otros parametros
+
+        function saludar2(saludo, aQuien){
+            console.log(`${saludo} ${aQuien} ${this.lugar}`)
+        }
+
+        
+        saludar2("HOla", "Roko");
+        saludar2.call(obj, "Hola", "David")
+        saludar2.apply(obj, ["Adios", "Ale"])
+        
+        //poner null es como regresar al contexto global
+        saludar2.call(null, "Hola", "David")
+        saludar2.apply(null, ["Adios", "Ale"])
+
+        //Si queremos enlazar un valor podemos usar bind
+
+        const persona = {
+            nombre:"Juanito",
+            saludar: function (){
+                console.log(`Hola ${this.nombre}`)
+            }
+        }
+
+        persona.saludar();
+
+        this.nombre = "Window"
+
+        const otraPersona = {
+            saludar: persona.saludar  //Para ver la diferencia entre hacer bind y no
+        }
+
+        otraPersona.saludar();
+
+        const otraPersona2 = {
+            saludar: persona.saludar.bind(persona),  // Aqui si hacemos bind
+            saludar2: persona.saludar.bind(this)  // Aqui si hacemos bind
+        }
+
+        otraPersona2.saludar();
+        otraPersona2.saludar2();
+
+
+        
+    </script>
+</body>
+</html>
