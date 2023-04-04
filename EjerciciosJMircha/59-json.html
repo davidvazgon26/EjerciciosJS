@@ -30,14 +30,16 @@
 
  console.log(json)
 
+ // JSON es una interfaz del lenguaje
  console.log(JSON)
 
  //Para ver las diferencias
- console.log("VAlores normales")
+ console.log("Valores normales")
  console.log("{}")
  console.log("[1,2,3]")
 
  //Ahora con parse...
+ //parse analiza una cadena de texto y lo cambia a un valor valido en js, es decir cambia por ej: "[1,2,3]" a [1,2,3]
  console.log("con parse")
  console.log(JSON.parse("{}"))
  console.log(JSON.parse("[1,2,3]"))
@@ -48,11 +50,12 @@
  console.log(JSON.parse('{"cadena":"David","numero":"41","boleano":"true","arreglo":["correr","programar","cocinar"],"objeto":{"twitter":"@davidvazgon","email":"davidvazgon@hotmail.com"},"nulo":null}'))
 
  //Ahora con stringify
+ // Hace lo contrario a parse, stringify convierte un objeto a cadena de texto
  console.log("con Stringify")
 console.log(JSON.stringify({}))
 console.log(JSON.stringify([1,2,3]))
 console.log(typeof JSON.stringify(true))
 console.log(JSON.stringify({x:2, y:3}))
-console.log(JSON.stringify(json))
+console.log(JSON.stringify(json)) // el objeto json esta mas arriba.
 </script>
 </html>
