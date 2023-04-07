@@ -59,3 +59,43 @@ document.querySelectorAll("a").forEach(el => console.log(el))
 console.log(document.querySelectorAll(".card")[2])
 
 console.log(document.querySelectorAll("#menu li"))
+
+// Data atributes
+
+console.log(document.documentElement.lang);
+console.log(document.documentElement.getAttribute("lang")); 
+console.log(document.querySelector(".link-dom").href); 
+console.log(document.querySelector(".link-dom").getAttribute("href")); 
+
+//Modificando elementos del DOM
+console.log(document.documentElement.lang)
+document.documentElement.lang = "en"
+console.log(document.documentElement.lang)
+
+//Regresando al valor iniciaal pero usando setElement
+document.documentElement.setAttribute("lang", "es-MX")
+console.log(document.documentElement.lang) 
+
+const $linkDOM = document.querySelector(".link-dom"); // Se acostumbra en las variables que guardan elementos del DOM agregar al inicio del nombre el signo de "$" para identificarles
+
+$linkDOM.setAttribute("target", "_blank");
+$linkDOM.setAttribute("rel", "nooperner"); // se agrega como buena practica al abrir otra pestana para que no guarde relacion
+$linkDOM.setAttribute("href", "https://www.google.com")
+
+//Ver si existe un elemento 
+console.log($linkDOM.hasAttribute("rel"))
+//quitarlo
+$linkDOM.removeAttribute("rel")
+console.log($linkDOM.hasAttribute("rel"))
+
+//Trabajando con Data-Attributes
+
+console.log($linkDOM.getAttribute("data-description"));
+console.log($linkDOM.dataset);
+
+// modificando dataAttribute
+$linkDOM.setAttribute("data-description", "modelo de objeto del documento")
+console.log($linkDOM.getAttribute("data-description"));
+$linkDOM.dataset.description = "Modificando otra vez"
+console.log($linkDOM.getAttribute("data-description"));
+console.log($linkDOM.hasAttribute("data-description"))
