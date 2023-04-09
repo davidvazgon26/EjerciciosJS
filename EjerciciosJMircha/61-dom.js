@@ -105,3 +105,69 @@ console.log($linkDOM.hasAttribute("data-description"));
 //ver mis estilos
 
 console.log($linkDOM.style)
+console.log($linkDOM.getAttribute('style'))
+console.log($linkDOM.style.backgroundColor)
+
+//Tambien se pueden acceder las propiedades de la siguiente manera (tipo JSON):
+
+console.log(window.getComputedStyle($linkDOM))
+console.log(window.getComputedStyle($linkDOM).getPropertyValue("color"))
+
+//Modificando con setProperty
+
+$linkDOM.style.setProperty("text-decoration", "none")
+$linkDOM.style.setProperty("display", "block")
+$linkDOM.style.width = '50%';
+$linkDOM.style.textAlign = 'center';
+$linkDOM.style.marginLeft = 'auto';
+$linkDOM.style.marginRight = 'auto';
+$linkDOM.style.padding = '1rem';
+$linkDOM.style.borderRadius = '.5rem';
+$linkDOM.style.marginTop = '1.5rem';
+
+console.log($linkDOM.style)
+console.log($linkDOM.getAttribute('style'))
+console.log(window.getComputedStyle($linkDOM).getPropertyValue("padding"))
+
+//usando mis variables CSS
+
+const $html = document.documentElement, 
+        $body = document.body;
+
+let varDarkColor = getComputedStyle($html).getPropertyValue('--dark-color'),
+    varYellowColor = getComputedStyle($html).getPropertyValue('--yellow-color');
+
+    console.log(varDarkColor, varYellowColor)
+
+    $body.style.backgroundColor = varDarkColor;
+    $body.style.color = varYellowColor;
+
+    // Modificando el valor de la variable para que se refleje en el navegador
+    $html.style.setProperty("--dark-color", "red");
+    varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color");
+
+    $body.style.setProperty("background-color", varDarkColor);
+
+    //Agregando y quitando clases de los tag de HTML
+
+    const $card = document.querySelector('.card');
+
+    console.log($card);
+    console.log($card.className);
+    console.log($card.classList);
+    console.log($card.classList.contains("rotate-45"));
+    $card.classList.add("rotate-45");
+    console.log($card.classList.contains("rotate-45"));
+    console.log($card.className);
+    console.log($card.classList);
+    $card.classList.remove("rotate-45");
+    console.log($card.classList.contains("rotate-45"));
+    $card.classList.toggle("rotate-45");
+    console.log($card.classList.contains("rotate-45"));
+    $card.classList.toggle("rotate-45");
+    console.log($card.classList.contains("rotate-45"));
+    $card.classList.toggle("rotate-45");
+    $card.classList.replace("rotate-45", "rotate-135");
+    $card.classList.add("opacity-80", "sepia");
+    $card.classList.remove("opacity-80", "sepia");
+    $card.classList.toggle("opacity-80", "sepia");
