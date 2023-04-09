@@ -98,4 +98,10 @@ $linkDOM.setAttribute("data-description", "modelo de objeto del documento")
 console.log($linkDOM.getAttribute("data-description"));
 $linkDOM.dataset.description = "Modificando otra vez"
 console.log($linkDOM.getAttribute("data-description"));
-console.log($linkDOM.hasAttribute("data-description"))
+console.log($linkDOM.hasAttribute("data-description"));
+
+
+
+//ver mis estilos
+
+console.log($linkDOM.style)
