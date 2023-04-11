@@ -167,6 +167,7 @@ let varDarkColor = getComputedStyle($html).getPropertyValue('--dark-color'),
     $card.classList.toggle("rotate-45");
     console.log($card.classList.contains("rotate-45"));
     $card.classList.toggle("rotate-45");
+    $card.classList.toggle("rotate-45");
     $card.classList.replace("rotate-45", "rotate-135");
     $card.classList.add("opacity-80", "sepia");
     $card.classList.remove("opacity-80", "sepia");
