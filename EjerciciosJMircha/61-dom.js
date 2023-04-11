@@ -192,3 +192,73 @@ let varDarkColor = getComputedStyle($html).getPropertyValue('--dark-color'),
     $whatIsDOM.innerHTML = text  // Usa esta cuando tu texto tenga etiquetas HTML incluidas
     $whatIsDOM.outerHTML = text  // Reemplaza la etiqueta en cuestion para tener una correcta semantica en HTML
     
+
+    //recorriendo los nodos o elementos
+
+    const $cards = document.querySelector(".cards")
+
+    console.log($cards)
+    console.log($cards.children)
+    console.log($cards.children[2])
+    console.log($cards.parentElement)
+    console.log($cards.parentNode)
+    console.log($cards.firstChild)
+    console.log($cards.firstElementChild)
+    console.log($cards.lastChild)
+    console.log($cards.lastElementChild)
+    console.log($cards.nextElementSibling)
+
+    //El ancestro mas cercano que le demos
+
+    console.log($cards.closest("ul"));
+
+
+    // Creando etiquetas dinamicas
+
+    const $figure = document.createElement('figure'),
+    $img = document.createElement('img'),
+    $figcaption = document.createElement('figcaption'),
+    $figcaptionText = document.createTextNode('Animals');
+
+    $img.setAttribute("src", "https://placeimg.com/200/200/animals")
+    $img.setAttribute("alt", "Animals")
+    $figure.classList.add("card")
+    $figcaption.appendChild($figcaptionText)
+    $figure.appendChild($img)
+    $figure.appendChild($figcaption)
+    $cards.appendChild($figure)
+
+    // Otro ejemplo
+    const estaciones = ['Primavera','Verano','Otono','Invierno']
+    const $ul = document.createElement('ul');
+
+    document.write("<h3>Estaciones del Año</h3>");
+    document.body.appendChild($ul);
+
+    estaciones.forEach(el => {
+        const $li = document.createElement('li')
+        $li.textContent = el;
+        $ul.appendChild($li);
+    })
+
+
+    //Usando fragment para insertar en el DOM
+
+    const meses = ['Enero',"Febrero",'Marzo',"Abril",'Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre']
+
+
+    const $ul3 = document.createElement('ul');
+    const $fragment = document.createDocumentFragment()
+
+    meses.forEach(el => {
+        const $li = document.createElement('li');
+        $li.textContent =el;
+        $fragment.appendChild($li)
+    })
+
+    document.write("<h3>Meses del Anio</h3>");
+    $ul3.appendChild($fragment);
+    document.body.appendChild($ul3);
+
+
+
