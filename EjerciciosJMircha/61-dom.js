@@ -258,7 +258,7 @@ let varDarkColor = getComputedStyle($html).getPropertyValue('--dark-color'),
 
     document.write("<h3>Meses del Anio</h3>");
     $ul3.appendChild($fragment);
-    document.body.appendChild($ul3);
+    document.body.appendChild($ul3);  
 
 
 
