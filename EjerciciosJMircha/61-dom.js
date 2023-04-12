@@ -261,4 +261,44 @@ let varDarkColor = getComputedStyle($html).getPropertyValue('--dark-color'),
     document.body.appendChild($ul3);  
 
 
+    //Trabajando con los templates
+
+    const $template = document.getElementById('template-card').content,
+    $fragment2 = document.createDocumentFragment();
+    const cardContent = [
+        {
+            title: "Tecnologia",
+            img: "https://placeimg.com/200/200/tech"
+        },
+        {
+            title: "Animales",
+            img: "https://placeimg.com/200/200/animals"
+        },
+        {
+            title: "Arquitectura",
+            img: "https://placeimg.com/200/200/arch"
+        },
+        {
+            title: "Gente",
+            img: "https://placeimg.com/200/200/people"
+        },
+        {
+            title: "Naturaleza",
+            img: "https://placeimg.com/200/200/nature"
+        },
+    ]
+
+    cardContent.forEach(el => {
+        $template.querySelector("img").setAttribute("src", el.img)
+        $template.querySelector("img").setAttribute("alt", el.title)
+        $template.querySelector("figcaption").textContent = el.title;
+
+        //clonar el template
+
+        let $clone = document.importNode($template, true);
+        $fragment2.appendChild($clone);
+    })
+
+    $cards.appendChild($fragment2)
+
 
