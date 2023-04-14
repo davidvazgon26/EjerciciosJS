@@ -215,6 +215,9 @@ let varDarkColor = getComputedStyle($html).getPropertyValue('--dark-color'),
 
     // Creando etiquetas dinamicas
 
+/*
+
+//insertar una tarjeta nueva
     const $figure = document.createElement('figure'),
     $img = document.createElement('img'),
     $figcaption = document.createElement('figcaption'),
@@ -227,6 +230,8 @@ let varDarkColor = getComputedStyle($html).getPropertyValue('--dark-color'),
     $figure.appendChild($img)
     $figure.appendChild($figcaption)
     $cards.appendChild($figure)
+
+    */
 
     // Otro ejemplo
     const estaciones = ['Primavera','Verano','Otono','Invierno']
@@ -299,6 +304,63 @@ let varDarkColor = getComputedStyle($html).getPropertyValue('--dark-color'),
         $fragment2.appendChild($clone);
     })
 
-    $cards.appendChild($fragment2)
+    // $cards.appendChild($fragment2) // Agrega las tarjetas creadas con el template.
+
+    //Utilizando replace, remove e insert a la antigua  (clase 70)
+
+    const $newCard = document.createElement("figure"),
+    $cloneCards = $cards.cloneNode(true) // para clonar el nodo completo hay que usar true
+
+    $newCard.innerHTML=`
+    <img src="https://placeimg.com/200/200/any" alt="Any">
+    <figcaption>Any</figcaption>
+    `;
+
+    $newCard.classList.add("card") //Agregando estilos a la card a insertar
+
+    // $cards.replaceChild($newCard, $cards.children[2]); // Reemplazando el nodo 2 de las cards
+    // $cards.removeChild($cards.lastElementChild);  // Eliminando la ultima card de las cards quedando solo 4
+    // $cards.insertBefore($newCard, $cards.firstElementChild); // Inserte card al inicio de las card pero se pierde la que se reemplazo
+    // document.body.appendChild($cloneCards) //Se clono todas las cards
 
 
+    // Utilizando los nuevos metodos para reemplazar insertar y remover en el DOM (clase 71)
+
+    /* 
+.insertAdjacent...
+    .insertAdjacentElement(position,el)  // Igual a un appendChild
+    .insertAdjacentHTML(position,html) // Igual a un innerHTML que agrega contenido HTML
+    .insertAdjacentText(position,text) // Igual a un textContent
+
+posiciones:
+    beforebegin (hermano anterior)
+    afterbegin (primer hijo)
+    beforeend (ultimo hijo)
+    afterend  (hermano siguiente)
+*/
+
+const $newCard2 = document.createElement("figure");
+const $newCard3 = document.createElement("figure");
+
+let $contentCard=`<img src="https://placeimg.com/200/200/any" alt="Any">
+<figcaption></figcaption>`;
+
+$newCard2.classList.add("card")
+$newCard2.insertAdjacentHTML("beforeend", $contentCard)
+
+$newCard3.classList.add("card")
+$newCard3.insertAdjacentHTML("beforeend", $contentCard)
+$newCard3.querySelector("figcaption").insertAdjacentText("beforeend", "Any")
+
+// $cards.insertAdjacentElement("beforebegin", $newCard2);
+// $cards.insertAdjacentElement("afterbegin", $newCard2);
+// $cards.insertAdjacentElement("beforeend", $newCard2);
+// $cards.insertAdjacentElement("afterend", $newCard3);
+
+
+//Tambien ya puedes utilizar los metodos de jquery nativamente en js
+
+$cards.prepend($newCard3)
+// $cards.append($newCard3)
+// $cards.before($newCard3)
+// $cards.after($newCard3)
