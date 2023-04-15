@@ -403,6 +403,30 @@ const removerDobleClick = (e) =>{
 
     $eventoRemover.addEventListener("dblclick", removerDobleClick)
 
+// Clase 74 del DOM, Flujo de Eventos (Burbuja y Captura)
 
+const $divsEventos = document.querySelectorAll(".evento-flujo div")
+const $linksEventos = document.querySelector(".evento-flujo a")
 
+console.log($divsEventos)
 
+function flujoEventos(e) {
+    console.log(`Hola te saluda ${this.className}, el click que origino fue ${e.target.className}`);
+    e.stopPropagation();
+}
+
+$divsEventos.forEach(div => {
+    div.addEventListener("click", flujoEventos) 
+    // div.addEventListener("click", flujoEventos, true) //El tercer parametro invierte la burbuja o propagacion 
+        //Ejecutar el vento solo una vez, que simula el montaje de un componente solo en carga
+        // div.addEventListener("click", flujoEventos,{
+        //     capture:false, //Burbuja false, Captura True
+        //     once: true, //ejecuta solo una vez
+        // })
+})
+
+$linksEventos.addEventListener("click", (e)=>{
+    e.preventDefault();  //Previene que no vaya a mi sitio personal con el a href en una nueva pestana.
+    e.stopPropagation();
+    alert("Hola, yo soy David")
+})
