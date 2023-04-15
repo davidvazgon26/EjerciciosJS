@@ -411,22 +411,39 @@ const $linksEventos = document.querySelector(".evento-flujo a")
 console.log($divsEventos)
 
 function flujoEventos(e) {
-    console.log(`Hola te saluda ${this.className}, el click que origino fue ${e.target.className}`);
+    console.log(`Hola te saluda ${this.className || this}, el click que origino fue ${e.target.className}`);
     e.stopPropagation();
 }
 
-$divsEventos.forEach(div => {
-    div.addEventListener("click", flujoEventos) 
-    // div.addEventListener("click", flujoEventos, true) //El tercer parametro invierte la burbuja o propagacion 
-        //Ejecutar el vento solo una vez, que simula el montaje de un componente solo en carga
-        // div.addEventListener("click", flujoEventos,{
-        //     capture:false, //Burbuja false, Captura True
-        //     once: true, //ejecuta solo una vez
-        // })
+
+// Clase 76 del DOM, Delegacion de eventos, una manera mas eficiente
+document.addEventListener("click", (e)=>{
+    console.log("Hiciste click en: " , e.target);
+
+    if(e.target.matches(".evento-flujo div")){
+       flujoEventos(e)
+    }
+
+    if(e.target.matches(".evento-flujo a")){
+        alert("Hola desde el eventListener eficiente")
+        e.preventDefault();
+    }
 })
 
-$linksEventos.addEventListener("click", (e)=>{
-    e.preventDefault();  //Previene que no vaya a mi sitio personal con el a href en una nueva pestana.
-    e.stopPropagation();
-    alert("Hola, yo soy David")
-})
+// $divsEventos.forEach(div => {
+//     div.addEventListener("click", flujoEventos) 
+//     // div.addEventListener("click", flujoEventos, true) //El tercer parametro invierte la burbuja o propagacion 
+//         //Ejecutar el vento solo una vez, que simula el montaje de un componente solo en carga
+//         // div.addEventListener("click", flujoEventos,{
+//         //     capture:false, //Burbuja false, Captura True
+//         //     once: true, //ejecuta solo una vez
+//         // })
+// })
+
+//Este codigo se reemplaza por una logica mas eficiente en la linea 418 ya que evita agregar un addEventListener a cada elemento con forEach, tampoco necesitaremos las variables $divsEventos y $linksEventos ni el forEach de $divsEventos
+
+// $linksEventos.addEventListener("click", (e)=>{
+//     e.preventDefault();  //Previene que no vaya a mi sitio personal con el a href en una nueva pestana.
+//     e.stopPropagation();
+//     alert("Hola, yo soy David")
+// })
