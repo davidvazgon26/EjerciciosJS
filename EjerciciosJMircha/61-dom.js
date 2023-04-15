@@ -364,3 +364,26 @@ $cards.prepend($newCard3)
 // $cards.append($newCard3)
 // $cards.before($newCard3)
 // $cards.after($newCard3)
+
+
+// Clase 72 eventos o manejadores de eventos  (evenHandler)
+
+
+function holaMundo(){
+    alert("HOla desde el DOM")
+    console.log(event);
+}
+
+const $eventoSemantico = document.getElementById("evento-semantico");
+const $eventoMultiple = document.getElementById("evento-multiple");
+
+$eventoSemantico.onclick = holaMundo;
+
+$eventoMultiple.addEventListener("click", holaMundo)
+$eventoMultiple.addEventListener("click", (e)=>{
+    console.log(e.type)
+    console.log(e.target)
+    console.log(event)
+})
+
+
