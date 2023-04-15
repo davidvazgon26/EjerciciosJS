@@ -370,12 +370,17 @@ $cards.prepend($newCard3)
 
 
 function holaMundo(){
-    alert("HOla desde el DOM")
+    alert("Hola desde el DOM")
     console.log(event);
+}
+
+function saludar(nombre = "desconocido"){
+    alert(`Holliiiii ${nombre}`)
 }
 
 const $eventoSemantico = document.getElementById("evento-semantico");
 const $eventoMultiple = document.getElementById("evento-multiple");
+const $eventoRemover = document.getElementById("evento-remover");
 
 $eventoSemantico.onclick = holaMundo;
 
@@ -385,5 +390,19 @@ $eventoMultiple.addEventListener("click", (e)=>{
     console.log(e.target)
     console.log(event)
 })
+
+
+$eventoMultiple.addEventListener("click", ()=> saludar("David"));
+
+const removerDobleClick = (e) =>{
+    alert("Removiendo el evento de tipo "+ e.type);
+    console.log(e)
+    $eventoRemover.removeEventListener("dblclick", removerDobleClick)
+    $eventoRemover.disabled = true;
+}
+
+    $eventoRemover.addEventListener("dblclick", removerDobleClick)
+
+
 
 
