@@ -447,3 +447,45 @@ document.addEventListener("click", (e)=>{
 //     e.stopPropagation();
 //     alert("Hola, yo soy David")
 // })
+
+
+// Clase 77 BOM (Browser Object Model) Propiedades y Eventos
+
+
+// Limpiar consola y ver el tamano cada que re dimensionemos
+
+window.addEventListener("resize", (e)=>{
+    console.clear();
+    console.log("************Evento Resize*************");
+    console.log("innerWidth: ", window.innerWidth);
+    console.log("innerHeight: ", window.innerHeight);
+    console.log("outerWidth: ", window.outerWidth);
+    console.log("outerHeight: " + window.outerHeight);
+    
+})
+
+window.addEventListener("scroll", (e)=>{
+    console.clear();
+    console.log("************Evento Scroll*************");
+    console.log(window.scrollX)
+    console.log(window.scrollY)
+})
+
+//Se comenta el clear para ver cual de los 2 es mas rapido
+window.addEventListener("load", (e)=>{
+    // console.clear();
+    console.log("************Evento Load*************");
+    console.log(window.screenX)
+    console.log(window.screenY)
+})
+
+
+window.addEventListener("DOMContentLoaded", (e)=>{
+    // console.clear();
+    console.log("************Evento DOMContentLoaded*************");
+    console.log(window.screenX)
+    console.log(window.screenY)
+})
+
+
+
