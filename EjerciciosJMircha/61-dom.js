@@ -512,3 +512,33 @@ let ventana
  $btnImprimir.addEventListener("click",e=>{
     window.print();
  });
+
+ console.log("************   Objeto URL (location)   ************");
+
+ console.log("location: ", location)
+ console.log("location.origin: ",location.origin)
+ console.log("location.protocol: ",location.protocol)
+ console.log("location.host: ",location.host)
+ console.log("location.hostname: ",location.hostname)
+ console.log("location.port: ",location.port)
+ console.log("location.href: ",location.href)
+ console.log("location.hash: ",location.hash) //Detectar el valor que esta despues de una url (el hash)
+ console.log("location.search: ",location.search) // Detecta parametros
+ console.log("location.pathname: ",location.pathname) // Detecta parametros
+ console.log("************   Objeto History (historial)   ************");
+
+console.log(window.history)
+console.log(window.history.length) // Existen back y forward para ir atras y adelante en la navegacion
+
+console.log("************   Objeto Navigator (navegador)   ************");
+
+console.log("Navigator: ", navigator);
+console.log("navigator.connection: ", navigator.connection); // Informacion de conexion
+console.log("navigator.geolocation: ", navigator.geolocation); // 
+console.log("navigator.mediaDevices: ", navigator.mediaDevices); // Dispositivos
+console.log("navigator.mimeTypes: ", navigator.mimeTypes); // Tipos de formato que soporta el navegador
+console.log("navigator.onLine: ", navigator.onLine); // Cuando pierde la conexion o la recupera
+console.log("navigator.serviceWorker: ", navigator.serviceWorker); // PAra hacer progresive web apps PWA
+console.log("navigator.storage: ", navigator.storage); // almacenamiento en webstorage o localstorage
+console.log("navigator.usb: ", navigator.usb); //detectar cuando se conecta o desconecta una usb
+console.log("navigator.userAgent: ", navigator.userAgent); // info sobre el navegador conectado y el dispositivo
