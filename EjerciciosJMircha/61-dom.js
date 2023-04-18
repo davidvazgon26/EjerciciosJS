@@ -463,7 +463,7 @@ window.addEventListener("resize", (e)=>{
     console.log("outerHeight: " + window.outerHeight);
     
 })
-
+/*
 window.addEventListener("scroll", (e)=>{
     console.clear();
     console.log("************Evento Scroll*************");
@@ -472,6 +472,7 @@ window.addEventListener("scroll", (e)=>{
 })
 
 //Se comenta el clear para ver cual de los 2 es mas rapido
+
 window.addEventListener("load", (e)=>{
     // console.clear();
     console.log("************Evento Load*************");
@@ -486,6 +487,28 @@ window.addEventListener("DOMContentLoaded", (e)=>{
     console.log(window.screenX)
     console.log(window.screenY)
 })
+*/
+
+// Clase 78 BOM y sus metodos.
+
+// window.alert("Clase 78 BOM")
+// window.confirm("Necesito tu confirmacion")
+// let prompts = window.prompt("Ingrsa un dato")
+// console.log(prompts)
 
 
+const $btnAbrir  = document.getElementById('abrir-ventana'),
+ $btnCerrar  = document.getElementById('cerrar-ventana'),
+ $btnImprimir  = document.getElementById('imprimir-ventana');
 
+let ventana
+ $btnAbrir.addEventListener("click",e=>{
+    ventana = window.open("https://davidvazquez.tech/")
+ });
+ $btnCerrar.addEventListener("click",e=>{
+    // window.close()
+    ventana.close()
+ });
+ $btnImprimir.addEventListener("click",e=>{
+    window.print();
+ });
