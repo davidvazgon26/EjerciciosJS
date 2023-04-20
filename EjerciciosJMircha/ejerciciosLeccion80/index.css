@@ -70,6 +70,7 @@ img{
     width: 100%;
     background-color: var(--second-modal-color);
     opacity: 0;
+    visibility: hidden;
     transition: transform 0.3s ease, opacity 0.4s ease;
     /* transform: translate(0,-100%);de arriba: 0, -100% */
     /* transform: translate(0,100%);de abajo: 0, 100% */
@@ -80,6 +81,7 @@ img{
 .panel.is-active{
     transform: translate(0,0);
     opacity: 1;
+    visibility: visible;
 }
 
 .panel-btn{
