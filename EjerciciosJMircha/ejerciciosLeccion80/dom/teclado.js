@@ -22,3 +22,51 @@ export function shortCuts(e){
     }
     
 }
+
+let x = 0;
+let y = 0;
+
+export function moveBall(e, ball, stage){
+  const $ball = d.querySelector(ball);
+  const $stage = d.querySelector(stage);
+
+  const limitsBall = $ball.getBoundingClientRect();
+  const limitsStage = $stage.getBoundingClientRect();
+
+//   console.log(e.keyCode);
+//   console.log(e.key);
+
+  //Se puede hacer con key o keyCode el switch
+  switch (e.keyCode) {
+    case 37: //Izquierda
+      if (limitsBall.left > limitsStage.left) {
+        e.preventDefault();
+        x--;
+      }
+      break;
+    case 38: //Arriba
+      if (limitsBall.top > limitsStage.top) {
+        e.preventDefault();
+        y--;
+      }
+      break;
+    case 39: //Derecha
+      if (limitsBall.right < limitsStage.right) {
+        e.preventDefault();
+        x++;
+      }
+      break;
+    case 40: //Abajo
+      if (limitsBall.bottom < limitsStage.bottom) {
+        e.preventDefault();
+        y++;
+      }
+      break;
+
+    default:
+      break;
+  }
+
+  $ball.style.transform = `translate(${x*10}px, ${y*10}px)`;
+
+}

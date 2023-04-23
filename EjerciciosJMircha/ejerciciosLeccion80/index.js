@@ -1,6 +1,6 @@
 import hamburgerMenu from "./dom/menuHamburguesa.js";
 import { digitalClock, alarmaSonora } from "./dom/reloj.js";
-import { shortCuts } from "./dom/teclado.js";
+import { shortCuts, moveBall } from "./dom/teclado.js";
 
 const d = document;
 
@@ -13,5 +13,6 @@ d.addEventListener("DOMContentLoaded", (e)=>{
 //keydown, keyup, keypress
 d.addEventListener("keydown", (e)=> {
     shortCuts(e);
+    moveBall(e, ".ball", ".stage");
 });
 
