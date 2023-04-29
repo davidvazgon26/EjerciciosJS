@@ -1,0 +1,28 @@
+{
+  "name": "learn-webpack",
+  "version": "1.0.0",
+  "description": "Learning all about webpack 4link del curso: https://www.linkedin.com/learning/learning-webpack-4-2/",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -w",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "webpack-dev-server"
+  },
+  "author": "David Vazquez",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.0.6",
+    "jquery": "^3.6.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^4.13.3"
+  },
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "tcslinkedinnodepackahemanager2018",
+  "version": "1.0.0",
+  "description": "Objetivos de aprendizaje\r Installing Node and npm\r Adding and removing node packages\r Updating a package\r Working with an NPM cache\r Running an NPM audit\r Introduction to NPX",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./index.js --exec ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Vazquez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
