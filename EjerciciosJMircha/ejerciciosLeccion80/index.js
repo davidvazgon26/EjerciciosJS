@@ -1,3 +1,4 @@
+import scrollTopButton from "./dom/btnScroll.js";
 import countDown from "./dom/cuenta_regresiva.js";
 import hamburgerMenu from "./dom/menuHamburguesa.js";
 import { digitalClock, alarmaSonora } from "./dom/reloj.js";
@@ -10,6 +11,7 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     digitalClock("#reloj","#activar-reloj","#desactivar-reloj");
     alarmaSonora("./assets/alarma.mp3","#activar-alarma", "#desactivar-alarma");
     countDown("countdown", "May 23, 2023 03:23:19", "Feliz Cumpleanios Docente Digital");
+    scrollTopButton(".scroll-top-btn");
 });
 
 //keydown, keyup, keypress
