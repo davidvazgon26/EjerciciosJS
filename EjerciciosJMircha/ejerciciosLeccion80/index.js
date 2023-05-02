@@ -13,8 +13,10 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     alarmaSonora("./assets/alarma.mp3","#activar-alarma", "#desactivar-alarma");
     countDown("countdown", "May 23, 2023 03:23:19", "Feliz Cumpleanios Docente Digital");
     scrollTopButton(".scroll-top-btn");
-    darkTheme(".dark-theme-btn", "dark-mode");
 });
+
+darkTheme(".dark-theme-btn", "dark-mode"); // Se saca de la carga inicial con DOMContentLoaded para poder volverlo a invocar dentro de darkTheme.
+
 
 //keydown, keyup, keypress
 d.addEventListener("keydown", (e)=> {
