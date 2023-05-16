@@ -2,6 +2,7 @@ import scrollTopButton from "./dom/btnScroll.js";
 import countDown from "./dom/cuenta_regresiva.js";
 import darkTheme from "./dom/darkTheme.js";
 import userDeviceInfo from "./dom/deteccionDispositivos.js";
+import networkStatus from "./dom/deteccionRed.js";
 import hamburgerMenu from "./dom/menuHamburguesa.js";
 import responsiveMedia from "./dom/objeto_responsivo.js";
 import responsiveTester from "./dom/prueba_responsive.js";
@@ -37,7 +38,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
 });
 
 darkTheme(".dark-theme-btn", "dark-mode"); // Se saca de la carga inicial con DOMContentLoaded para poder volverlo a invocar dentro de darkTheme.
-
+networkStatus();
 //keydown, keyup, keypress
 d.addEventListener("keydown", (e) => {
   shortCuts(e);
