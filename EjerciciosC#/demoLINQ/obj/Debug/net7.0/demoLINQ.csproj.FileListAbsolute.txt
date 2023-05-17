@@ -1,0 +1,15 @@
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\bin\Debug\net7.0\demoLINQ.exe
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\bin\Debug\net7.0\demoLINQ.deps.json
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\bin\Debug\net7.0\demoLINQ.runtimeconfig.json
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\bin\Debug\net7.0\demoLINQ.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\bin\Debug\net7.0\demoLINQ.pdb
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\demoLINQ.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\demoLINQ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\demoLINQ.AssemblyInfoInputs.cache
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\demoLINQ.AssemblyInfo.cs
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\demoLINQ.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\demoLINQ.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\refint\demoLINQ.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\demoLINQ.pdb
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\demoLINQ.genruntimeconfig.cache
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\demoLINQ\obj\Debug\net7.0\ref\demoLINQ.dll

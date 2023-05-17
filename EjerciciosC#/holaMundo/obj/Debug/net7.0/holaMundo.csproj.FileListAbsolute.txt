@@ -1,0 +1,15 @@
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\bin\Debug\net7.0\holaMundo.exe
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\bin\Debug\net7.0\holaMundo.deps.json
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\bin\Debug\net7.0\holaMundo.runtimeconfig.json
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\bin\Debug\net7.0\holaMundo.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\bin\Debug\net7.0\holaMundo.pdb
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\holaMundo.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\holaMundo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\holaMundo.AssemblyInfoInputs.cache
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\holaMundo.AssemblyInfo.cs
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\holaMundo.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\holaMundo.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\refint\holaMundo.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\holaMundo.pdb
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\holaMundo.genruntimeconfig.cache
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\holaMundo\obj\Debug\net7.0\ref\holaMundo.dll
