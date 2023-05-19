@@ -57,7 +57,7 @@ namespace LINQ
             }
 
             public String Imprime(){
-                return Numero + "" + Cadena;
+                return Numero + " " + Cadena;
             }
         }
 
