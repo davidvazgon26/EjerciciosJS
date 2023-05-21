@@ -4,6 +4,7 @@ import darkTheme from "./dom/darkTheme.js";
 import userDeviceInfo from "./dom/deteccionDispositivos.js";
 import networkStatus from "./dom/deteccionRed.js";
 import webCam from "./dom/deteccionWebcam.js";
+import getGeolocation from "./dom/geolocalizacion.js";
 import hamburgerMenu from "./dom/menuHamburguesa.js";
 import responsiveMedia from "./dom/objeto_responsivo.js";
 import responsiveTester from "./dom/prueba_responsive.js";
@@ -37,6 +38,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   responsiveTester("responsive-tester");
   userDeviceInfo("user-device");
   webCam("webcam");
+  getGeolocation("geolocation");
 });
 
 darkTheme(".dark-theme-btn", "dark-mode"); // Se saca de la carga inicial con DOMContentLoaded para poder volverlo a invocar dentro de darkTheme.
