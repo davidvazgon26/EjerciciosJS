@@ -13,19 +13,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\holaMundo\\holaMundo.csproj",
+      "projectUniqueName": "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\holaMundo\\holaMundo.csproj",
       "projectName": "holaMundo",
-      "projectPath": "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\holaMundo\\holaMundo.csproj",
+      "projectPath": "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\holaMundo\\holaMundo.csproj",
       "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\holaMundo\\obj\\",
+      "outputPath": "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\holaMundo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
