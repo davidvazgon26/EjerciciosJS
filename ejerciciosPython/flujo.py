@@ -78,7 +78,7 @@ ventana = tk.Tk()
 
 # Personalizar la ventana
 ventana.title("Question Flow Application")
-ventana.geometry("400x400")  # Est
+ventana.geometry("400x400")  
 
 # Configurar estilo
 style = ttk.Style()
