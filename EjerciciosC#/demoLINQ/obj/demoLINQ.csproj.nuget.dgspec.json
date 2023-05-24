@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\demoLINQ.csproj": {}
+    "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\demoLINQ.csproj": {}
   },
   "projects": {
-    "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\demoLINQ.csproj": {
+    "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\demoLINQ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\demoLINQ.csproj",
+        "projectUniqueName": "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\demoLINQ.csproj",
         "projectName": "demoLINQ",
-        "projectPath": "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\demoLINQ.csproj",
+        "projectPath": "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\demoLINQ.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\obj\\",
+        "outputPath": "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\demoLINQ\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
