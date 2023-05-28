@@ -31,3 +31,12 @@ C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\obj\Debug\net7.0\
 C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\obj\Debug\net7.0\projectef.pdb
 C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\obj\Debug\net7.0\projectef.genruntimeconfig.cache
 C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\obj\Debug\net7.0\ref\projectef.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\bin\Debug\net7.0\Humanizer.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\bin\Debug\net7.0\NodaTime.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.NodaTime.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\bin\Debug\net7.0\Npgsql.NodaTime.dll
+C:\Users\david\Desktop\EjerciciosVarios\EjerciciosC#\projectef\obj\Debug\net7.0\EFCoreNpgsqlNodaTime.cs
