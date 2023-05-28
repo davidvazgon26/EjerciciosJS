@@ -18,7 +18,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// app.UseCors();  // Para manejar temas de seguridad y quien puede acceder a las rutas.
+
 app.UseAuthorization();
+
+//Aqui van los custome middlewares como UseWelcomePage que habilita una pagina de bienvenida en nuestra ruta si la visitas desde un browser.
+
+// app.UseWelcomePage();
+
+app.UseTimeMiddleware();  // Para utilizarlo debes a la ruta al final agregar el parametro ?time
 
 app.MapControllers();
 
