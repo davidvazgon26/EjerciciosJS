@@ -12,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<TareasContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("cnTareas")));
 
+// Todo lo que quieras agregar debe pasar antes de builder.build();
+
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
