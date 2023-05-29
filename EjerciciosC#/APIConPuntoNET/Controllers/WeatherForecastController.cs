@@ -32,9 +32,9 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpGet(Name = "GetWeatherForecast")]
-    [Route("Get/weatherforecast")]   // va a funcionar con la ruta original y con esta tambien el metodo get
-    [Route("Get/weatherforecast2")]  //Puedo crear las rutas que necesite
-    [Route("[action]")]  //Tomara como valida el nombre de nuestra accion, en este caso Get, que es el nombre de nuestro metodo aqui abajo.
+    // [Route("Get/weatherforecast")]   // va a funcionar con la ruta original y con esta tambien el metodo get
+    // [Route("Get/weatherforecast2")]  //Puedo crear las rutas que necesite
+    // [Route("[action]")]  //Tomara como valida el nombre de nuestra accion, en este caso Get, que es el nombre de nuestro metodo aqui abajo.
 
     /*
     esta ruta funcionara con:
@@ -45,6 +45,8 @@ public class WeatherForecastController : ControllerBase
     */
     public IEnumerable<WeatherForecast> GetDavid()
     {
+        // _logger.LogInformation("Retornando la lista de weatherforecast desde GetDavid");
+        _logger.LogDebug("Retornando la lista de weatherforecast desde GetDavid");
         return ListWeatherForecast;
     }
 

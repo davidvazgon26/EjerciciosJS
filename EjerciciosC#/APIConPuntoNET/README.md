@@ -93,3 +93,52 @@ En este ejercicio crearemos una carpeta middlewares para agregar nuestros custom
 Este concepto nos ayuda a no tener que estar creando objetos o referencias al objeto, sino a inyectar esta dependencia para poder utilizarla.
 
 Ejemplo desde la creacion hasta su inyeccion:
+
+creamos la carpeta Services
+dentro generamos el archivo HelloWorldService.cs con su clase e interface.
+
+En Program.cs hacemos la inyeccion. (antes del Build)
+
+existen diferentes tipos de implementacion:
+
+- AddScope se inyecta la misma instancia en el contexto o al nivel de controlador o a nivel de clase.
+- AddSingleton se inyecta una instancia para toda la aplicacion lo que consume mucha memoria.
+
+- Creamos un controlador (lo puedes nombrar igual)en la carpeta de los controller, despues lo utilizamos como se ve en el archivo Program.cs
+
+### Loggin a API
+
+Viene un logger por default configurado en nuestro archivo WeatherForecastController el cual podemos utilizar en cada ruta de nuestra API para retornar algunos mensajes a la consola como el de getDavid en WeatherForecastController.
+
+Esto se puede configurar desde los archivos appsettings.json y appsettings.Development.json
+
+puedo indicar el nivel de error en:
+
+"LogLevel": {
+"Default": "Information",
+"Microsoft.AspNetCore": "Warning"
+}
+
+    y los diferentes tipos que tenemos son:
+
+    Trace = 0, Debug = 1, Information = 2, Warning = 3, Error = 4, Critical = 5, y None = 6
+
+### Documentacion de nuestra API con Suagger
+
+Ya viene pre cargado y configurada la libreria y el codigo para implementar en nuestro proyecto, puedes ver en el archivo csproj la dependencia y la configuracion eb Program.cs
+
+para acceder a esta desde un navegador solo debemos correr nuestra aplicacion e ingresar a la ruta inicial por ejemplo: http://localhost:5052/swagger
+
+** ojo debes seguir el standar open API, de no seguirlo tendras algunos errores al ver la pagina **
+
+## Finalizacion de nuestra API
+
+Ahora que ya tenemos los conocimientos necesarios, vamos a crear una version mas cercana a la realidad realizando algunos cambios en el codigo e incluyendo algunas dependencias que tambien utilizamos en nuesta version de api minimalista buscando en nuget.org:
+
+#### Paquetes que necesitamos en nuestro proyecto
+
+- EntityFrameworkCore (dotnet add package Microsoft.EntityFrameworkCore --version 7.0.5)
+- EntityFrameworkCore.inMemory (dotnet add package Microsoft.EntityFrameworkCore.InMemory --version 7.0.5)
+- EntityFrameworkCore.PostgreSQL (dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 7.0.4)
+- EntityFrameworkCore.Design (dotnet add package Microsoft.EntityFrameworkCore.Design --version 7.0.5)
+- Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (dotnet add package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore --version 7.0.5)

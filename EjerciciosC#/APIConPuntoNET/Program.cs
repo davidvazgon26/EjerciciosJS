@@ -6,6 +6,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+// al inyectar la interface se crea el objeto que nombramos HelloWorldService //Esta es la manera mas habitual
+// builder.Services.AddScoped<IHelloWorldService, HelloWorldService>();
+//Tambien se puede inyectar directamente con una arrow function asi:
+builder.Services.AddScoped<IHelloWorldService>(p => new HelloWorldService());
+
 
 var app = builder.Build();
 
@@ -26,7 +31,7 @@ app.UseAuthorization();
 
 // app.UseWelcomePage();
 
-app.UseTimeMiddleware();  // Para utilizarlo debes a la ruta al final agregar el parametro ?time
+// app.UseTimeMiddleware();  // Para utilizarlo debes a la ruta al final agregar el parametro ?time
 
 app.MapControllers();
 
