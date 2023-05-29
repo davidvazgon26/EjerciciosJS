@@ -142,3 +142,14 @@ Ahora que ya tenemos los conocimientos necesarios, vamos a crear una version mas
 - EntityFrameworkCore.PostgreSQL (dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 7.0.4)
 - EntityFrameworkCore.Design (dotnet add package Microsoft.EntityFrameworkCore.Design --version 7.0.5)
 - Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore (dotnet add package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore --version 7.0.5)
+
+Pasos siguientes.
+
+- Crear el contexto (en este caso usamos el mismo de TareasContext.cs)
+- Crear los modelos (En este caso usamos los mismos de Categoria y Tarea)
+- Crear los Controladores (TareaController y CategoriaController)
+- Crear los services (CategoriaService.cs y TareaService.cs)
+- configurar en Program.cs los builder
+- configurar en Program.cs la conexion a la BD
+- configurar en appsettings.json el string de conexion a la BD
+- agregar en el controller base o por default en el proyecto (en este caso HelloWorldController) la variable, agregarla al constructor y la ruta para que en caso de que no exista la BD la cree, ya que si no existe la BD al momento de correr la aplicacion dara error porque no la encuentra.
