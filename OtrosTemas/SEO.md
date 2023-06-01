@@ -271,39 +271,40 @@ Semrush -> https://es.semrush.com/ (Ingresa la palabra que quieres analizar)
 
 https://app.neilpatel.com/en/dashboard -> Backlinks
 
-
 ### Lecturas recomendadas
 
 Getlinko | Aumenta la visibilidad de tu marca
 
 https://getlinko.com
 
-
 LEOlytics | Exclusive International Online Marketing Tool
 
 https://www.leolytics.com/
-
 
 Comprar enlaces de calidad es fácil con EasyBacklink
 
 https://www.easyback.link/
 
-
 Unancor - Artículos en Medios Digitales de Alta Calidad
 
 https://www.unancor.com/
-
 
 Prensarank - Posts y notas de prensa en medios y blogs desde 10€
 
 https://prensarank.com/
 
-
 Publisuites - Post patrocinados, redacción de contenidos y marketing con influencers
 
 https://www.publisuites.com/es/
 
-
 Platzi: Cursos online profesionales de tecnología
 
 https://platzi.com/especialista-seo
+
+### Extensiones para SEO:
+
+Lighthouse: https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=es
+
+SEOquake : https://chrome.google.com/webstore/detail/seoquake/akdgnmcogleenhbclghghlkkdndkjdjc?hl=es , https://www.seoquake.com/index.html
+
+articulo o guia de los meta tags: https://moz.com/blog/the-ultimate-guide-to-seo-meta-tags
