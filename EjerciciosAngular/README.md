@@ -17,3 +17,4 @@ Si usar ng -version en el proyecto te muestra las versiones utilizadas en ese pr
 Extensiones ecomendadas:
 
 - Angular Language Service
+- thunder
