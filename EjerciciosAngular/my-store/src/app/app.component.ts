@@ -16,6 +16,9 @@ export class AppComponent {
     Hobbie: 'Futbol',
   };
 
+  names: string[] = ['David', 'Alejandro', 'Daniel'];
+  newName = '';
+
   btnDisable = true;
 
   toggleButton() {
@@ -34,5 +37,14 @@ export class AppComponent {
   onChange(event: Event) {
     const element = event.target as HTMLInputElement;
     this.name = element.value;
+  }
+
+  addName() {
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+
+  deleteName(index: number) {
+    this.names.splice(index, 1);
   }
 }
