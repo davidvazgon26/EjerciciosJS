@@ -1,5 +1,40 @@
-<h2>*ngFor Objetos</h2>
+<h2>Clases y estilos</h2>
+<input type="text" required #nameInput2="ngModel" [(ngModel)]="varNombre">
+<!-- <p>{{varNombre}}</p> -->
+<p class="message-error" [class.active]="nameInput2.invalid">El campo es requerido</p>
+
+<!-- Estilos en linea -->
+
+<label>Nombre</label>
+<input type="text" required #nameInput3="ngModel" [(ngModel)]="varNombre2">
+<p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Texto texto texto</p>
+
 <div>
+  <div>
+    <input type="text" [(ngModel)]="widthImg">
+  </div>
+  <div>
+    <img height="200px" src={{img}} alt="imagen">
+  </div>
+</div>
+
+<hr />
+<!-- <h2>ngSwitch</h2>
+<input type="text" required [(ngModel)]="newName2">
+<div [ngSwitch]="newName2">
+  <p *ngSwitchCase="'David'">La persona es {{newName}}</p>
+  <p *ngSwitchCase="'Juan'">La persona es {{newName}}</p>
+  <p *ngSwitchCase="'Daniel'">La persona es {{newName}}</p>
+  <p ngSwitchDefault>No hace Mathc</p>
+</div>
+
+<hr /> -->
+<!-- <p *ngIf="persona.name === David"></p>
+<p *ngIf="persona.name === Juan"></p>
+<p *ngIf="persona.name === Daniel"></p> -->
+
+<h2>*ngFor Objetos</h2>
+<div class="products--grid">
   <div *ngFor="let prod of products">
     <img [src]="prod.image" alt="imagen">
     <h3>{{prod.price}}</h3>
@@ -38,7 +73,9 @@
 
 <p>Nombre: {{name}}</p>
 <input type="text" required #nameInput="ngModel" [(ngModel)]="name" />
-<p>Valid: {{nameInput.valid}}</p>
+<!-- <p *ngIf="nameInput.valid">Valid: {{nameInput.valid}}</p> -->
+<p class="aviso" *ngIf="!nameInput.valid">Ingresa un dato</p>
+
 
 <p>Age: {{age}}</p>
 <input type="number" min="10" max="18" required #ageInput="ngModel" [(ngModel)]="age" />

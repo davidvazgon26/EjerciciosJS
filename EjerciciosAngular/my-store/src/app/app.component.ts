@@ -26,25 +26,46 @@ export class AppComponent {
     {
       name: 'El mejor juguete',
       price: 565,
-      image: 'https://picsum.photos/200/200?random=1',
+      image: 'https://picsum.photos/130/100?random=1',
       category: 'Jugetes',
     },
     {
       name: 'Bicicleta casi nueva',
       price: 356,
-      image: 'https://picsum.photos/200/200?random=2',
+      image: 'https://picsum.photos/130/100?random=2',
     },
     {
       name: 'Collection Tree',
       price: 34,
-      image: 'https://picsum.photos/200/200?random=3',
+      image: 'https://picsum.photos/130/100?random=3',
     },
     {
       name: 'Mis Libros',
       price: 23,
-      image: 'https://picsum.photos/200/200?random=4',
+      image: 'https://picsum.photos/130/100?random=4',
+    },
+    {
+      name: 'Collection Tree',
+      price: 34,
+      image: 'https://picsum.photos/130/100?random=5',
+    },
+    {
+      name: 'Mis Libros',
+      price: 23,
+      image: 'https://picsum.photos/130/100?random=6',
+    },
+    {
+      name: 'Mis Libros',
+      price: 23,
+      image: 'https://picsum.photos/130/100?random=7',
     },
   ];
+
+  //Para componente con estilos
+  varNombre: string = '';
+  varNombre2: string = '';
+
+  widthImg: number = 10;
 
   toggleButton() {
     this.btnDisable = !this.btnDisable;

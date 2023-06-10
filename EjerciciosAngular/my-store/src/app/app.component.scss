@@ -8,3 +8,42 @@
   padding: 8px;
   color: white;
 }
+
+.aviso {
+  color: red;
+}
+
+.products--grid {
+  display: flex;
+  flex-direction: column;
+  // grid-template-columns: repeat(5, 1fr);
+  // grid-gap: 15px;
+  div {
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    h2,
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.message-error {
+  background: red;
+  color: white;
+  opacity: 0;
+  transition: all linear 0.5s;
+  &.active {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .products--grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+  }
+}
