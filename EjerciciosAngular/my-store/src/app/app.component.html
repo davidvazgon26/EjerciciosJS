@@ -1,3 +1,34 @@
+<h2>NgClass & NgStyle</h2>
+
+<!-- Ngclass -->
+<input type="text" required #nameInput4="ngModel" [(ngModel)]="ngStyleName">
+<hr class="line-error" [ngClass]="{
+  'valid': nameInput4.valid,
+  'invalid': nameInput4.invalid,
+}" />
+<p class="message-error" [class.invalid]="nameInput4.invalid">El campo es requerido</p>
+
+<!-- NgStyle -->
+<div class="styles">
+  <div>
+    <input type="number" [(ngModel)]="box.width" />
+    <input type="number" [(ngModel)]="box.height" />
+    <input type="color" [(ngModel)]="box.background" />
+  </div>
+  <div>
+    <div [ngStyle]="{
+      'width.px':box.width,
+      'height.px':box.height,
+      'background-color':box.background,
+      'display': 'block',
+    }">
+
+    </div>
+  </div>
+</div>
+
+
+<hr />
 <h2>Clases y estilos</h2>
 <input type="text" required #nameInput2="ngModel" [(ngModel)]="varNombre">
 <!-- <p>{{varNombre}}</p> -->
@@ -5,7 +36,8 @@
 
 <!-- Estilos en linea -->
 
-<label [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Nombre</label>
+<!-- no puedo usar variables manipuladas con ngModel antes de declararlo, es igual que con las variables de js -->
+<!-- <label [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Nombre</label> -->
 <label>Nombre</label>
 <input type="text" required #nameInput3="ngModel" [(ngModel)]="varNombre2">
 <p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Texto texto texto</p>

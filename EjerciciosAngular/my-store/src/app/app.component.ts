@@ -21,6 +21,13 @@ export class AppComponent {
   names: string[] = ['David', 'Alejandro', 'Daniel'];
   newName = '';
   newName2 = '';
+  ngStyleName = 'NgStyle';
+
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red',
+  };
 
   products: IProduct[] = [
     {
