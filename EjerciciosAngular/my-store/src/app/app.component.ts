@@ -29,6 +29,12 @@ export class AppComponent {
     background: 'red',
   };
 
+  registerForm = {
+    name: '',
+    email: '',
+    password: '',
+  };
+
   products: IProduct[] = [
     {
       name: 'El mejor juguete',
@@ -99,5 +105,9 @@ export class AppComponent {
 
   deleteName(index: number) {
     this.names.splice(index, 1);
+  }
+
+  onRegister() {
+    console.log(this.registerForm);
   }
 }
