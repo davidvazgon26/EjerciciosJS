@@ -5,8 +5,8 @@ namespace APIConPuntoNET;
 
 public class TareasContext : DbContext
 {
-    public DbSet<Categoria> Categoria { get; set; }
-    public DbSet<Tarea> Tareas { get; set; }
+    public DbSet<Categoria>? Categoria { get; set; }
+    public DbSet<Tarea>? Tareas { get; set; }
 
     public TareasContext(DbContextOptions<TareasContext> options) : base(options) { }
 
