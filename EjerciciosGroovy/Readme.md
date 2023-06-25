@@ -29,3 +29,7 @@ La **documentacion de Groovy** la encuentras en el siguiente enlace: https://gro
 - Tambien puedes seguir los mismos pasos para instalar java: sdk list java, sdk install java y java -version. si ha sdk install java no le agregas la version te instalara la version por default en ese momento
 
 - **Para abrir el entorno de desarrollo de Groovy usa el comando:** groovyConsole
+
+Groovy es Java, con la ventaja de ser opcionalmente tipado.
+
+Groovy puede funcionar como un tipo de bash.
