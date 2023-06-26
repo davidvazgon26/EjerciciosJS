@@ -13,6 +13,9 @@ namespace ASPNetCore
             escuela.Anio = 2020;
             escuela.EscuelaId = Guid.NewGuid().ToString();
             escuela.Nombre = "DavidSchool";
+
+            ViewBag.CosasDinamicas = "Una prueba de bolsa dinamica";
+
             return View(escuela);
         }
     }
