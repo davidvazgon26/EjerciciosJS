@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\projectef.csproj": {}
+    "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\projectef.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\projectef.csproj": {
+    "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\projectef.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\projectef.csproj",
+        "projectUniqueName": "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\projectef.csproj",
         "projectName": "projectef",
-        "projectPath": "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\projectef.csproj",
+        "projectPath": "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\projectef.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\obj\\",
+        "outputPath": "c:\\Users\\david\\Desktop\\EjerciciosVarios\\EjerciciosC#\\projectef\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
