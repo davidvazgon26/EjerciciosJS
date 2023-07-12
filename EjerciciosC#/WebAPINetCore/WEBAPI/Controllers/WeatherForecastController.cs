@@ -38,6 +38,12 @@ public class WeatherForecastController : ControllerBase
         return ListWeatherForecast;
     }
 
+    [HttpGet("otro")]
+    public IEnumerable<WeatherForecast> ById(int index)
+    {
+        return new List<WeatherForecast> { ListWeatherForecast[index] };
+    }
+
     [HttpPost]
     public IActionResult Post(WeatherForecast weatherForecast)
     {
@@ -47,9 +53,14 @@ public class WeatherForecastController : ControllerBase
     }
 
     [HttpDelete]
-    public IActionResult Delete(ind index)
+    public IActionResult Delete(int index)
     {
-        ListWeatherForecast.Remove(index);
+        if (index < 0 || index >= ListWeatherForecast.Count)
+        {
+            return NotFound(); // Devuelve una respuesta HTTP 404 si el índice está fuera de rango
+        }
+
+        ListWeatherForecast.RemoveAt(index);
 
         return Ok();
     }
