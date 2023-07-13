@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WEBAPI.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")] //Puedo manipular una parte estatica ya que controller es dinamica y toma el nombre del controlador, en este caso le agregue la parte de api.
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -34,6 +35,17 @@ public class WeatherForecastController : ControllerBase
 
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
+    {
+        return ListWeatherForecast;
+    }
+
+    /********************************************/
+    //Ejercicio de distintas rutas
+    [HttpGet(Name = "GetWeatherForecast")] //Manejo de distintas rutas
+    [Route("OtraRutaParaGet")]
+    [Route("OtraRutaParaGet33")]
+    [Route("[Action]")]
+    public IEnumerable<WeatherForecast> GetWw()
     {
         return ListWeatherForecast;
     }
