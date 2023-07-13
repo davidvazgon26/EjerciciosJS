@@ -20,6 +20,8 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
+//app.UseWelcomePage(); // Middleware de pagina de Bienvenida. (ojo desabilita las pruebas de get en el navegador)
+
 app.MapControllers();
 
 app.Run();
