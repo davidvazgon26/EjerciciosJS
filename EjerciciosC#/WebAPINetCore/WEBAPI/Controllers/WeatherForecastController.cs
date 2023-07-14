@@ -41,7 +41,7 @@ public class WeatherForecastController : ControllerBase
 
     /********************************************/
     //Ejercicio de distintas rutas
-    [HttpGet(Name = "GetWeatherForecast")] //Manejo de distintas rutas
+    [HttpGet] //Manejo de distintas rutas
     [Route("OtraRutaParaGet")]
     [Route("OtraRutaParaGet33")]
     [Route("[Action]")]
