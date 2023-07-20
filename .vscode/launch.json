@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "EjerciciosTCS.Java.levelCount.Main",
+      "projectName": "EjerciciosVarios_8ec9f3b5"
+    },
+    {
+      "type": "java",
       "name": "Imprimir",
       "request": "launch",
       "mainClass": "CursoPOO.Java.Imprimir",
