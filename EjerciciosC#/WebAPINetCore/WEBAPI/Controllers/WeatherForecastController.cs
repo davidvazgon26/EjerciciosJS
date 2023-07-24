@@ -13,7 +13,10 @@ public class WeatherForecastController : ControllerBase
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
     };
 
-    private readonly ILogger<WeatherForecastController> _logger;
+    private readonly ILogger<WeatherForecastController> _logger; //Esta es la implementacion por defecto de webapi de una interface de logger, es decir los logs en los endpoint donde lo apliques.
+    /*tipos de loggers: Trace=0, Debug=1, Information=2, Warning = 3, Error = 4, Critical = 5, None = 6*/
+
+    //Ojo no olvides cambiar este parametro en el archivo de appsetings.Development.json sino, los cambios no los tendra en cuenta.
 
     private static List<WeatherForecast> ListWeatherForecast = new List<WeatherForecast>();
 
@@ -40,15 +43,21 @@ public class WeatherForecastController : ControllerBase
     }
 
     /********************************************/
+
+    //Ojo comente todo el end point para que funcionara swagger
+
     //Ejercicio de distintas rutas
-    [HttpGet] //Manejo de distintas rutas
-    [Route("OtraRutaParaGet")]
-    [Route("OtraRutaParaGet33")]
-    [Route("[Action]")] //Action permite usar el nombre del metodo como parte de la ruta, es decir: api/WeatherForecast/GetWw
-    public IEnumerable<WeatherForecast> GetWw()
-    {
-        return ListWeatherForecast;
-    }
+    //   [HttpGet] //Manejo de distintas rutas
+    // [Route("OtraRutaParaGet")]
+    // [Route("OtraRutaParaGet33")]
+    // [Route("[Action]")] //Action permite usar el nombre del metodo como parte de la ruta, es decir: api/WeatherForecast/GetWw
+    // public IEnumerable<WeatherForecast> GetWw()
+    // {
+    //     _logger.LogInformation("Retorna la lista tipo wwatherforecast");
+    //     return ListWeatherForecast;
+    // }
+
+
 
     [HttpGet("otro")]
     public IEnumerable<WeatherForecast> ById(int index)

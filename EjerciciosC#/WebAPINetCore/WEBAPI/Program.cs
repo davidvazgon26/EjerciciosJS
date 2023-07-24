@@ -5,10 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen();  //Implementacion de swagger, ruta: /swagger/index.html
 
-//Las inyecciones de dependencias van antes del build
-builder.Services.AddScoped<IHelloWorldService, HelloWordServices>(); // Cada que se inyecte la interface se crear un nuevo objeto  Hellow. Ahora crearemos un controlador que utilice esta dependencia.
+//Las inyecciones de dependencias van antes del Build(), esta la utilizamos en 
+builder.Services.AddScoped<IHelloWorldService, HelloWordServices>(); // Cada que se inyecte la interface se crear un nuevo objeto  HelloWorld. Ahora crearemos un controlador que utilice esta dependencia.
 
 /*
    addscoped = Se crea una nueva instancia a nivel de controlador o clase y siempre se inyecta esta misma
@@ -20,7 +20,7 @@ builder.Services.AddScoped<IHelloWorldService, HelloWordServices>(); // Cada que
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment()) //Se recomienda utilizar la interface de swagger solo para desarrollo, no para produccion.
 {
     app.UseSwagger();
     app.UseSwaggerUI();
@@ -37,3 +37,24 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+/*
+El orden de los middlewares es asi:
+
+request ->
+
+ExceptionHandler
+HTTS
+HttpRedirection
+Static Files
+Routing
+CORS
+Authentication
+Authorization
+
+Custom middlewares
+
+End Points
+
+*/
