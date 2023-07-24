@@ -18,5 +18,6 @@ public class HelloWorldController : ControllerBase
     public IActionResult Get()
     {
         return Ok(helloWorldService.GetHelloWorld()); //Lo utilizo
+        
     }
 }

@@ -20,7 +20,7 @@ public class WeatherForecastController : ControllerBase
     public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
         _logger = logger;
-        if (ListWeatherForecast == null || !ListWeatherForecast.Any())
+        if (ListWeatherForecast == null || !ListWeatherForecast.Any()) //valido si es nula o esta vacia la lista
         {
             ListWeatherForecast = Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
@@ -44,7 +44,7 @@ public class WeatherForecastController : ControllerBase
     [HttpGet] //Manejo de distintas rutas
     [Route("OtraRutaParaGet")]
     [Route("OtraRutaParaGet33")]
-    [Route("[Action]")]
+    [Route("[Action]")] //Action permite usar el nombre del metodo como parte de la ruta, es decir: api/WeatherForecast/GetWw
     public IEnumerable<WeatherForecast> GetWw()
     {
         return ListWeatherForecast;
