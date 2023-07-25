@@ -11,9 +11,12 @@ public class HelloWorldController : ControllerBase
 {
     IHelloWorldService helloWorldService; //1.- Se inyecta el servicio
 
-    public HelloWorldController(IHelloWorldService helloWorld) //2.- Lo pasamos como argumento
+    TareasContext dbcontext;
+
+    public HelloWorldController(IHelloWorldService helloWorld, TareasContext db) //2.- Lo pasamos como argumento
     {
         helloWorldService = helloWorld; //3.- Lo recibimos o iniciamos en el constructor
+        dbcontext = db;
     }
 
     [HttpGet]
@@ -21,5 +24,13 @@ public class HelloWorldController : ControllerBase
     {
         return Ok(helloWorldService.GetHelloWorld()); //4.- Lo utilizo
 
+    }
+
+    [HttpGet]
+    [Route("createdb")]
+    public IActionResult CreateDatabase()
+    {
+        dbcontext.Database.EnsureCreated();
+        return Ok();
     }
 }

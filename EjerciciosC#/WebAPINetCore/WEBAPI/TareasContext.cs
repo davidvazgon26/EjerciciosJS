@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using WEBAPI.Models;
+using WEBAPI.Services;
 
 
 public class TareasContext : DbContext
@@ -42,7 +44,7 @@ public class TareasContext : DbContext
             tarea.Property(p => p.FechaCreacion);
             tarea.Ignore(p => p.Resumen);
             tarea.HasData(tareaInit);
-       
+
         });
     }
 }

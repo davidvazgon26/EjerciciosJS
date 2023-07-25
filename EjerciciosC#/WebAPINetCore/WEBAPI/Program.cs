@@ -1,3 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using WEBAPI.Services;
+using WEBAPI.Models;
+
+
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);  // Esta linea es para usar postgress en lugar de SQL Server
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,8 +15,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();  //Implementacion de swagger, ruta: /swagger/index.html
 
+builder.Services.AddDbContext<TareasContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("conexionDB")));
+
 //Las inyecciones de dependencias van antes del Build(), esta la utilizamos en 
 builder.Services.AddScoped<IHelloWorldService, HelloWordServices>(); // Cada que se inyecte la interface se crear un nuevo objeto  HelloWorld. Ahora crearemos un controlador que utilice esta dependencia.
+
+// Inyectando las dependencnias para Categorias y Tareas...  con esto quedan listas para usarse dentro de un Controller
+builder.Services.AddScoped<ICategoriaService, CategoriaService>();
+builder.Services.AddScoped<ITareasService, TareasService>();
+
 
 /*
    addscoped = Se crea una nueva instancia a nivel de controlador o clase y siempre se inyecta esta misma
