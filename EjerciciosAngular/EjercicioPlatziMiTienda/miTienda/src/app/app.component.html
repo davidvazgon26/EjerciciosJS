@@ -1,2 +1,7 @@
-<app-img></app-img>
-<!-- //aqui estoy llamando a mi componente img -->
+<!-- //aqui estoy llamando a mi componente img y pasandole parametros-->
+<!-- <app-img img="Este valor viene desde el componente en app.component.html"></app-img> -->
+
+<!-- Ahora lo hare dinamicamente -->
+
+<p><input type="text" [(ngModel)]="imgParent" /></p>
+<app-img [img]="imgParent"></app-img>
