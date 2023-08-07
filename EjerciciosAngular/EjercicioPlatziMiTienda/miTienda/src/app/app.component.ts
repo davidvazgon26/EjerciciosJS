@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   imgParent = '';
   // http://www.w3schools.com/howto/img_avatar.png
+
+  onLoaded(img: String) {
+    console.log('Recibiendo en el padre la confirmacion del loaded', img);
+  }
 }

@@ -4,4 +4,4 @@
 <!-- Ahora lo hare dinamicamente -->
 
 <p><input type="text" [(ngModel)]="imgParent" /></p>
-<app-img [img]="imgParent"></app-img>
+<app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img>
