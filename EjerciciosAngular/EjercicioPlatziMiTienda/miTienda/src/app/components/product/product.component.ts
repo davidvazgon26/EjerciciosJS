@@ -9,7 +9,7 @@ import { Product } from '../../models/product.model';
 })
 export class ProductComponent {
   product: Product = {
-    id: '1',
+    id: '10',
     name: 'Product 1',
     image: '',
     price: 100,
