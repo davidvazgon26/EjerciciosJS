@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Product } from '../../models/product.model';
 
@@ -8,10 +8,10 @@ import { Product } from '../../models/product.model';
   styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent {
-  product: Product = {
-    id: '10',
-    name: 'Product 1',
+  @Input() product: Product = {
+    id: '',
+    name: '',
     image: '',
-    price: 100,
+    price: 0,
   };
 }
