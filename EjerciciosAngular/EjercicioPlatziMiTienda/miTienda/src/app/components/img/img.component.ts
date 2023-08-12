@@ -8,6 +8,7 @@ import {
   AfterViewInit,
   OnDestroy,
 } from '@angular/core';
+import { count } from 'rxjs';
 
 @Component({
   selector: 'app-img',
@@ -21,6 +22,8 @@ export class ImgComponent
   @Output() loaded = new EventEmitter<String>();
   imageDefault =
     'https://www.travesseradedalt.barcelona/wp-content/uploads/profile-default-male.png';
+  // counter = 0;
+  // counterFn: number | undefined;
 
   constructor() {
     //before render
@@ -38,6 +41,10 @@ export class ImgComponent
     //Before render
     // Aqui corremos cosas asincronas como fetch y solo corre una vez.
     console.log('ngOnInit', 'imgValue =>', this.img);
+    // this.counterFn = window.setInterval(() => {
+    //   this.counter += 1;
+    //   console.log('run counter');
+    // }, 1000);
   }
 
   ngAfterViewInit() {
@@ -49,6 +56,7 @@ export class ImgComponent
   ngOnDestroy(): void {
     //Delete
     console.log('ngOnDestroy');
+    // window.clearInterval(this.counterFn);
   }
 
   imgError() {
