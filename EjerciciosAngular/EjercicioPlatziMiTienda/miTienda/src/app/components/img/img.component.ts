@@ -11,6 +11,12 @@ export class ImgComponent {
   imageDefault =
     'https://www.travesseradedalt.barcelona/wp-content/uploads/profile-default-male.png';
 
+  constructor() {
+    //before render
+    // No correr cosas asincronas
+    console.log('Constructor', 'imgValue =>', this.img);
+  }
+
   imgError() {
     this.img = this.imageDefault;
   }
