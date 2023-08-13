@@ -10,9 +10,9 @@ export class AppComponent {
   // http://www.w3schools.com/howto/img_avatar.png
   showImg = true;
 
-  onLoaded(img: String) {
-    console.log('Recibiendo en el padre la confirmacion del loaded', img);
-  }
+  // onLoaded(img: String) {
+  //   console.log('Recibiendo en el padre la confirmacion del loaded', img);
+  // }
 
   toggleImg() {
     this.showImg = !this.showImg;

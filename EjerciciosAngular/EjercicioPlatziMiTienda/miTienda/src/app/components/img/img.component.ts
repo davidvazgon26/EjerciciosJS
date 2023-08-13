@@ -8,7 +8,7 @@ import {
   AfterViewInit,
   OnDestroy,
 } from '@angular/core';
-import { count } from 'rxjs';
+// import { count } from 'rxjs';
 
 @Component({
   selector: 'app-img',
@@ -18,8 +18,8 @@ import { count } from 'rxjs';
 export class ImgComponent
   implements OnChanges, OnInit, AfterViewInit, OnDestroy
 {
-  @Input() img: string = 'valor init de img';
-  @Output() loaded = new EventEmitter<String>();
+  @Input() img = 'valor init de img';
+  @Output() loaded = new EventEmitter<string>();
   imageDefault =
     'https://www.travesseradedalt.barcelona/wp-content/uploads/profile-default-male.png';
   // counter = 0;
