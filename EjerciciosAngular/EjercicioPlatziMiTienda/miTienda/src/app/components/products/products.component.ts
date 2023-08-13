@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from 'src/app/models/product.model';
+import { StoreService } from 'src/app/services/store.service';
 
 @Component({
   selector: 'app-products',
@@ -36,14 +37,14 @@ export class ProductsComponent {
     },
   ];
 
-  constructor() {}
+  constructor(
+    private storeService: StoreService //Se inyecto el servicio
+  ) {
+    this.myShoppingCart = this.storeService.getShoppingCart();
+  }
 
   onAddToShoppingCart(product: Product) {
-    console.log(product);
-    this.myShoppingCart.push(product);
-    this.totalShoppinCart = this.myShoppingCart.reduce(
-      (sum, item) => sum + item.price,
-      0
-    );
+    this.storeService.addProduct(product);
+    this.totalShoppinCart = this.storeService.getTotal();
   }
 }
