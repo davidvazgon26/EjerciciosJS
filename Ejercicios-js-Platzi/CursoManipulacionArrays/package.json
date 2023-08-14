@@ -1,0 +1,20 @@
+{
+  "name": "cursomanipulacionarrays",
+  "version": "1.0.0",
+  "description": "Ejercicios de manipulacion de arrays",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "arrays"
+  ],
+  "author": "David",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http-server": "^14.1.1"
+  }
+}
