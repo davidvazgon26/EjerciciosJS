@@ -1,5 +1,16 @@
 # MyStoreApi
 
+## Mis propios conventarios:
+
+Esta es la API que estaremos utilizando: https://young-sands-07814.herokuapp.com/api/products
+
+## Activar el modulo de HTTP
+
+- Ir a modulo app.modules.ts
+- Importar el modulo HttpClientModule dentro de este modulo asi: "import { HighlightDirective } from './directives/highlight.directive';
+  "
+- agegar el nuevo modulo a los imports
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 
 ## Development server
