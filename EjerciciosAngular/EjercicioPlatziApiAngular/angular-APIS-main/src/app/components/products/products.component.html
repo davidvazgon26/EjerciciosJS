@@ -5,9 +5,15 @@
 
 
   <div class="product-detail" [class.active]="showProductDetail">
-    <div>
+    <div *ngIf="productChosen">
       <button (click)="toggleProductDetail()">Close</button>
-      Contenido
+      <h2>{{productChosen.title}}</h2>
+      <swiper [slidesPerView]="1">
+        <ng-template swiperSlide *ngFor="let img of productChosen.images"><img [src]="img" alt=""></ng-template>
+        <ng-template swiperSlide>Slide 2</ng-template>
+        <ng-template swiperSlide>Slide 3</ng-template>
+      </swiper>
+      <p>{{productChosen.description}}</p>
     </div>
   </div>
 </div>
