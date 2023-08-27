@@ -2,6 +2,7 @@
 <div class="products--grid">
   <app-product [product]="product" *ngFor="let product of products" (addedProduct)="onAddToShoppingCart($event)"
     (showProduct)="onShowDetail($event)"></app-product>
+  <button (click)="loadMore()">Load more</button>
 
 
   <div class="product-detail" [class.active]="showProductDetail">
@@ -14,7 +15,8 @@
         <ng-template swiperSlide>Slide 3</ng-template>
       </swiper>
       <p>{{productChosen.description}}</p>
-      <button (click)="updateProduct">Editar</button>
+      <button (click)="updateProduct()">Editar</button>
+      <button (click)="deleteProduct()">Eliminar</button>
     </div>
   </div>
 </div>
