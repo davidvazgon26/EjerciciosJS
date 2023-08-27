@@ -108,7 +108,7 @@ export class ProductsComponent implements OnInit {
     this.productsService
       .getProductsByPage(this.limit, this.offset)
       .subscribe((data) => {
-        this.products.concat;
+        this.products = this.products.concat(data);
         this.offset += this.limit;
       });
   }
