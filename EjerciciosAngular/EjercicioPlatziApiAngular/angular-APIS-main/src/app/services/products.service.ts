@@ -5,7 +5,7 @@ import {
   HttpErrorResponse,
   HttpStatusCode,
 } from '@angular/common/http';
-import { retry, catchError, throwError } from 'rxjs';
+import { retry, catchError, throwError, map } from 'rxjs';
 
 import {
   CreateProductDTO,
@@ -32,7 +32,17 @@ export class ProductsService {
       params = params.set('offset', offset);
     }
 
-    return this.http.get<Product[]>(this.apiUrl, { params });
+    return this.http.get<Product[]>(this.apiUrl, { params }).pipe(
+      retry(3),
+      map((products) =>
+        products.map((item) => {
+          return {
+            ...item,
+            taxes: 0.16 * item.price,
+          };
+        })
+      )
+    );
   }
 
   getProduct(id: string) {
@@ -53,9 +63,21 @@ export class ProductsService {
   }
 
   getProductsByPage(limit: number, offset: number) {
-    return this.http.get<Product[]>(`${this.apiUrl}`, {
-      params: { limit, offset },
-    });
+    return this.http
+      .get<Product[]>(`${this.apiUrl}`, {
+        params: { limit, offset },
+      })
+      .pipe(
+        retry(3),
+        map((products) =>
+          products.map((item) => {
+            return {
+              ...item,
+              taxes: 0.16 * item.price,
+            };
+          })
+        )
+      );
   }
 
   create(data: CreateProductDTO) {
