@@ -1,19 +1,30 @@
-import { Component, OnInit, Input, Output, EventEmitter, OnChanges, AfterViewInit, OnDestroy, SimpleChanges } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  Output,
+  EventEmitter,
+  OnChanges,
+  AfterViewInit,
+  OnDestroy,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-img',
   templateUrl: './img.component.html',
-  styleUrls: ['./img.component.scss']
+  styleUrls: ['./img.component.scss'],
 })
-export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
-
+export class ImgComponent
+  implements OnInit, OnChanges, AfterViewInit, OnDestroy
+{
   img: string = '';
 
   // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('img')
   set changeImg(newImg: string) {
     this.img = newImg;
-    console.log('change just img  =>' ,this.img);
+    // console.log('change just img  =>' ,this.img);
     // code
   }
   @Input() alt: string = '';
@@ -25,13 +36,13 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   constructor() {
     // before render
     // NO async -- once time
-    console.log('constructor', 'imgValue =>', this.img);
+    // console.log('constructor', 'imgValue =>', this.img);
   }
 
   ngOnChanges(changes: SimpleChanges) {
     // before - during render
     // changes inputs -- multiples times
-    console.log('ngOnChanges', 'imgValue =>', this.img);
+    // console.log('ngOnChanges', 'imgValue =>', this.img);
     console.log('changes', changes);
     // if (changes.) {
     //   // code
@@ -65,8 +76,7 @@ export class ImgComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy
   }
 
   imgLoaded() {
-    console.log('log hijo');
+    // console.log('log hijo');
     this.loaded.emit(this.img);
   }
-
 }

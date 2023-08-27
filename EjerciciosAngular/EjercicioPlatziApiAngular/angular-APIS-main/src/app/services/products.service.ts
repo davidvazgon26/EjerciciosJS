@@ -7,11 +7,14 @@ import {
   UpdateProductDTO,
 } from './../models/product.model';
 
+import { environment } from './../../environments/environment';
+
 @Injectable({
   providedIn: 'root',
 })
 export class ProductsService {
-  private apiUrl = 'https://young-sands-07814.herokuapp.com/api/products';
+  // private apiUrl = 'https://young-sands-07814.herokuapp.com/api/products';
+  private apiUrl = `${environment.API_URL}/api/products`;
 
   constructor(private http: HttpClient) {}
 
