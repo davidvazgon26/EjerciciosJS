@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { StoreService } from '../../services/store.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from 'src/app/models/user.models';
-import { switchMap } from 'rxjs';
+// import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -13,7 +13,6 @@ import { switchMap } from 'rxjs';
 export class NavComponent implements OnInit {
   activeMenu = false;
   counter = 0;
-  token = '';
   profile: User | null = null;
 
   constructor(
@@ -33,21 +32,21 @@ export class NavComponent implements OnInit {
 
   login() {
     this.authService
-      .login('david@ejemplo.com', '123456')
-      .pipe(
-        switchMap((token) => {
-          this.token = token.access_token;
-          return this.authService.profile(token.access_token);
-        })
-      )
+      .loginAndGet('david@ejemplo.com', '123456')
+      // .pipe(
+      //   switchMap((token) => {
+      //     this.token = token.access_token;
+      //     return this.authService.profile();
+      //   })
+      // )
       .subscribe((user) => {
         this.profile = user;
       });
   }
 
-  getProfile() {
-    this.authService.profile(this.token).subscribe((profile) => {
-      console.log(profile);
-    });
-  }
+  // getProfile() {
+  //   this.authService.profile().subscribe((profile) => {
+  //     console.log(profile);
+  //   });
+  // }
 }
