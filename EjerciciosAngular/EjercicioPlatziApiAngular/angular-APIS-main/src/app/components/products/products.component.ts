@@ -5,6 +5,7 @@ import {
   CreateProductDTO,
   UpdateProductDTO,
 } from '../../models/product.model';
+import { switchMap, zip } from 'rxjs';
 
 import { StoreService } from '../../services/store.service';
 import { ProductsService } from '../../services/products.service';
@@ -72,6 +73,31 @@ export class ProductsComponent implements OnInit {
         this.statusDetail = 'error';
       }
     );
+  }
+
+  // Se recomienda si quieres reutilizar toda esta logica ponerla mejor como servicio en lugar de hacerlo en el componente
+  readAndUpdate(id: string) {
+    // solicitando producto y actualizando en el mismo metodo sin caer en el callback hell
+    this.productsService
+      .getProduct(id)
+      .pipe(
+        // regularmente cuando depende una peticion de orientation, en este caso obtener el id del producto
+        switchMap((product) =>
+          this.productsService.update(product.id, { title: 'change' })
+        )
+      )
+      .subscribe((data) => {
+        console.log(data);
+      });
+    // zip en lugar de l Promise.all
+    // regularmente se usa cuando requieres correr en parallelo las peticiones
+    zip(
+      this.productsService.getProduct(id),
+      this.productsService.update(id, { title: 'nuevo' })
+    ).subscribe((response) => {
+      const read = response[0];
+      const update = response[1];
+    });
   }
 
   createNewProduct() {
