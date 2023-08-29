@@ -1,5 +1,17 @@
 <app-nav></app-nav>
 <button (click)="createUser()">Create User</button>
+<!-- primer ejempl directo con HTML solamente -->
+<p>
+    <a href="./../assets/files/texto.txt" download>Download</a>
+</p>
+<!-- opcion usando el servicio -->
+<p>
+    <button (click)="downloadPDF()">Descargar</button>
+</p>
+<p>
+    <input type="file" (change)="onUpload($event)">
+    <img *ngIf='imgRta' [src]="imgRta" alt="imagen">
+</p>
 <!-- <button (click)="login()">Login</button> -->
 <!-- <button (click)="getProfile()">Get Profile</button> -->
 <app-products></app-products>
