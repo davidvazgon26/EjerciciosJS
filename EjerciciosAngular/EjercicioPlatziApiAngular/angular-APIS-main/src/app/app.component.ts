@@ -65,7 +65,7 @@ export class AppComponent {
 
   onUpload(event: Event) {
     const element = event.target as HTMLInputElement;
-    const file = element.files?.item(0);
+    const file = element.files?.item(0); //Me traigo el primer archivo del array
     if (file) {
       this.filesService.uploadFIles(file).subscribe((rta) => {
         this.imgRta = rta.location;
