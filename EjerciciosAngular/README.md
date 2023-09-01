@@ -40,6 +40,8 @@ Extensiones ecomendadas:
         firebase deploy
     * Listo, en consola tendras el enlace a tu proyecto en productivo, en mi caso es:
 
+    pendiente
+
            consola o dashboard: https://console.firebase.google.com/project/demoangularbasic/overview
 
             o
