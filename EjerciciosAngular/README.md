@@ -1,3 +1,5 @@
+### Antes de arrancar proyecto, valida esto:
+
 Verifica versión de Node: node -v
 
 Verifica versión de npm: npm -v
