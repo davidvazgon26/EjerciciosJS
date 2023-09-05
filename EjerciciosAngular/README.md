@@ -1,3 +1,5 @@
+### Antes de arrancar proyecto, valida esto:
+
 Verifica versión de Node: node -v
 
 Verifica versión de npm: npm -v
@@ -39,6 +41,8 @@ Extensiones ecomendadas:
     * ahora solo queda regresar a firebase para traernos el comando para hacer deploy que es:
         firebase deploy
     * Listo, en consola tendras el enlace a tu proyecto en productivo, en mi caso es:
+
+    pendiente
 
            consola o dashboard: https://console.firebase.google.com/project/demoangularbasic/overview
 
