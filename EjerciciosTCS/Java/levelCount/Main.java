@@ -1,6 +1,3 @@
-// package EjerciciosTCS.Java.levelCount;
-
-// import java.io.*;
 
 public class Main {
 
@@ -32,5 +29,9 @@ public class Main {
     }
 
 }
+
+// // package EjerciciosTCS.Java.levelCount;
+
+// // import java.io.*;
 
 // java Main "{"0": { "name": "John"},"1":{"name":"micheal"}}"

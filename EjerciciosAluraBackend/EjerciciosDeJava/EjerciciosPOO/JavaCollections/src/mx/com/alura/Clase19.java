@@ -1,18 +1,11 @@
 package EjerciciosPOO.JavaCollections.src.mx.com.alura;
 
-import java.util.Optional;
+// import java.util.Optional;
 
 import EjerciciosPOO.JavaCollections.src.mx.com.alura.model.Alumno;
 import EjerciciosPOO.JavaCollections.src.mx.com.alura.model.Curso;
 
 public class Clase19 {
-    /*
-     * //TODO:
-     * https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html
-     * //TODO:
-     * https://docs.oracle.com/javase/8/docs/api/index.html?java/util/Collection.
-     * html
-     */
 
     // En este ejercicios estamos pasando la responsabilidades a cada una de las
     // clases para mejorar nuestro codigo y hacerlo mas reutilizable
@@ -65,16 +58,28 @@ public class Clase19 {
 
         /*
          * Lo que aprendimos en esta aula:
-
-            * Saber que un Map nos permite acceder a sus valores con más rapidez porque trabaja en el concepto de llave única y valor.
-
-            * Buscar valores de un mapa a través de un key termina siendo mucho más rápido que un List o Set.
-
-            * El usar mapas es muy útil cuando tenemos registros únicos en nuestros registros como DNI, numero de celular, etc. 
-              Porque así podemos diferenciar nuestros valores y colocarlos como llave única en nuestros registros.
-
-            * Leer valores de un Map.
+         * 
+         * Saber que un Map nos permite acceder a sus valores con más rapidez porque
+         * trabaja en el concepto de llave única y valor.
+         * 
+         * Buscar valores de un mapa a través de un key termina siendo mucho más rápido
+         * que un List o Set.
+         * 
+         * El usar mapas es muy útil cuando tenemos registros únicos en nuestros
+         * registros como DNI, numero de celular, etc.
+         * Porque así podemos diferenciar nuestros valores y colocarlos como llave única
+         * en nuestros registros.
+         * 
+         * Leer valores de un Map.
          * 
          */
     }
 }
+
+/*
+ * //TODOs:
+ * https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html
+ * //TODOs:
+ * https://docs.oracle.com/javase/8/docs/api/index.html?java/util/Collection.
+ * html
+ */

@@ -6,12 +6,16 @@ import EjerciciosPOO.JavaCollections.src.mx.com.alura.model.Alumno;
 import EjerciciosPOO.JavaCollections.src.mx.com.alura.model.Curso;
 
 public class Clase18 {
-/*
-    //TODO:  https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html
-    //TODO:  https://docs.oracle.com/javase/8/docs/api/index.html?java/util/Collection.html
-*/
+    /*
+     * //TODOs:
+     * https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html
+     * //TODOs:
+     * https://docs.oracle.com/javase/8/docs/api/index.html?java/util/Collection.
+     * html
+     */
 
-//En este ejercicios estamos pasando la responsabilidades a cada una de las clases para mejorar nuestro codigo y hacerlo mas reutilizable
+    // En este ejercicios estamos pasando la responsabilidades a cada una de las
+    // clases para mejorar nuestro codigo y hacerlo mas reutilizable
     public static void main(String[] args) {
 
         Curso curso1 = new Curso("Historia", 30);
@@ -23,7 +27,7 @@ public class Clase18 {
         Alumno alumno5 = new Alumno("Gustavo Sanchez", "005");
         Alumno alumno6 = new Alumno("Marcia Maria", "006");
         Alumno alumno7 = new Alumno("Claudia Patricia", "007");
-       
+
         curso1.addAlumno(alumno1);
         curso1.addAlumno(alumno2);
         curso1.addAlumno(alumno3);
@@ -34,13 +38,16 @@ public class Clase18 {
 
         // curso1.getAlumnos().forEach(alumno->System.out.println(alumno));
 
-        Optional<Alumno> alumno = curso1.getAlumnos().stream().filter(a -> "003".equalsIgnoreCase(a.getCodigo())).findFirst();
-         
-        if(alumno.isPresent()){
-            System.out.println(alumno.get());
-        }else{System.out.println("NO existe el Alumno");}
+        Optional<Alumno> alumno = curso1.getAlumnos().stream().filter(a -> "003".equalsIgnoreCase(a.getCodigo()))
+                .findFirst();
 
-        //Agregar Map en la clase Curso
+        if (alumno.isPresent()) {
+            System.out.println(alumno.get());
+        } else {
+            System.out.println("NO existe el Alumno");
+        }
+
+        // Agregar Map en la clase Curso
 
         Alumno alumnoMap = curso1.getAlumnoMap().get("003");
         System.out.println(alumnoMap);

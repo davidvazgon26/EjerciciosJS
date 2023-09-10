@@ -6,11 +6,13 @@ import java.util.HashSet;
 // import java.util.Set;
 
 public class Clase12 {
-/*
-    //TODO:  https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html
-    //TODO:  https://docs.oracle.com/javase/8/docs/api/index.html?java/util/Collection.html
-*/
-
+    /*
+     * //TODOs:
+     * https://docs.oracle.com/javase/tutorial/collections/interfaces/index.html
+     * //TODOs:
+     * https://docs.oracle.com/javase/8/docs/api/index.html?java/util/Collection.
+     * html
+     */
 
     public static void main(String[] args) {
         String alumno1 = "Luis Miguel";
@@ -22,7 +24,8 @@ public class Clase12 {
         String alumno7 = "David Vaz";
         String alumno8 = "Marcia Maria";
 
-        // Set<String> listaAlumnos = new HashSet<>(); // Si declaro con la interface me permite cambiar de tipo facilmente (usar Collection en lugar de Set)
+        // Set<String> listaAlumnos = new HashSet<>(); // Si declaro con la interface me
+        // permite cambiar de tipo facilmente (usar Collection en lugar de Set)
         Collection<String> listaAlumnos = new HashSet<>();
         Collection<String> listaAlumnos2 = new ArrayList<>();
 
@@ -46,14 +49,15 @@ public class Clase12 {
         listaAlumnos2.add(alumno8);
         listaAlumnos2.add(alumno8);
 
-//La interface Set no guarda la posicion, es por eso que siempre dara diferentes posiciones a los elementos de la lista o set
-//set no permite elementos duplicados.
+        // La interface Set no guarda la posicion, es por eso que siempre dara
+        // diferentes posiciones a los elementos de la lista o set
+        // set no permite elementos duplicados.
         for (String alumno : listaAlumnos) {
             System.out.println(alumno);
         }
         System.out.println("con HashSet y lambda (no repite elementos)");
-        listaAlumnos.forEach(alumno-> System.out.println(alumno));
+        listaAlumnos.forEach(alumno -> System.out.println(alumno));
         System.out.println("con ArrayList y lambda (repite elementos)");
-        listaAlumnos2.forEach(alumno-> System.out.println(alumno));
+        listaAlumnos2.forEach(alumno -> System.out.println(alumno));
     }
 }
