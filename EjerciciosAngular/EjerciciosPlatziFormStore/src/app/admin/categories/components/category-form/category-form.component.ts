@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 import { CategoriesService } from './../../../../core/services/categories.service';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-category-form',
@@ -15,7 +17,8 @@ export class CategoryFormComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private categoriesService: CategoriesService
+    private categoriesService: CategoriesService,
+    private storage: AngularFireStorage
   ) {
     this.buildForm();
   }
@@ -51,5 +54,25 @@ export class CategoryFormComponent implements OnInit {
       console.log(response);
       this.router.navigate(['./admin/categories']);
     });
+  }
+
+  uploadFile(event) {
+    const image = event.target.files[0];
+    const name = 'category.png';
+    const ref = this.storage.ref(name);
+    const task = this.storage.upload(name, image);
+
+    task
+      .snapshotChanges()
+      .pipe(
+        finalize(() => {
+          const urlImage$ = ref.getDownloadURL();
+          urlImage$.subscribe((url) => {
+            console.log(url);
+            this.imageField.setValue(url);
+          });
+        })
+      )
+      .subscribe();
   }
 }
