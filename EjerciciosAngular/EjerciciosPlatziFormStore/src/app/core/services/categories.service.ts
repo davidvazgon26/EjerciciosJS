@@ -24,4 +24,10 @@ export class CategoriesService {
       data
     );
   }
+
+  checkCategory(name: string) {
+    return this.http.post(`${environment.url_api}/categories/availability`, {
+      name,
+    });
+  }
 }
