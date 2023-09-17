@@ -6,15 +6,12 @@ import { ProductsService } from './../../../core/services/products/products.serv
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
-
   products: Product[] = [];
 
-  constructor(
-    private productsService: ProductsService
-  ) { }
+  constructor(private productsService: ProductsService) {}
 
   ngOnInit() {
     this.fetchProducts();
@@ -26,10 +23,9 @@ export class ProductsComponent implements OnInit {
   }
 
   fetchProducts() {
-    this.productsService.getAllProducts()
-    .subscribe(products => {
+    this.productsService.getAllProducts().subscribe((products) => {
       this.products = products;
+      // console.log(products);
     });
   }
-
 }
