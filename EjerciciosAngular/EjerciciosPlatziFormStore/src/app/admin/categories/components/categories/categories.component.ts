@@ -9,7 +9,7 @@ import { Category } from './../../../../core/models/category.model';
   styleUrls: ['./categories.component.scss'],
 })
 export class CategoriesComponent implements OnInit {
-  categories: Category[] = [];
+  categoriesTs: Category[] = [];
   displayedColumns: string[] = ['id', 'name', 'image', 'actions'];
 
   constructor(private categoriesService: CategoriesService) {}
@@ -19,8 +19,9 @@ export class CategoriesComponent implements OnInit {
   }
 
   private getCategories() {
-    this.categoriesService.getAllCategories().subscribe((categories) => {
-      this.categories = categories;
+    this.categoriesService.getAllCategories().subscribe((categoriesResult) => {
+      this.categoriesTs = categoriesResult;
+      // console.log('suscrito ', this.categoriesTs);
     });
   }
 }

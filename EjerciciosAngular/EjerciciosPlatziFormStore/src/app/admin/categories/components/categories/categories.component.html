@@ -1,23 +1,26 @@
 <a mat-raised-button routerLink="create">Crear nueva Categoria</a>
-<table mat-table [dataSource]="categories" class="mat-elevation-z8 products-table">
+
+
+<table mat-table [dataSource]="categoriesTs" class="mat-elevation-z8 products-table">
     <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>ID</th>
-        <td mat-cell *matCellDef="let category">{{category._id}}</td>
+        <th mat-header-cell *matHeaderCellDef>ID's</th>
+        <!-- la variable puede llevar cualquier nombre -->
+        <td mat-cell *matCellDef="let v">{{v.id}}</td>
     </ng-container>
     <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef>Name</th>
-        <td mat-cell *matCellDef="let category">{{category.name}}</td>
+        <th mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let c">{{c.name}}</td>
     </ng-container>
     <ng-container matColumnDef="image">
-        <th mat-header-cell *matHeaderCellDef>Image</th>
-        <td mat-cell *matCellDef="let category">
-            <img [src]="category.image" alt="category">
+        <th mat-header-cell *matHeaderCellDef>Imagen</th>
+        <td mat-cell *matCellDef="let d">
+            <img [src]="d.image" alt="d.name">
         </td>
     </ng-container>
     <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef>Actions</th>
+        <th mat-header-cell *matHeaderCellDef>Accion:</th>
         <td mat-cell *matCellDef="let category">
-            <a mat-raised-button [routerLink]="['edit', category._id]">Editar</a>
+            <a mat-raised-button color="" [routerLink]="['edit', category.id]">Editar</a>
             <button mat-raised-button color="warn">Eliminar</button>
         </td>
     </ng-container>

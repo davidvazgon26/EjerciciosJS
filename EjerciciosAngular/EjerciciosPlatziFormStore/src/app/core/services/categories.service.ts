@@ -11,7 +11,11 @@ export class CategoriesService {
   constructor(private http: HttpClient) {}
 
   getAllCategories() {
-    return this.http.get<Category[]>(`${environment.url_api}/categories/`);
+    let result = this.http.get<Category[]>(
+      `${environment.url_api}/categories/`
+    );
+    // console.log('getAllCategories de categories.service: ', result);
+    return result;
   }
 
   getCategory(id: string) {
@@ -19,10 +23,12 @@ export class CategoriesService {
   }
 
   createCategory(data: Partial<Category>) {
+    console.log('createCategory', data);
     return this.http.post<Category>(`${environment.url_api}/categories`, data);
   }
 
   updateCategory(id: string, data: Partial<Category>) {
+    // console.log('updateCategory', data);
     return this.http.put<Category>(
       `${environment.url_api}/categories/${id}`,
       data
@@ -30,8 +36,16 @@ export class CategoriesService {
   }
 
   checkCategory(name: string) {
-    return this.http.post(`${environment.url_api}/categories/availability`, {
-      name,
-    });
+    console.log('checkCategory');
+    console.log(name);
+    let result = this.http.post(
+      `${environment.url_api}/categories/availability`,
+      {
+        name,
+      }
+    );
+    console.log('result: ', result);
+
+    return result;
   }
 }
