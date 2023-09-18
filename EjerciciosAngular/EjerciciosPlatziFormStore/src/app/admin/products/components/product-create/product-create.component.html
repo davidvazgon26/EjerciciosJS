@@ -48,8 +48,15 @@
 
       <div class="row">
         <div class="col-xs">
+          <img *ngIf="(images$ | async) as images" [src]="images" alt="">
+          <input type="file" (change)="uploadFile($event)">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs">
           <mat-form-field>
-            <mat-label>Categorias: </mat-label>
+            <mat-label>Categories: </mat-label>
             <mat-select formControlName="categoryId">
               <!-- <input placeholder="Category" formControlName="categoryId" matInput type="number"> -->
               <mat-option [value]="category.id" *ngFor="let category of categories">{{category.name}}</mat-option>
@@ -65,12 +72,13 @@
           </mat-form-field>
         </div>
       </div>
+
       <div class="row">
         <div class="col-xs">
-          <img *ngIf="(images$ | async) as images" [src]="images" alt="">
-          <input type="file" (change)="uploadFile($event)">
+          <app-stepper formControlName="stock"></app-stepper>
         </div>
       </div>
+
     </mat-card-content>
     <mat-card-actions>
       <button [disabled]="form.invalid" mat-raised-button type="submit">Guardar</button>
