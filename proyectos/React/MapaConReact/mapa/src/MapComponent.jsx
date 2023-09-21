@@ -1,6 +1,7 @@
 import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
 
-const Map = () => {
+// eslint-disable-next-line react-refresh/only-export-components
+function Map() {
   return (
     <div>
       <GoogleMap
@@ -9,8 +10,7 @@ const Map = () => {
       />
     </div>
   );
-};
+}
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default withScriptjs(withGoogleMap(Map));
-
-// listo, solo me falta crear mi apikey en google, crear la facturacion e implementar la api en el codigo
