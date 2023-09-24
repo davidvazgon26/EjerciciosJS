@@ -1,4 +1,5 @@
 import scrollTopButton from "./dom/btnScroll.js";
+import slider from "./dom/carrusel.js";
 import countDown from "./dom/cuenta_regresiva.js";
 import darkTheme from "./dom/darkTheme.js";
 import userDeviceInfo from "./dom/deteccionDispositivos.js";
@@ -43,6 +44,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   getGeolocation("geolocation");
   searchFilters(".card-filter", ".card");
   draw("#winner-btn", ".player");
+  slider();
 });
 
 darkTheme(".dark-theme-btn", "dark-mode"); // Se saca de la carga inicial con DOMContentLoaded para poder volverlo a invocar dentro de darkTheme.
