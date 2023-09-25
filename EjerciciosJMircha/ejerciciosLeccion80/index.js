@@ -11,6 +11,7 @@ import hamburgerMenu from "./dom/menuHamburguesa.js";
 import responsiveMedia from "./dom/objeto_responsivo.js";
 import responsiveTester from "./dom/prueba_responsive.js";
 import { digitalClock, alarmaSonora } from "./dom/reloj.js";
+import scrollSpy from "./dom/scroll_spy.js";
 import draw from "./dom/sorteo.js";
 import { shortCuts, moveBall } from "./dom/teclado.js";
 
@@ -45,6 +46,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   searchFilters(".card-filter", ".card");
   draw("#winner-btn", ".player");
   slider();
+  scrollSpy();
 });
 
 darkTheme(".dark-theme-btn", "dark-mode"); // Se saca de la carga inicial con DOMContentLoaded para poder volverlo a invocar dentro de darkTheme.
