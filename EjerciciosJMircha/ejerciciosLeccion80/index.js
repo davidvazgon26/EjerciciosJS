@@ -14,6 +14,7 @@ import { digitalClock, alarmaSonora } from "./dom/reloj.js";
 import scrollSpy from "./dom/scroll_spy.js";
 import draw from "./dom/sorteo.js";
 import { shortCuts, moveBall } from "./dom/teclado.js";
+import smartVideo from "./dom/video_inteligente.js";
 
 const d = document;
 
@@ -47,6 +48,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   draw("#winner-btn", ".player");
   slider();
   scrollSpy();
+  smartVideo();
 });
 
 darkTheme(".dark-theme-btn", "dark-mode"); // Se saca de la carga inicial con DOMContentLoaded para poder volverlo a invocar dentro de darkTheme.
