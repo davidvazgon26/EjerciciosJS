@@ -395,13 +395,21 @@ img {
 
 .contact-form {
     --form-ok-color: #4caf50;
-    --forom-error-color: #f44336;
+    --form-error-color: #f44336;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
 }
 
 /* Todos los hijos de esta clase */
+.contact-form {
+    --form-ok-color: #4caf50;
+    --form-error-color: #f44336;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
 .contact-form>* {
     padding: 0.5rem;
     margin: 1rem auto;
@@ -422,7 +430,7 @@ img {
 
 .contact-form input,
 .contact-form textarea {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: sans-serif;
 }
 
@@ -437,11 +445,11 @@ img {
 }
 
 .contact-form [required]:valid {
-    border: thin solid green;
+    border: thin solid var(--form-ok-color);
 }
 
 .contact-form [required]:invalid {
-    border: thin solid red;
+    border: thin solid var(--form-error-color);
 }
 
 .contact-form-error {
@@ -471,5 +479,4 @@ img {
         visibility: visible;
         opacity: 1;
     }
-
 }
