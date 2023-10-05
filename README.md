@@ -9,7 +9,7 @@ Existen proyectos de varios lenguajes.
 
 Se seguirá actualizando los ejercicios en este repositorio
 
-Ahora hay proyectos de Angular y proximamente de C#
+Ahora hay proyectos de Angular y proximamente de C# con .Net
 
 Trabajando con validadores en formulario de Angular
 
