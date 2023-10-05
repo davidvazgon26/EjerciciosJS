@@ -33,4 +33,9 @@ export default function contactFormValidations() {
       }
     }
   });
+
+  d.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Enviando Formulario");
+  });
 }
