@@ -8,6 +8,7 @@ import webCam from "./dom/deteccionWebcam.js";
 import searchFilters from "./dom/filtroBusquedas.js";
 import getGeolocation from "./dom/geolocalizacion.js";
 import hamburgerMenu from "./dom/menuHamburguesa.js";
+import speechReader from "./dom/narrador.js";
 import responsiveMedia from "./dom/objeto_responsivo.js";
 import responsiveTester from "./dom/prueba_responsive.js";
 import { digitalClock, alarmaSonora } from "./dom/reloj.js";
@@ -53,10 +54,12 @@ d.addEventListener("DOMContentLoaded", (e) => {
   contactFormValidations();
 });
 
-darkTheme(".dark-theme-btn", "dark-mode"); // Se saca de la carga inicial con DOMContentLoaded para poder volverlo a invocar dentro de darkTheme.
+darkTheme(".dark-theme-btn", "dark-mode"); // Se saca de la carga inicial con DOMContentLoaded para poder volverlo a invocar dentro de darkTheme porque no puedo invocar dentro del DOMContentLoaded una funcion que usa el DOMContentLoaded
 networkStatus();
 //keydown, keyup, keypress
 d.addEventListener("keydown", (e) => {
   shortCuts(e);
   moveBall(e, ".ball", ".stage");
 });
+
+speechReader();
