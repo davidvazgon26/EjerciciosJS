@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal con HTML</title>
+</head>
+
+<body>
+    <dialog>
+        <button autofocus>Close</button>
+        <p>Hola a todos</p>
+    </dialog>
+    <button>Show the dialog</button>
+
+    <script>
+        const dialog = document.querySelector("dialog");
+        const showButton = document.querySelector("dialog + button");
+        const closeButton = document.querySelector("dialog button");
+
+        showButton.addEventListener("click", () => {
+            dialog.showModal();
+        });
+
+        closeButton.addEventListener("click", () => {
+            dialog.close();
+        });
+    </script>
+</body>
+
+</html>

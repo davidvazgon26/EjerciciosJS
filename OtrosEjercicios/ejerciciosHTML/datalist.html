@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como usar Datalist</title>
+</head>
+
+<body>
+    <h3>Datalist Normal</h3>
+    <input list="languages" id="language-choice" name="language-choice">
+    <!-- 
+        * El input y el datalist deben tener el mismo nombre en el id y el list respectivamente
+        * Datalist te permite la funcionalidad de un select, pero si no existe la opcion puedes escribirla.
+    -->
+
+    <datalist id="languages">
+        <option value="Javascript"></option>
+        <option value="Java"></option>
+        <option value="Swift"></option>
+        <option value="Go"></option>
+        <option value="PHP"></option>
+    </datalist>
+
+    <h3>Datalist de tiempo</h3>
+    <input type="time" list="popularHours" />
+    <datalist id="popularHours">
+        <option value="12:00"></option>
+        <option value="13:00"></option>
+        <option value="14:00"></option>
+    </datalist>
+
+</body>
+
+</html>

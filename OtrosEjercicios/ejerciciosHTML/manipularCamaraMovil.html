@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipular Camara</title>
+</head>
+<!-- 
+    ojo, solo funciona para dispositivos moviles 
+    en accept el tipo de archivo a crear
+    en capture la camara que se utilizara, user la frontal y enviroment la trasera
+-->
+
+<body>
+    <form action="server.cgi" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" capture="user">
+        <input type="file" name="video" accept="video/*" capture="enviroment">
+        <input type="submit" value="Upload">
+    </form>
+</body>
+
+</html>
