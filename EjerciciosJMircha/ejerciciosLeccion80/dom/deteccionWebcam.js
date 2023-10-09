@@ -18,7 +18,7 @@ export default function webCam(id) {
           "beforebegin",
           `Sucedio el siguiente error: <p><mark>${err}</mark></p>`
         );
-        console.log("error: ", err);
+        // console.log("error: ", err);
       });
   }
 }
