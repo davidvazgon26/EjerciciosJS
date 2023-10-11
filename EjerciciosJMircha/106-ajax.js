@@ -68,3 +68,34 @@
       )
     );
 })();
+
+// Con Async y await
+(() => {
+  const $fetchAsync = document.getElementById("fetch-async"),
+    $fragment = document.createDocumentFragment();
+
+  async function getData() {
+    try {
+      let result = await fetch("https://jsonplaceholder.typicode.com/users"),
+        json = await result.json();
+
+      // if(!res.ok) throw new Error("Ocurrio un Error al solicitar los Datos")
+      if (!res.ok)
+        throw { status: result.status, statusText: result.statusText };
+
+      json.forEach((el) => {
+        const $li = document.createElement("li");
+        $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`;
+        $fragment.appendChild($li);
+      });
+
+      $fetchAsync.appendChild($fragment);
+    } catch (error) {
+      let message = err.statusText || "Ocurrio un error";
+      $fetchAsync.innerHTML = `Error ${err.status}: ${message}`;
+    } finally {
+      console.log("Se ejecuta de cualquier forma");
+    }
+  }
+  getData();
+})();
