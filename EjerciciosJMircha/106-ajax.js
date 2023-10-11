@@ -90,7 +90,7 @@
       });
 
       $fetchAsync.appendChild($fragment);
-    } catch (error) {
+    } catch (err) {
       let message = err.statusText || "Ocurrio un error";
       $fetchAsync.innerHTML = `Error ${err.status}: ${message}`;
     } finally {
@@ -98,4 +98,31 @@
     }
   }
   getData();
+})();
+
+// Con Axios
+(() => {
+  const $axio = document.getElementById("axios"),
+    $fragment = document.createDocumentFragment();
+
+  axios
+    .get("https://jsonplaceholder.typicode.com/users")
+    .then((res) => {
+      let json = res.data;
+
+      json.forEach((el) => {
+        const $li = document.createElement("li");
+        $li.innerHTML = `${el.name} -- ${el.email} -- ${el.phone}`;
+        $fragment.appendChild($li);
+      });
+
+      $axio.appendChild($fragment);
+    })
+    .catch((err) => {
+      let message = err.response.statusText || "Ocurrio un error";
+      $axio.innerHTML = `Error ${err.response.status}: ${message}`;
+    })
+    .finally(() => {
+      console.log("Se ejecuta de cualquier forma para axios");
+    });
 })();
