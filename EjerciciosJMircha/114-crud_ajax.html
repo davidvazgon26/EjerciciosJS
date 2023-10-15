@@ -42,7 +42,7 @@
     <template id="crud-template">
         <tr>
             <td class="name"></td>
-            <td class="constellacion"></td>
+            <td class="constellation"></td>
             <td>
                 <button class="edit">Editar</button>
                 <button class="delete">Eliminar</button>
@@ -51,10 +51,10 @@
     </template>
     <script>
         const d = document,
-            $table = d.querySelector("crud-table"),
-            $form = d.querySelector("crud-form"),
-            $title = d.querySelector("crud-title"),
-            $template = d.querySelector("crud-template").content,
+            $table = d.querySelector(".crud-table"),
+            $form = d.querySelector(".crud-form"),
+            $title = d.querySelector(".crud-title"),
+            $template = d.querySelector("#crud-template").content,
             $fragment = d.createDocumentFragment();
 
         const ajax = (options) => {
@@ -69,7 +69,7 @@
                     success(json);
                 } else {
                     let message = xhr.statusText || "Ocurrio un error";
-                    error("Error ${xhr.status}: ${messafe}");
+                    error(`Error ${xhr.status}: ${message}`);
                 }
             })
 
@@ -77,6 +77,37 @@
             xhr.setRequestHeader("Content-type", "application/json; charset=utf-8")
             xhr.send(JSON.stringify(data));
         }
+
+        const getAll = () => {
+            ajax({
+                method: "GET", //no es necesario en get pero yo lo pongo
+                url: "http://localhost:3000/santos",
+                success: (res) => {
+                    console.log(res);
+
+                    res.forEach(item => {
+                        $template.querySelector(".name").textContent = item.nombre;
+                        $template.querySelector(".constellation").textContent = item.constelacion;
+                        $template.querySelector(".edit").dataset.id = item.id;
+                        $template.querySelector(".edit").dataset.name = item.nombre;
+                        $template.querySelector(".edit").dataset.constellation = item.constelacion;
+                        $template.querySelector(".delete").dataset.id = item.id;
+
+                        let $clone = d.importNode($template, true);
+                        $fragment.appendChild($clone);
+                    });
+
+                    $table.querySelector("tbody").appendChild($fragment);
+                },
+                error: (err) => {
+                    console.error(err);
+                    $table.insertAdjacentHTML("afterend", `<p><b>${err}</b></p>`)
+                },
+                data: null // no es necesario pero yo lo pongo
+            })
+        }
+
+        d.addEventListener("DOMContentLoaded", getAll)
     </script>
 </body>
 
