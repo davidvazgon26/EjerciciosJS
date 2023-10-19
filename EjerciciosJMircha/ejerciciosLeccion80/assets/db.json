@@ -49,6 +49,11 @@
       "nombre": "Mascara de Muerte",
       "constelacion": "Cancer",
       "id": 13
+    },
+    {
+      "nombre": "Dhoko",
+      "constelacion": "Libra",
+      "id": 14
     }
   ],
   "dioses": [

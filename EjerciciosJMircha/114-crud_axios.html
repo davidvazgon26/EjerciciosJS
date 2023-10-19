@@ -91,19 +91,17 @@
 
                 if (!e.target.id.value) {
                     //Create - POST
-
                     try {
 
                         let options = {
                             method: "POST",
                             headers: { "Content-type": "application/json; charset=utf-8" },
-                            body: JSON.stringify({ nombre: e.target.nombre.value, constelacion: e.target.constellation.value })
+                            data: JSON.stringify({ nombre: e.target.nombre.value, constelacion: e.target.constellation.value })
                         }
 
-                        let res = await fetch("http://localhost:3000/santos", options),
-                            json = await res.json();
+                        let res = await axios("http://localhost:3000/santos", options),
+                            json = await res.data;
 
-                        if (!res.ok) throw { status: res.status, statusText: res.statusText };
                         location.reload()
 
                     } catch (err) {
@@ -119,13 +117,12 @@
                         let options = {
                             method: "PUT",
                             headers: { "Content-type": "application/json; charset=utf-8" },
-                            body: JSON.stringify({ nombre: e.target.nombre.value, constelacion: e.target.constellation.value })
+                            data: JSON.stringify({ nombre: e.target.nombre.value, constelacion: e.target.constellation.value })
                         }
 
-                        let res = await fetch(`http://localhost:3000/santos/${e.target.id.value}`, options),
-                            json = await res.json();
+                        let res = await axios(`http://localhost:3000/santos/${e.target.id.value}`, options),
+                            json = await res.data;
 
-                        if (!res.ok) throw { status: res.status, statusText: res.statusText };
                         location.reload()
 
                     } catch (err) {
@@ -157,10 +154,9 @@
                             headers: { "Content-type": "application/json; charset=utf-8" }
                         }
 
-                        let res = await fetch(`http://localhost:3000/santos/${e.target.dataset.id}`, options),
-                            json = await res.json();
+                        let res = await axios(`http://localhost:3000/santos/${e.target.dataset.id}`, options),
+                            json = await res.data;
 
-                        if (!res.ok) throw { status: res.status, statusText: res.statusText };
                         location.reload()
 
                     } catch (err) {
