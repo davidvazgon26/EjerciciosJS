@@ -6,7 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitio con AJAX</title>
     <style>
+        html {
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: 16px;
+        }
 
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 992px;
+        }
+
+        .header {
+            padding: .5rem;
+            background-color: rgba(231, 96, 46, 0.2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 4rem;
+            height: 4rem;
+            padding: 4px;
+            background: #482e21;
+            border-radius: 50%;
+            border: 2px solid #e7602e
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            font-size: 115%;
+        }
+
+        .menu a {
+            color: #e7602e;
+            padding: 4px 1vw;
+            transition: all .3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .menu a:hover {
+            opacity: 75%;
+            background: #482e21;
+            padding: 4px 1vw;
+            color: white;
+            border-radius: 8px;
+        }
     </style>
 </head>
 
@@ -25,12 +98,13 @@
         </section>
     </header>
     <main class="container">
-        <footer class="footer container">
-            <p>
-                <small>Sitio disenado por Kenai </small>
-            </p>
-        </footer>
+
     </main>
+    <footer class="footer container">
+        <p>
+            <small>Sitio disenado por DAVG </small>
+        </p>
+    </footer>
 </body>
 
 </html>
