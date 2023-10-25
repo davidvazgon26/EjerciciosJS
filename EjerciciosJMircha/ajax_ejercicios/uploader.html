@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -31,6 +31,7 @@
 
 <body>
     <main>
+        <label for="files">Cargar Archivos:</label>
         <input type="file" id="files" name="files" multiple>
     </main>
     <script>
@@ -39,8 +40,8 @@
             $files = d.getElementById("files");
 
         const uploader = (file) => {
-            // console.log(file)
-            const xhr = XMLHttpRequest(),
+            console.log(file)
+            const xhr = new XMLHttpRequest(),
                 formData = new FormData();
 
             formData.append("file", file);
@@ -49,7 +50,8 @@
                 if (xhr.readdyState !== 4) return;
 
                 if (xhr.status >= 200 && xhr.status < 300) {
-                    console.log(xhr.responseText)
+                    let json = JSON.parse(xhr.responseText);
+                    console.log(json)
                 } else {
                     let message = xhr.statusText || "Ocurrio un error";
                     console.error(`Error ${xhr.status}: ${message}`);
