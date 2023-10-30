@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,60 +8,74 @@
     <title>Manipulando el DOM</title>
 
     <style>
-        :root{
+        :root {
             --dark-color: #222;
-            --yellow-color:#F7DF1E;
+            --yellow-color: #F7DF1E;
         }
 
-        .cards{
-            border: thin solid var( --yellow-color );
+        .cards {
+            border: thin solid var(--yellow-color);
             padding: 1rem;
         }
 
-        .card{
+        .card {
             display: inline-block;
             background-color: var(--yellow-color);
             color: var(--yellow-color);
         }
 
-        .card figcaption{
+        .card figcaption {
             padding: 1rem;
             background: #222;
         }
 
-        .rotate-45{
+        .rotate-45 {
             transform: rotate(45deg);
         }
 
-        .rotate-135{
+        .rotate-135 {
             transform: rotate(135deg);
         }
 
-        .opacity-80{
+        .opacity-80 {
             opacity: .8;
         }
 
-        .sepia{
+        .sepia {
             filter: sepia(1);
         }
-        .evento-flujo div{
+
+        .evento-flujo div {
             padding: 4rem;
             font-size: 2rem;
             text-align: center;
             color: #222;
         }
-        .uno{
+
+        .uno {
             background: yellow;
         }
-        .dos{
+
+        .dos {
             background: gold;
         }
-        .tres{
+
+        .tres {
             background: lightyellow;
+        }
+
+        .link-dom {
+            background-color: #FD7F1E;
+            color: white;
+        }
+
+        .hh3 {
+            width: 2000px;
         }
     </style>
 
 </head>
+
 <body>
 
 
@@ -94,7 +109,9 @@
     <br>
     <h3> Manejo del DOM</h3>
 
-    <p id="que-es">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit sint architecto, earum non ut suscipit, hic animi ratione, natus tempore unde perspiciatis quos necessitatibus possimus fuga placeat officia commodi. Necessitatibus?</p>
+    <p id="que-es">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit sint architecto, earum non ut
+        suscipit, hic animi ratione, natus tempore unde perspiciatis quos necessitatibus possimus fuga placeat officia
+        commodi. Necessitatibus?</p>
 
     <nav id="menu">
         <ul>
@@ -107,7 +124,7 @@
     </nav>
 
     <input type="text" name="nombre" placeholder="Nombre">
-    <a href="dom.html" class="link-dom" style="background-color: #FD7F1E; color: white;" data-description="Document Object Model">DOM</a>
+    <a href="dom.html" class="link-dom" data-description="Document Object Model" alt="DOM">DOM</a>
 
     <section class="cards">
         <figure class="card">
@@ -130,12 +147,12 @@
             <img src="https://placeimg.com/200/200/nature" alt="Nature">
             <figcaption>Nature</figcaption>
         </figure>
-        
+
     </section>
 
     <template id="template-card">
         <figure class="card">
-            <img/>
+            <img />
             <figcaption></figcaption>
         </figure>
     </template>
@@ -167,7 +184,7 @@
     </section>
     <br><br><br><br><br>
 
-    <h3 style="width: 2000px;">Manejo del BOM</h3>
+    <h3 class="hh3">Manejo del BOM</h3>
     <button id="abrir-ventana">Abrir Ventana</button>
     <br><br>
     <button id="cerrar-ventana">Cerrar Ventana</button>
@@ -190,7 +207,8 @@
         const hablar = () => window.speechSynthesis.speak(utterance);
 
     </script>
-  
+
     <script src="./61-dom.js"></script>
 </body>
+
 </html>
