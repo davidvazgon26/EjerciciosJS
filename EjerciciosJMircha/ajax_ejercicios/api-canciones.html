@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Canciones</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .loader {
+            display: none;
+            margin: auto;
+        }
+
+        @media screen and (min-width: 800px) {
+            main {
+                flex-direction: row;
+            }
+        }
+
+        main>* {
+            padding: 1rem;
+            flex-basis: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Buscado de Canciones</h1>
+    <form id="song-search">
+        <input type="text" name="artist" placeholder="Nombre del interprete" required>
+        <br>
+        <input type="text" name="song" placeholder="Nombre de la cancion" required>
+        <br>
+        <input type="submit">
+    </form>
+    <img class="loader" src="../ejerciciosLeccion80/assets/grid.svg" alt="Cargando...">
+    <aside class="error"></aside>
+    <main>
+        <article class="artist"></article>
+        <article class="song"></article>
+    </main>
+    <script>
+        const d = document,
+            $form = d.getElementById("song-search"),
+            $loader = d.getElementById(".loader"),
+            $error = d.getElementById(".error"),
+            $main = d.getElementById("main"),
+            $artist = d.getElementById(".artist"),
+            $song = d.getElementById(".song");
+
+        $form.addEventListener("submit", async e => {
+            e.preventDefault();
+
+            try {
+                $loader.style.display = "block";
+
+                let artist = e.target.artist.value.toLowerCase(),
+                    song = e.target.song.value.toLowerCase(),
+                    $artistTemplate = "",
+                    $songTemplate = "",
+                    artistAPI = `https://theaudiodb.com/api/v1/json/1/search.php?s=${artist}`,
+                    songAPI = `https://api.lyrics.ovh/v1/${artist}/${song}`,
+                    artistFetch = fetch(artistSPI),
+                    songFetch = fetch(songAPI);
+                [artistRes, songRes] = await Promise.all([artistFetch, songFetch]),
+                    artistData = await artistRes.json(),
+                    songData = await songRes.json();
+
+                console.log(artistData, songData)
+
+            } catch (err) {
+                console.log(err)
+                $loader.style.display = "none";
+                let message = err.statusText || "Ocurrio un error";
+                $error.innerHTML = `<p>Error ${err.status}: ${message}</p>`;
+                $loader.style.display = "none";
+            }
+        })
+
+    </script>
+</body>
+
+</html>
