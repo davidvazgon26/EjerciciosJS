@@ -43,7 +43,8 @@
     <form id="song-search">
         <input type="text" name="artist" placeholder="Nombre del interprete" required>
         <br>
-        <input type="text" name="song" placeholder="Nombre de la cancion" required>
+        <!-- <input type="text" name="song" placeholder="Nombre de la cancion" required> -->
+        <input type="text" name="song" placeholder="Nombre de la cancion">
         <br>
         <input type="submit">
     </form>
@@ -56,11 +57,11 @@
     <script>
         const d = document,
             $form = d.getElementById("song-search"),
-            $loader = d.getElementById(".loader"),
-            $error = d.getElementById(".error"),
-            $main = d.getElementById("main"),
-            $artist = d.getElementById(".artist"),
-            $song = d.getElementById(".song");
+            $loader = d.querySelector(".loader"),
+            $error = d.querySelector(".error"),
+            $main = d.querySelector("main"),
+            $artist = d.querySelector(".artist"),
+            $song = d.querySelector(".song");
 
         $form.addEventListener("submit", async e => {
             e.preventDefault();
@@ -72,15 +73,45 @@
                     song = e.target.song.value.toLowerCase(),
                     $artistTemplate = "",
                     $songTemplate = "",
-                    artistAPI = `https://theaudiodb.com/api/v1/json/1/search.php?s=${artist}`,
+                    artistAPI = `https://theaudiodb.com/api/v1/json/2/search.php?s=${artist}`,
                     songAPI = `https://api.lyrics.ovh/v1/${artist}/${song}`,
-                    artistFetch = fetch(artistSPI),
+                    // songAPI = `https://www.buscaletras.com/${artist}/${song}`,
+                    artistFetch = fetch(artistAPI),
                     songFetch = fetch(songAPI);
                 [artistRes, songRes] = await Promise.all([artistFetch, songFetch]),
-                    artistData = await artistRes.json(),
-                    songData = await songRes.json();
+                    // [artistRes] = await Promise.all([artistFetch]),
+                    artistData = await artistRes.json();
+                songData = await songRes.json();
 
-                console.log(artistData, songData)
+                console.log(artistData)
+                console.log(songData)
+
+                if (artistData.artists === null) {
+                    $artistTemplate = `<h2>No existe el interprete <mark>${artist}</mark></h2>`
+                } else {
+                    let artist = artistData.artists[0];
+                    $artistTemplate = `
+                    <h2>${artist.strArtist}</h2>
+                    <img src="${artist.strArtistThumb}" alt="${artist.strArtist}">
+                    <p>${artist.intBornYear} - ${(artist.intDiedYear || "Presente")}</p>
+                    <p>${artist.strCountry}</p>
+                    <p>${artist.strGenre} - ${artist.strStyle}</p>
+                    <a href="://${artist.strWebsite}" target="_blank">Sitio Web</a>
+                    <p>${artist.strBiographyEN}</p>
+                    `;
+                }
+
+                if (songData.error) {
+                    $songTemplate = `<h2>No existe el interprete <mark>${song}</mark></h2>`
+                } else {
+                    $songTemplate = ` <h2>${song.toUpperCase()}</h2> <blockquote>${songData.lyrics}</blockquote>`
+
+                }
+
+
+                $loader.style.display = "none";
+                $artist.innerHTML = $artistTemplate;
+                $song.innerHTML = $songTemplate
 
             } catch (err) {
                 console.log(err)
