@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress REST API</title>
+</head>
+
+<body>
+    <h1>WordPress REST API</h1>
+    <article id="site" class="site"></article>
+    <section id="posts" class="posts"></section>
+    <img src="./../ejerciciosLeccion80/assets/grid.svg" alt="Cargando..." class="loader">
+    <template id="post-template">
+        <article class="post">
+            <img src="" alt="" class="post-image">
+            <aside>
+                <h2 class="post-title"></h2>
+                <figure class="post-author"></figure>
+                <small class="post-date"></small>
+                <a href="" class="post-link" target="_blank">Ver publicacion original</a>
+                <p class="post-excerpt"></p>
+                <div class="post-categories"></div>
+                <div class="post-tags"></div>
+                <details class="post-content">
+                    <summary>Ver contenido de la publicacion</summary>
+                    <article></article>
+                </details>
+            </aside>
+        </article>
+    </template>
+
+    <script>
+        fetch("https://malvestida.com/wp-json/wp/v2/pages")
+            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(json => {
+                console.log(json)
+            })
+    </script>
+</body>
+
+</html>
