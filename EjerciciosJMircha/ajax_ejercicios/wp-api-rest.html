@@ -124,6 +124,7 @@
 
     <script>
         const d = document,
+            w = window,
             $site = d.getElementById("site"),
             $posts = d.getElementById("posts"),
             $loader = d.querySelector(".loader"),
@@ -132,9 +133,12 @@
             DOMAIN = "https://css-tricks.com",  //  css-tricks
             SITE = `${DOMAIN}/wp-json`,
             API_WP = `${SITE}/wp/v2`,
-            POSTS = `${API_WP}/posts?_embed`,
+            POSTS = `${API_WP}/posts?_embed&per_page=5&page=10`,
             PAGES = `${API_WP}/pages`,
             CATEGORIES = `${API_WP}/categories`
+
+        let page = 1,
+            perPage = 5;
 
         function getSiteData() {
             fetch(SITE)
@@ -160,7 +164,7 @@
         function getPosts() {
             $loader.style.display = "block";
 
-            fetch(POSTS)
+            fetch(`${POSTS}&page=${page}&per_page=${perPage}`)
                 .then(res => res.ok ? res.json() : Promise.reject(res))
                 .then(json => {
                     console.log(json)
@@ -206,6 +210,20 @@
             getSiteData();
             getPosts();
         })
+
+        w.addEventListener("scroll", e => {
+            const { scrollTop, clientHeight, scrollHeight } = d.documentElement;
+            console.log(scrollTop, clientHeight, scrollHeight);
+            // (posicion actual,tamanio de la vista o lo visible, tamano del scoll total alcanzable) scrollHeight = scrollTop +  clientHeight;
+            console.log(scrollTop, clientHeight, scrollHeight);
+            if (scrollTop + clientHeight >= scrollHeight) {
+                console.log("Cargar nuevos datos");
+                page++;
+                getPosts();
+            }
+        })
+
+
         // fetch(POSTS)
         //     .then(res => res.ok ? res.json() : Promise.reject(res))
         //     .then(json => {
