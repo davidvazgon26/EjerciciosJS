@@ -2,6 +2,7 @@ import api from "../helpers/wp_api.js";
 import { ajax } from "../helpers/ajax.js";
 import { PostCard } from "./PostCard.js";
 import { Post } from "./Post.js";
+import {SearchCard} from "./SearchCard.js"
 
 export async function Router() {
   const d = document;
@@ -27,13 +28,28 @@ export async function Router() {
   } else if (hash.includes("#/search")) {
     let query = localStorage.getItem("wpSearch");
 
-    if (!query) return false;
+    if (!query) {
+      d.querySelector(".loader").style.display = "none";
+      return false;
+    }
 
     await ajax({
       url: `${api.SEARCH}/${query}`,
       cbSuccess: (search) => {
         console.log(search);
-        // $main.innerHTML = Post(post);
+        let html = "";
+
+        if (search.length === 0) {
+          html = `
+            <p class="error">
+             No existen resultados de busqueda para el temino
+             <mark> ${query}</mark> 
+            </p>
+            `;
+        } else {
+          search.forEach(post => html += SearchCard(post))
+        }
+         $main.innerHTML = html;
       },
     });
   } else if (hash === "#/contacto") {
