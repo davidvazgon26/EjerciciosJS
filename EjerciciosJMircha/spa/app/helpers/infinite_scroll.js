@@ -15,7 +15,7 @@ export async function InfiniteScroll() {
     let { scrollTop, clientHeight, scrollHeight } = d.documentElement,
       { hash } = w.location;
 
-    console.log(scrollTop, clientHeight, scrollHeight, hash);
+    // console.log(scrollTop, clientHeight, scrollHeight, hash);
 
     if (scrollTop + clientHeight >= scrollHeight) {
       api.page++;
