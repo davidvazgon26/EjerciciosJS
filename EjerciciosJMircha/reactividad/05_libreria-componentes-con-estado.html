@@ -49,14 +49,16 @@
             const $item = d.getElementById("todo-item");
             if (!$item) return;
 
-            //Actualizar el State y la UI (este ya no)
-            //Actualizar el State de forma reactiva
+
+            //Actualizar el State y la UI (este ya no).
+            //Actualizar el State de forma reactiva.
             const lastState = app.getState()
             lastState.todoList.push($item.value);
             app.setState({ todoList: lastState.todoList })
             // render();
 
-            //limpiar el input
+
+            //limpiar el input.
             $item.value = "";
             $item.focus();
         })
