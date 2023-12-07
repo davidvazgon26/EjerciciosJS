@@ -1,0 +1,19 @@
+{
+  "name": "#Mi primer PWA",
+  "short_name": "#PWA",
+  "descriptio": "Bienvenido a mi primer PWA con js",
+  "background_color": "#2b2b2b",
+  "theme_color": "#F0DB4F",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": "./?utm_source=web_app_manifest",
+  "scope": "./",
+  "lang": "es-MX",
+  "icons": [
+    {
+      "src": "./img/programacion.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
