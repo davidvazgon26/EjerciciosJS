@@ -15,8 +15,7 @@ Trabajando con validadores en formulario de Angular
 
 Trabajando con Angular Material
 
-continua con angular material
-..
+continua con angular material.
 
 
 
