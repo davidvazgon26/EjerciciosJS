@@ -33,3 +33,8 @@ En resumen, los scripts de Groovy son programas escritos en el lenguaje de progr
 Groovy es Java, con la ventaja de ser opcionalmente tipado.
 
 Groovy puede funcionar como un tipo de bash.
+
+        **Ojo Groovy se ve mas como un complemento para Java, no un sustituto**
+
+    * Groovy es opcionalmente tipado
+    *

@@ -1,11 +1,15 @@
- @groovy.transform.Canonical  // CAnonical trae ToString y Constructor juntos.
+// @groovy.transform.Canonical  // CAnonical trae ToString y Constructor juntos.
 // @groovy.transform.ToString  //Esta anotacion permite usar el persona2
 
 // Mi primer clase
 class Person{
     String name ;
     int age;
-
+    
+    void setName(String name){
+    println "Calling setName on Person"
+    this.name = name;
+    }
 }
 
 Person person = new Person();
@@ -19,12 +23,41 @@ persona2.with{
 }
 
 Person person3 = new Person([name:'Juan', age:44]);
-Person person4 = new Person('Daniel', 49); 
-Person person5 = ["Lupe", 34];
-//Necesitas el constructor para hacerlo asi y debes respetar el orden en que se declararon las propiedades en la clase.
 
 println "Name: ${person.getName()} Age: ${person.getAge()}";
 println "Name: ${persona2.getName()} Age: ${persona2.getAge()}";
 println "Name: ${person3.getName()} Age: ${person3.getAge()}";
-println "Name: ${person4.getName()} Age: ${person4.getAge()}";
-println "Name: ${person5.getName()} Age: ${person5.getAge()}";
+
+//@groovy.transform.ToString
+class Person2 {
+    int age
+    String name
+}
+
+Person2 person4 = new Person2()
+person4.name = 'Ale'
+person4.age = 33
+
+println person4
+
+Person2 person5 = new Person2([name:"omar", age:55])
+println person5.name +", "+ person5.age
+
+ Person2 person6 = [name:"Lupe", age:44];
+ println person6.name +", "+ person6.age
+//Necesitas el constructor para hacerlo asi y debes respetar el orden en que se declararon las propiedades en la clase.
+
+//@groovy.transform.Canonical
+//class Person3 {
+//    String name
+//    int age
+//
+//    // Constructor con parámetros
+//    Person3(String name, int age) {
+//        this.name = name
+//        this.age = age
+//    }
+//}
+//
+//Person3 person7 = new Person3("Dale", 11)
+//println person7
