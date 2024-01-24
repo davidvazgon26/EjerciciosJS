@@ -7,3 +7,7 @@ println(map.getClass());  //En algunos casos tendras que usar parentesis para in
 println(list.class);
 println(nueve.class);
 println(cadena.class);
+
+// hay mas tipos de datos en imprimeLista.groovy
+
+
