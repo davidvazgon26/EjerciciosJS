@@ -1,4 +1,4 @@
-// AST o Abstract Syntax Tree
+// AST Transformations o Abstract Syntax Tree
 
 // asi seria antes de usar notaciones en groovy
 //class Person{
@@ -18,9 +18,11 @@
 //
 //asi seria ahora con la notacion.
 
-import groovy.transform.ToString
+//import groovy.transform.ToString
+import groovy.transform.*
 
 @ToString(includes=['name', 'age'])  //Tambien puedo usar exclude
+@TupleConstructor
 class Person {
     String name
     String lastname
@@ -29,9 +31,11 @@ class Person {
 
 def person = new Person ([name:"David", lastname:"Vazquez", age:43])
 def person2 = new Person ([name:"David", lastname:"Vazquez", age:43])
+def person3 = new Person()
 
 println person
 
 println person.hashCode()
 println person2.hashCode()
 println person.equals(person2)
+println person3
