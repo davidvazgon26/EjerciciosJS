@@ -38,3 +38,14 @@ Groovy puede funcionar como un tipo de bash.
 
     * Groovy es opcionalmente tipado
     *
+
+## Instalacion de Gradle para crear proyectos compatibles con Groovy
+
+        * Puedes comprobar si lo tienes instalado con el comando gradle --version
+        * Si no lo tienes instalado lo puedes instalar con Sdk man
+        * Puedes ver las versiones disponibles con el comando sdk list gradle
+        * puedes instalar gradle con el comando sdk install gradle o si quieres una version en especifico con sdk install gradle y la version deseada, por ejemplo `sdk install gradle 6.8.3`
+        * Creas la carpeta o directorio donde vas a guardar tu proyecto
+        * Te posicionas en esa direccion en la consola
+        * Utiliza el comando gradle init para iniciarlo
+        * Seguimos o definimos los parametros del proyecto conforme lo vaya pidiendo el Daemon o wizard.
