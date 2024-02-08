@@ -19,7 +19,7 @@ self.addEventListener("install", (e) => {
       .then((cache) => {
         return cache.addAll(urlsToCache).then(() => self.skipWaiting());
       })
-      .catch((err) => console.log("Fallo registro de cache", err))
+      .catch((err) => console.log("Fallo registro de cache ", err))
   );
 });
 
