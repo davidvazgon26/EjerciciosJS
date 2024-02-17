@@ -49,3 +49,4 @@ Groovy puede funcionar como un tipo de bash.
         * Te posicionas en esa direccion en la consola
         * Utiliza el comando gradle init para iniciarlo
         * Seguimos o definimos los parametros del proyecto conforme lo vaya pidiendo el Daemon o wizard.
+....
