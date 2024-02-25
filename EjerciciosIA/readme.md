@@ -11,7 +11,9 @@
 * Los modelos fundacionales son modelos que se pueden entrenar con una apmplia gama de datos y posteriormente enfocar en un rubro especifico (conocidos los fundacionales tambien como LLM o Large Language Models).
 
 Ejemplos de IA Generativas,
-_ Texto: ChatGPT y Google Bard o Gemini
-_ Imagen: Midjourney, Dall-E y Stable Diffusion \* Audio: MusicLM y Otter
+_ Texto: ChatGPT y Google Bard o Gemini.
+_ Imagen: Midjourney, Dall-E y Stable Diffusion.
+
+- Audio: MusicLM, Otter y MusicGen
 
 Este tipo de modelo s se puede interactuar con ellos por medio de prompts
