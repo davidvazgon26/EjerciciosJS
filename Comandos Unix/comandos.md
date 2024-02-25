@@ -275,7 +275,7 @@ o
 
 resultado:
 
-    sin resultado visible, debes usar cd y ls para comprobar
+    sin resultado visible, debes usar cd y ls para comprobar.
 
 ## rm
 
