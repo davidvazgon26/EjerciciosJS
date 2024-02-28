@@ -18,6 +18,6 @@ _ Imagen: Midjourney, Dall-E y Stable Diffusion.
 
 Este tipo de modelo s se puede interactuar con ellos por medio de prompts
 
-- Indagar sobre manejo de datos personales
+- Indagar sobre manejo de datos personales.
 
 [Guia de reflexiones eticas] (https://static.platzi.com/media/public/uploads/guia-de-retos-del-curso-de-etica-y-manejo-de-datos-para-data-science-e-inteligencia-artificial_9fead094-c4d7-4c5f-8f74-43fef9c30a46.docx)
